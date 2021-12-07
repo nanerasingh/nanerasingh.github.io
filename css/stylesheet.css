@@ -1,0 +1,133 @@
+html {
+    background: #292c36;
+    color: #fff;
+    font-family: 'SF Mono', 'Menlo', 'Droid Sans Mono', monospace;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    cursor: default;
+}
+.container {
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    right: -50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    padding: 20px;
+    box-sizing: border-box;
+}
+.intro {
+    font-size: 45pt;
+    width: 100%;
+}
+.intro.name {
+    color: #00ABA3;
+}
+.intro.cursor {
+    font-weight: 200;
+    display: none;
+    position: relative;
+    top: -6px;
+}
+.links {
+    margin-top: 50px;
+    font-size: 18pt;
+    color: #41B645;
+    font-weight: 600;
+}
+.links > a {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 5px;
+    cursor: pointer;
+    color: #83C057;
+}
+.links > a:hover {
+    color: #608c40;
+}
+
+.btn {
+    display: block;
+    margin-top: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18pt;
+    padding: 10px;
+}
+.btn.small {
+    font-size: 15pt;
+    display: inline-block;
+}
+
+.btn:hover {
+    color: #cecece;
+}
+
+
+@media(max-width: 1000px) {
+    .intro {
+        font-size: 40pt;
+    }
+    .links {
+        font-size: 17pt;
+    }
+    .btn {
+        font-size: 17pt;
+    }
+}
+@media(max-width: 900px) {
+    .intro {
+        font-size: 35pt;
+    }
+}
+@media(max-width: 800px) {
+    .intro {
+        font-size: 30pt;
+    }
+    .links {
+        font-size: 16pt;
+    }
+    .btn {
+        font-size: 16pt;
+    }
+}
+@media(max-width: 500px) {
+    .links {
+        font-size: 15pt;
+    }
+}
+@media(max-width: 340px) {
+    .links {
+        font-size: 14pt;
+    }
+    .btn {
+        font-size: 15pt;
+    }
+}
+
+.cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
