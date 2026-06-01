@@ -1,0 +1,43 @@
+{
+  "minVersion": "0.1",
+  "headerImage": "https://nanerasingh.github.io/images/header.png",
+  "tintColor": "#4A90D9",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Control Center module showing live network speed and type. Rootless (arm64) compatible.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Developer Information",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Developer",
+          "text": "Manu (Nanerasingh)"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Twitter",
+          "action": "https://twitter.com/nanerasingh",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "GitHub",
+          "action": "https://github.com/nanerasingh",
+          "openExternal": true
+        }
+      ]
+    }
+  ]
+}

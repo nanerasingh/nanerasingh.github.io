@@ -1,0 +1,54 @@
+{
+  "minVersion": "0.1",
+  "headerImage": "https://nanerasingh.github.io/depicts/ScrollToDismissKeyBaord/ScrollToDismissKeyBaord1.png",
+  "tintColor": "#4A90D9",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Dismiss the keyboard by scrolling down in any app.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "screenshots": [
+            {
+              "url": "https://nanerasingh.github.io/depicts/ScrollToDismissKeyBaord/ScrollToDismissKeyBaord1.png",
+              "accessibilityText": "ScrollToDismissKeyboard"
+            }
+          ],
+          "itemCornerRadius": 8,
+          "itemSize": "{160,284}"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Developer Information",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Developer",
+          "text": "Manu (Nanerasingh)"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Twitter",
+          "action": "https://twitter.com/nanerasingh",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "GitHub",
+          "action": "https://github.com/nanerasingh",
+          "openExternal": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "minVersion": "0.1",
+  "headerImage": "https://nanerasingh.github.io/depicts/Time/Time1.png",
+  "tintColor": "#4A90D9",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "views": [
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "Customise the Clock for iPhone X, Non-X models, and iPad. Massive feature set with tons of options.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "screenshots": [
+            {
+              "url": "https://nanerasingh.github.io/depicts/Time/Time1.png",
+              "accessibilityText": "TIME (The Ultimate Tweak)"
+            },
+            {
+              "url": "https://nanerasingh.github.io/depicts/Time/Time2.png",
+              "accessibilityText": "TIME (The Ultimate Tweak)"
+            },
+            {
+              "url": "https://nanerasingh.github.io/depicts/Time/Time3.png",
+              "accessibilityText": "TIME (The Ultimate Tweak)"
+            }
+          ],
+          "itemCornerRadius": 8,
+          "itemSize": "{160,284}"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Developer Information",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Developer",
+          "text": "Manu (Nanerasingh)"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Twitter",
+          "action": "https://twitter.com/nanerasingh",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "GitHub",
+          "action": "https://github.com/nanerasingh",
+          "openExternal": true
+        }
+      ]
+    }
+  ]
+}
