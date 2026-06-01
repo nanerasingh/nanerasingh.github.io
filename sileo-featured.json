@@ -1,0 +1,23 @@
+{
+  "class": "FeaturedBannersView",
+  "banners": [
+    {
+      "class": "FeaturedBanner",
+      "title": "Nanerasingh Repo",
+      "package": "com.manu.time",
+      "hideShadow": false
+    },
+    {
+      "class": "FeaturedBanner",
+      "title": "GradientBubble",
+      "package": "com.manu.gradientgububblecolor",
+      "hideShadow": false
+    },
+    {
+      "class": "FeaturedBanner",
+      "title": "DialerGradient",
+      "package": "com.manu.dialergradient",
+      "hideShadow": false
+    }
+  ]
+}
