@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>NetworkCC – 4G/5G & Location Services CC Modules</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+           background: #0a0a0f; color: #e8e8f0; }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #0d1b2a 0%, #1a2a4a 50%, #0d1b2a 100%);
+      padding: 48px 24px 36px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 0%, rgba(0,122,255,0.18) 0%, transparent 70%);
+    }
+    .hero-icons { display: flex; justify-content: center; gap: 20px; margin-bottom: 22px; }
+    .hero-icons img { width: 72px; height: 72px; border-radius: 16px;
+                      box-shadow: 0 4px 24px rgba(0,122,255,0.5); }
+    .hero h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px;
+               background: linear-gradient(90deg, #4fc3f7, #ffffff, #a78bfa);
+               -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero .subtitle { margin-top: 8px; font-size: 15px; color: #8899aa; }
+    .badges { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+    .badge { background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.12);
+             border-radius: 20px; padding: 4px 14px; font-size: 12px; color: #aab8cc; }
+
+    /* Content sections */
+    .container { max-width: 640px; margin: 0 auto; padding: 0 16px 40px; }
+
+    .card { background: #13131e; border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px; padding: 20px; margin-top: 16px; }
+    .card h2 { font-size: 17px; font-weight: 600; color: #c0cfdf; margin-bottom: 14px;
+               display: flex; align-items: center; gap: 8px; }
+    .card h2 .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .blue  { background: #007aff; }
+    .purple{ background: #a78bfa; }
+    .green { background: #34c759; }
+    .orange{ background: #ff9500; }
+
+    /* Module block */
+    .module-block { background: rgba(255,255,255,0.04); border-radius: 12px;
+                    padding: 16px; margin-bottom: 12px; display: flex; gap: 14px; align-items: flex-start; }
+    .module-block:last-child { margin-bottom: 0; }
+    .module-icon { width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
+                   box-shadow: 0 2px 12px rgba(0,0,0,0.4); }
+    .module-info h3 { font-size: 15px; font-weight: 600; color: #dde8f5; }
+    .module-info p  { font-size: 13px; color: #7a8fa8; margin-top: 4px; line-height: 1.5; }
+
+    /* Feature list */
+    .feat-list { list-style: none; }
+    .feat-list li { font-size: 14px; color: #9aaabb; padding: 6px 0;
+                    border-bottom: 1px solid rgba(255,255,255,0.04);
+                    display: flex; align-items: flex-start; gap: 10px; }
+    .feat-list li:last-child { border-bottom: none; }
+    .feat-list li::before { content: "›"; color: #4fc3f7; font-size: 16px; flex-shrink: 0; }
+
+    /* Mode table */
+    .mode-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .mode-table th { text-align: left; color: #556677; font-weight: 500;
+                     padding: 6px 8px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .mode-table td { padding: 8px; color: #9aaabb; border-bottom: 1px solid rgba(255,255,255,0.04); }
+    .mode-table tr:last-child td { border-bottom: none; }
+    .chip { display: inline-block; border-radius: 6px; padding: 2px 8px;
+            font-size: 11px; font-weight: 600; }
+    .chip-5g { background: rgba(52,199,89,0.15); color: #34c759; }
+    .chip-4g { background: rgba(0,122,255,0.15); color: #4fc3f7; }
+    .chip-auto { background: rgba(255,149,0,0.15); color: #ff9500; }
+
+    /* Compat */
+    .compat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .compat-item { background: rgba(255,255,255,0.04); border-radius: 10px;
+                   padding: 12px 14px; }
+    .compat-item .label { font-size: 11px; color: #556677; text-transform: uppercase;
+                          letter-spacing: 0.5px; }
+    .compat-item .value { font-size: 14px; color: #c0d0e0; margin-top: 4px; font-weight: 500; }
+
+    /* Install button */
+    .install-btn {
+      display: block; width: 100%; margin-top: 20px;
+      background: linear-gradient(135deg, #007aff, #5856d6);
+      color: #fff; text-align: center; text-decoration: none;
+      font-size: 16px; font-weight: 600; padding: 14px;
+      border-radius: 14px; letter-spacing: 0.2px;
+    }
+    .install-btn:active { opacity: 0.85; }
+
+    /* Footer */
+    .footer { text-align: center; font-size: 12px; color: #445566;
+              padding: 24px 0 0; }
+  </style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="hero-icons">
+    <img src="NetworkIcon@2x.png" alt="NetworkCC icon"/>
+    <img src="LocationIcon@2x.png" alt="LocationCC icon"/>
+  </div>
+  <h1>NetworkCC</h1>
+  <p class="subtitle">4G/5G &amp; Location Services Control Center Modules</p>
+  <div class="badges">
+    <span class="badge">iOS 14+</span>
+    <span class="badge">arm64</span>
+    <span class="badge">Rootless</span>
+    <span class="badge">CCSupport</span>
+    <span class="badge">Free</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Modules -->
+  <div class="card">
+    <h2><span class="dot blue"></span>Included Modules</h2>
+
+    <div class="module-block">
+      <img class="module-icon" src="NetworkIcon@2x.png" alt="NetworkCC"/>
+      <div class="module-info">
+        <h3>NetworkCC — 4G/5G Toggle</h3>
+        <p>Switch your cellular radio between LTE, 5G, and Auto directly from Control Center. No digging into Settings → Cellular → Voice &amp; Data.</p>
+      </div>
+    </div>
+
+    <div class="module-block">
+      <img class="module-icon" src="LocationIcon@2x.png" alt="LocationCC"/>
+      <div class="module-info">
+        <h3>LocationCC — Location Services Toggle</h3>
+        <p>Enable or disable system-wide Location Services with a single tap in Control Center. Live status indicator shows current state.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- NetworkCC Features -->
+  <div class="card">
+    <h2><span class="dot blue"></span>NetworkCC — Tap Actions</h2>
+    <table class="mode-table">
+      <thead>
+        <tr><th>Tap Mode</th><th>Behaviour</th><th>Key</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="chip chip-auto">Cycle All 3</span></td>
+          <td>Rotates Auto → 5G On → LTE on each tap</td>
+          <td><code>0</code></td>
+        </tr>
+        <tr>
+          <td><span class="chip chip-5g">5G Auto</span></td>
+          <td>Toggles between 5G Auto and LTE</td>
+          <td><code>1</code></td>
+        </tr>
+        <tr>
+          <td><span class="chip chip-5g">5G On</span></td>
+          <td>Toggles between 5G On and LTE</td>
+          <td><code>2</code></td>
+        </tr>
+        <tr>
+          <td><span class="chip chip-4g">LTE Only</span></td>
+          <td>Forces LTE, no 5G</td>
+          <td><code>3</code></td>
+        </tr>
+      </tbody>
+    </table>
+    <p style="font-size:12px;color:#556677;margin-top:12px;">Tap action is configurable in Settings → NetworkCC. Uses private <code>_CTServerConnectionSetRATSelection</code> API.</p>
+  </div>
+
+  <!-- LocationCC Features -->
+  <div class="card">
+    <h2><span class="dot purple"></span>LocationCC — Features</h2>
+    <ul class="feat-list">
+      <li>Reads current Location Services state on load via <code>CLLocationManager</code></li>
+      <li>Polls state periodically — icon updates live if another app changes it</li>
+      <li>Calls <code>setLocationServicesEnabled:</code> to toggle system-wide</li>
+      <li>Custom pin-style icon drawn in code — fits native CC aesthetic</li>
+      <li>Exception-safe: catches CLLocationManager errors gracefully</li>
+    </ul>
+  </div>
+
+  <!-- Compatibility -->
+  <div class="card">
+    <h2><span class="dot green"></span>Compatibility</h2>
+    <div class="compat-grid">
+      <div class="compat-item">
+        <div class="label">iOS</div>
+        <div class="value">14.0 – 17.x</div>
+      </div>
+      <div class="compat-item">
+        <div class="label">Architecture</div>
+        <div class="value">arm64 / arm64e</div>
+      </div>
+      <div class="compat-item">
+        <div class="label">Jailbreak</div>
+        <div class="value">Rootless (Dopamine, palera1n)</div>
+      </div>
+      <div class="compat-item">
+        <div class="label">Install Path</div>
+        <div class="value">/var/jb/Library/</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dependencies -->
+  <div class="card">
+    <h2><span class="dot orange"></span>Dependencies</h2>
+    <ul class="feat-list">
+      <li><strong>CCSupport</strong> by opa334 — enables third-party CC modules on rootless</li>
+      <li><strong>PreferenceLoader</strong> — loads Settings panel for tap-action config</li>
+      <li>iOS firmware ≥ 14.0</li>
+    </ul>
+  </div>
+
+  <!-- Install -->
+  <a class="install-btn" href="sileo://source/https://nanerasingh.github.io/">
+    Add Repo to Sileo
+  </a>
+
+  <div class="footer">
+    <p>by Manu (Nanerasingh) · v1.0.0 · Free</p>
+    <p style="margin-top:6px;">
+      <a href="https://twitter.com/nanerasingh" style="color:#4fc3f7;text-decoration:none;">@nanerasingh</a>
+    </p>
+  </div>
+
+</div>
+</body>
+</html>

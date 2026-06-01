@@ -1,14 +1,20 @@
 {
   "minVersion": "0.1",
-  "headerImage": "https://nanerasingh.github.io/images/header.png",
+  "headerImage": "https://nanerasingh.github.io/depicts/NetworkCC/NetworkIcon@3x.png",
   "tintColor": "#4A90D9",
   "tabs": [
     {
       "tabname": "Details",
       "views": [
         {
+          "class": "DepictionSubheaderView",
+          "title": "4G/5G & Location Services Control Center Modules",
+          "useBoldText": false,
+          "useBottomMargin": true
+        },
+        {
           "class": "DepictionMarkdownView",
-          "markdown": "Control Center module showing live network speed and type. Rootless (arm64) compatible.",
+          "markdown": "**NetworkCC** adds two Control Center modules:\n\n**\ud83d\udcf6 NetworkCC** \u2014 Switch your cellular radio between LTE, 5G Auto, and 5G On directly from Control Center. Configurable tap action cycles or toggles modes.\n\n**\ud83d\udccd LocationCC** \u2014 Enable or disable system-wide Location Services with a single tap. Icon reflects live state.",
           "useSpacing": true
         },
         {
@@ -16,18 +22,90 @@
         },
         {
           "class": "DepictionSubheaderView",
-          "title": "Developer Information",
+          "title": "NetworkCC \u2014 Tap Modes",
           "useBoldText": true,
           "useBottomMargin": false
         },
         {
           "class": "DepictionTableTextView",
+          "title": "Cycle All 3",
+          "text": "Rotates Auto \u2192 5G On \u2192 LTE on each tap"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "5G Auto",
+          "text": "Toggles between 5G Auto and LTE"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "5G On",
+          "text": "Toggles between 5G On and LTE"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "LTE Only",
+          "text": "Forces LTE, disables 5G"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Compatibility",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "iOS",
+          "text": "14.0 and above"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Architecture",
+          "text": "arm64 / arm64e (rootless)"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak",
+          "text": "Dopamine, palera1n, other rootless"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Dependencies",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "CCSupport",
+          "text": "by opa334 \u2014 required for rootless CC modules"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "PreferenceLoader",
+          "text": "Required for Settings panel"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
           "title": "Developer",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Author",
           "text": "Manu (Nanerasingh)"
         },
         {
           "class": "DepictionTableButtonView",
-          "title": "Twitter",
+          "title": "Twitter \u2014 @nanerasingh",
           "action": "https://twitter.com/nanerasingh",
           "openExternal": true
         },
@@ -35,6 +113,12 @@
           "class": "DepictionTableButtonView",
           "title": "GitHub",
           "action": "https://github.com/nanerasingh",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "View Full Depiction",
+          "action": "https://nanerasingh.github.io/depicts/NetworkCC/NetworkCC.html",
           "openExternal": true
         }
       ]
