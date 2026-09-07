@@ -1,67 +1,263 @@
+Package: com.manu.MinimulHudVibrate
+Version: 1.0-1+debug
+Architecture: iphoneos-arm
+Maintainer: manu
+Installed-Size: 388
+Depends: mobilesubstrate
+Filename: pkgs/com.manu.MinimulHudVibrate_1.0-1+debug_iphoneos-arm.deb
+Size: 45950
+MD5sum: 4497092860b2c010ecb0406174c2586a
+SHA1: 3306fc561ebe1be5d6e9a3012b0303b21d52b770
+SHA256: c2eb7bf0505b1b4d93d5d17dad48a660d32ef57a13d7622b2a08208e2a34bbbc
+Section: Tweaks
+Description: Finally, no more annoying volume pop-up over the video you're watching! Minimal HUD shows a tiny display with Vibrate when you change the volume that will never get in your way.Forked by me with Vibrate.
+Author: manu
+Depiction: https://nanerasingh.github.io/repo/depicts/MinimulHudVibrate.html
+Name: Minimul HudVibrate
+
 Package: com.manu.battery
+Version: 1.0
+Architecture: iphoneos-arm
+Maintainer: NaneraManu
+Installed-Size: 604
+Depends: mobilesubstrate, preferenceloader,firmware (<= 14.99)
+Filename: pkgs/com.manu.battery_1.0_iphoneos-arm.deb
+Size: 214962
+MD5sum: 34b5969d8b9c6453a6b8a6e39928bbf1
+SHA1: 24bbe62590b5ffc9a72b3479f52dd0ac97ef1160
+SHA256: 0d585220b37d190f6565bf646f7a3988b8cee942d79d8e675238f146a0da7f4a
+Section: Tweaks
+Description: Colored Percentage & Pulse in Battery for Bolt,or fillcolor pulse,Body Pulse,etc.
+Author: NaneraManu
+Icon: /BatteryPrefs/Resources/Battery.png
 Name: Battery
+
+Package: com.manu.battery
+Version: 1.1
+Architecture: iphoneos-arm
+Maintainer: NaneraManu
+Installed-Size: 1152
+Depends: mobilesubstrate, org.thebigboss.libcolorpicker, preferenceloader,firmware (<= 14.99)
+Filename: pkgs/com.manu.battery_1.1_iphoneos-arm.deb
+Size: 290116
+MD5sum: 46a8870ee142b26a9ec44194c416c78a
+SHA1: e2a16e3683ef0458c1c2feb4705f8ada4c0d14f2
+SHA256: 30fcb8d971e7e541b9316834833258750919a6024f363fd0496fcfc25cfa2e0d
+Section: Tweaks
+Description: Colored Percentage & Pulse in Battery for Bolt,or fillcolor pulse,Body Pulse,etc.
+Author: NaneraManu
+Icon: /BatteryPrefs/Resources/Battery.png
+Name: Battery
+
+Package: com.manu.battery
 Version: 1.2
 Architecture: iphoneos-arm
-Author: NaneraManu
 Maintainer: NaneraManu
-Depends: mobilesubstrate, org.thebigboss.libcolorpicker, preferenceloader,firmware (<= 14.99)
-Section: Tweaks
 Installed-Size: 1248
-Description: Colored Percentage & Pulse in Battery for Bolt,or fillcolor pulse,Body Pulse,etc.
+Depends: mobilesubstrate, org.thebigboss.libcolorpicker, preferenceloader,firmware (<= 14.99)
 Filename: pkgs/com.manu.battery_1.2_iphoneos-arm.deb
 Size: 297624
 MD5sum: 2646435e10f2f40d0e993cd4293066df
 SHA1: 49606ef676d851da796fe1a3e7e85189c95c3326
 SHA256: 3bd6c638e71d4be9bb8fc552c753c486764cdf7c197cc6dd884e3919194daa38
-Depiction: https://nanerasingh.github.io/depicts/Battery/Battery.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.battery.json
+Section: Tweaks
+Description: Colored Percentage & Pulse in Battery for Bolt,or fillcolor pulse,Body Pulse,etc.
+Author: NaneraManu
+Icon: /BatteryPrefs/Resources/Battery.png
+Name: Battery
 
 Package: com.manu.dialergradient
-Name: DialerGradient
-Version: 1.4
+Version: 1.0
 Architecture: iphoneos-arm
-Author: NaneraManu
 Maintainer: NaneraManu
+Installed-Size: 860
+Depends: mobilesubstrate, org.thebigboss.libcolorpicker, preferenceloader,firmware (<= 13.9)
+Filename: pkgs/com.manu.dialergradient_1.0_iphoneos-arm.deb
+Size: 451894
+MD5sum: f3402043c4c2bf7117302e895c426039
+SHA1: 4d23603554eed871ea9df4bb08c881973dcbd6a7
+SHA256: 1fcda21e02f4213ed9259a4bfe074ddf649aec92bb5c19961bce9edf5c8a8c13
+Section: Tweaks
+Description: Gradient Dialer Colors.
+Author: NaneraManu
+Icon: /DialerGradientPrefs/Resources/DialerGradient.png
+Name: DialerGradient
+
+Package: com.manu.dialergradient
+Version: 1.1
+Architecture: iphoneos-arm
+Maintainer: NaneraManu
+Installed-Size: 916
+Depends: mobilesubstrate, org.thebigboss.libcolorpicker, preferenceloader,firmware (<= 13.9)
+Conflicts: com.manu.dialergradientprefsdemo
+Filename: pkgs/com.manu.dialergradient_1.1_iphoneos-arm.deb
+Size: 466454
+MD5sum: 7e270e992d06a971e074d5d7702545a2
+SHA1: 6bca2b298b3cbe6611db4fbbe30d705c3d655eb5
+SHA256: f0d53269f35eb550dbb992385ce43164fadde53c0280ca731f64b9dc8369903a
+Section: Tweaks
+Description: Gradient Dialer Colors.
+Author: NaneraManu
+Icon: /DialerGradientPrefs/Resources/DialerGradient.png
+Name: DialerGradient
+
+Package: com.manu.dialergradient
+Version: 1.3
+Architecture: iphoneos-arm
+Maintainer: NaneraManu
+Installed-Size: 1688
 Depends: mobilesubstrate, org.thebigboss.libcolorpicker, preferenceloader,firmware (<= 14.99),com.muirey03.libimagepicker
 Conflicts: com.manu.dialergradientprefsdemo
+Filename: pkgs/com.manu.dialergradient_1.3_iphoneos-arm.deb
+Size: 505068
+MD5sum: 8ce03f5a50046607a132198ce386efec
+SHA1: 8dd98ce41282a4900617944c29cdffa4012de730
+SHA256: 2cc48e03c48321df0b97bbd0d82ccf05f2676f5752aecd0d5d7e50fabc777a04
 Section: Tweaks
-Installed-Size: 1592
 Description: Gradient Dialer Colors.
+Author: NaneraManu
+Icon: /DialerGradientPrefs/Resources/DialerGradient.png
+Name: DialerGradient
+
+Package: com.manu.dialergradient
+Version: 1.4
+Architecture: iphoneos-arm
+Maintainer: NaneraManu
+Installed-Size: 1592
+Depends: mobilesubstrate, org.thebigboss.libcolorpicker, preferenceloader,firmware (<= 14.99),com.muirey03.libimagepicker
+Conflicts: com.manu.dialergradientprefsdemo
 Filename: pkgs/com.manu.dialergradient_1.4_iphoneos-arm.deb
 Size: 497006
 MD5sum: 5e8692a09334fb9064275042dadb1e8d
 SHA1: 58ad96462b8226dc6d0a5b1a81bd1e1323e98be4
 SHA256: 50912e3d460c6e494bb8605d50bc70ab2332e753d3db3fb9ff64737c27d04b04
-Depiction: https://nanerasingh.github.io/depicts/DialerGradient/DialerGradient.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.dialergradient.json
+Section: Tweaks
+Description: Gradient Dialer Colors.
+Author: NaneraManu
+Icon: /DialerGradientPrefs/Resources/DialerGradient.png
+Name: DialerGradient
 
 Package: com.manu.flashsound
-Name: FlashSound
 Version: 1.0
 Architecture: iphoneos-arm
-Author: NaneraManu
 Maintainer: NaneraManu
-Depends: mobilesubstrate, preferenceloader,firmware (<= 14.99)
-Section: Tweaks
 Installed-Size: 1544
-Description: Flash ON OF Sound Alert.Chnage Custom Sound from Prefrence setting.
+Depends: mobilesubstrate, preferenceloader,firmware (<= 14.99)
 Filename: pkgs/com.manu.flashsound_1.0_iphoneos-arm.deb
 Size: 795898
 MD5sum: 049a04cb586a74a2878453e760b3a109
 SHA1: 533fbf95e085148f50dda23954117a49f2199283
 SHA256: 13f21f585593147468c0aed363aa4b53ef779c046c7ca2f94f06ec41f6121172
-Depiction: https://nanerasingh.github.io/depicts/FlashSound/FlashSound.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.flashsound.json
+Section: Tweaks
+Description: Flash ON OF Sound Alert.Chnage Custom Sound from Prefrence setting.
+Author: NaneraManu
+Icon: /FlashSoundPrefs/Resources/FlashSound.png
+Name: FlashSound
 
 Package: com.manu.gradientgububblecolor
-Name: GradientBubbleColor
-Version: 1.7
+Version: 1.0
 Architecture: iphoneos-arm
-Author: NaneraManu
 Maintainer: NaneraManu
-Depends: mobilesubstrate, org.thebigboss.libcolorpicker, com.muirey03.libimagepicker, preferenceloader,firmware (<= 14.99)
+Installed-Size: 780
+Depends: mobilesubstrate, org.thebigboss.libcolorpicker, preferenceloader,firmware (<= 13.9)
+Filename: pkgs/com.manu.gradientgububblecolor_1.0_iphoneos-arm.deb
+Size: 330662
+MD5sum: d46d6753df830a66c2365d9a2e4de6a7
+SHA1: 2cc017ab6010c9d04a8dd336c1c9969981f9e5b3
+SHA256: cb82348b2f752537746dcbd826ab009b0834cfcdd6bb2d7670abe54ed57fa6f4
 Section: Tweaks
-Installed-Size: 1468
+Description: Colors in iMessage.
+  Colors in iMessage.
+ -Gradient Colors.
+ -Bubble Colors.
+ -Thinking Dot Colors.
+ -Progress Bar Colors.
+ -Text Selction Colors.
+Author: NaneraManu
+Icon: /GradientBubbleColorPrefs/Resources/GradientBubble.png
+Name: GradientBubbleColor
+
+Package: com.manu.gradientgububblecolor
+Version: 1.1
+Architecture: iphoneos-arm
+Maintainer: NaneraManu
+Installed-Size: 780
+Depends: mobilesubstrate, org.thebigboss.libcolorpicker, preferenceloader,firmware (<= 13.9)
+Filename: pkgs/com.manu.gradientgububblecolor_1.1_iphoneos-arm.deb
+Size: 332628
+MD5sum: 95f32ee353e0ff1210fe4debf33875a0
+SHA1: 9c2f9d67e15024317603b11b242c497d62efda62
+SHA256: ce9272a09885f3d8e4729499d1e50c25a93b9933a1515a88f407134f1866dba6
+Section: Tweaks
+Description: Colors in iMessage.
+  Colors in iMessage.
+ -Gradient Colors.
+ -Bubble Colors.
+ -Thinking Dot Colors.
+ -Progress Bar Colors.
+ -Text Selction Colors.
+Author: NaneraManu
+Icon: /GradientBubbleColorPrefs/Resources/GradientBubble.png
+Name: GradientBubbleColor
+
+Package: com.manu.gradientgububblecolor
+Version: 1.2
+Architecture: iphoneos-arm
+Maintainer: NaneraManu
+Installed-Size: 780
+Depends: mobilesubstrate, org.thebigboss.libcolorpicker, preferenceloader,firmware (<= 13.9)
+Filename: pkgs/com.manu.gradientgububblecolor_1.2_iphoneos-arm.deb
+Size: 334106
+MD5sum: eed28bb2e2201e41b9da2845ccebbc2d
+SHA1: 6ee3966b33427ba8f04af9046147bbf8d6740048
+SHA256: 2d80f331e1496dba4cf295a6cb48e304a7ef84b7c0aa4d11b3c521a51175b56c
+Section: Tweaks
+Description: Colors in iMessage.
+  Colors in iMessage.
+ -Gradient Colors.
+ -Bubble Colors.
+ -Thinking Dot Colors.
+ -Progress Bar Colors.
+ -Text Selction Colors.
+Author: NaneraManu
+Icon: /GradientBubbleColorPrefs/Resources/GradientBubble.png
+Name: GradientBubbleColor
+
+Package: com.manu.gradientgububblecolor
+Version: 1.3
+Architecture: iphoneos-arm
+Maintainer: NaneraManu
+Installed-Size: 780
+Depends: mobilesubstrate, org.thebigboss.libcolorpicker, preferenceloader,firmware (<= 13.9)
+Filename: pkgs/com.manu.gradientgububblecolor_1.3_iphoneos-arm.deb
+Size: 334096
+MD5sum: 50c64ec664b47027894f2a12952b520a
+SHA1: 81a584b7fc2cf5be000ce99ed5e3d2462fdb49d7
+SHA256: dc798ad679e2a5142a4142f98936920d4523ed4a50db662e4581bea8ebe1f05f
+Section: Tweaks
+Description: Colors in iMessage.
+  Colors in iMessage.
+ -Gradient Colors.
+ -Bubble Colors.
+ -Thinking Dot Colors.
+ -Progress Bar Colors.
+ -Text Selction Colors.
+Author: NaneraManu
+Icon: /GradientBubbleColorPrefs/Resources/GradientBubble.png
+Name: GradientBubbleColor
+
+Package: com.manu.gradientgububblecolor
+Version: 1.4
+Architecture: iphoneos-arm
+Maintainer: NaneraManu
+Installed-Size: 756
+Depends: mobilesubstrate, org.thebigboss.libcolorpicker, com.muirey03.libimagepicker, preferenceloader,firmware (<= 13.9)
+Filename: pkgs/com.manu.gradientgububblecolor_1.4_iphoneos-arm.deb
+Size: 332458
+MD5sum: 793eb00504ac32794ee40c01dfc078d8
+SHA1: 47bd8599765150aa4b7067bfe95e5957b6ab4078
+SHA256: 1264283859b5cba84a70701bac8096dc5f91f8d66b1092d9ea98700625c75ef2
+Section: Tweaks
 Description: Colors in iMessage.
  -Colors in iMessage.
  -Gradient Colors.
@@ -69,78 +265,175 @@ Description: Colors in iMessage.
  -Thinking Dot Colors.
  -Progress Bar Colors.
  -Text Selction Colors.
+Author: NaneraManu
+Icon: /GradientBubbleColorPrefs/Resources/GradientBubble.png
+Name: GradientBubbleColor
+
+Package: com.manu.gradientgububblecolor
+Version: 1.5
+Architecture: iphoneos-arm
+Maintainer: NaneraManu
+Installed-Size: 892
+Depends: mobilesubstrate, org.thebigboss.libcolorpicker, com.muirey03.libimagepicker, preferenceloader,firmware (<= 14.99)
+Filename: pkgs/com.manu.gradientgububblecolor_1.5_iphoneos-arm.deb
+Size: 354532
+MD5sum: 304227322bb2c14ea28d1cfc8909b91f
+SHA1: e431c7eb76fc5933a1f45902fe12f5db9c51ebab
+SHA256: 5d5b8b0d503f4c5c0bb12bcbcc2e23eecaead146e863de9b922ea2d0133735d3
+Section: Tweaks
+Description: Colors in iMessage.
+ -Colors in iMessage.
+ -Gradient Colors.
+ -Bubble Colors.
+ -Thinking Dot Colors.
+ -Progress Bar Colors.
+ -Text Selction Colors.
+Author: NaneraManu
+Icon: /GradientBubbleColorPrefs/Resources/GradientBubble.png
+Name: GradientBubbleColor
+
+Package: com.manu.gradientgububblecolor
+Version: 1.6
+Architecture: iphoneos-arm
+Maintainer: NaneraManu
+Installed-Size: 956
+Depends: mobilesubstrate, org.thebigboss.libcolorpicker, com.muirey03.libimagepicker, preferenceloader,firmware (<= 14.99)
+Filename: pkgs/com.manu.gradientgububblecolor_1.6_iphoneos-arm.deb
+Size: 361136
+MD5sum: 364f17380801f09b0837b038e0524746
+SHA1: 8f41d6ee9d93e3aefbc74b83c9e66831383403f1
+SHA256: 60d649932a43f00381d9b66f905753680540971c09d1dc951e1be93aa25e7691
+Section: Tweaks
+Description: Colors in iMessage.
+ -Colors in iMessage.
+ -Gradient Colors.
+ -Bubble Colors.
+ -Thinking Dot Colors.
+ -Progress Bar Colors.
+ -Text Selction Colors.
+Author: NaneraManu
+Icon: /GradientBubbleColorPrefs/Resources/GradientBubble.png
+Name: GradientBubbleColor
+
+Package: com.manu.gradientgububblecolor
+Version: 1.7
+Architecture: iphoneos-arm
+Maintainer: NaneraManu
+Installed-Size: 1468
+Depends: mobilesubstrate, org.thebigboss.libcolorpicker, com.muirey03.libimagepicker, preferenceloader,firmware (<= 14.99)
 Filename: pkgs/com.manu.gradientgububblecolor_1.7_iphoneos-arm.deb
 Size: 434202
 MD5sum: ec71b1908b2485e6b30afc23e1f831db
 SHA1: aaaab0b894760b403dc07d7dff227fcb4486a043
 SHA256: 1bf8ac7f247f669726b8c5e154cc36fc5dfdff71628944742138a882afe53e23
-Depiction: https://nanerasingh.github.io/depicts/GradientBubble/GradientBubble.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.gradientgububblecolor.json
-
-Package: com.manu.MinimulHudVibrate
-Name: Minimul HudVibrate
-Version: 1.0-1+debug
-Architecture: iphoneos-arm
-Author: manu
-Maintainer: manu
-Depends: mobilesubstrate
 Section: Tweaks
-Installed-Size: 388
-Description: Finally, no more annoying volume pop-up over the video you're watching! Minimal HUD shows a tiny display with Vibrate when you change the volume that will never get in your way.Forked by me with Vibrate.
-Filename: pkgs/com.manu.MinimulHudVibrate_1.0-1+debug_iphoneos-arm.deb
-Size: 45950
-MD5sum: 4497092860b2c010ecb0406174c2586a
-SHA1: 3306fc561ebe1be5d6e9a3012b0303b21d52b770
-SHA256: c2eb7bf0505b1b4d93d5d17dad48a660d32ef57a13d7622b2a08208e2a34bbbc
-Depiction: https://nanerasingh.github.io/depicts/MinimulHudVibrate/MinimulHudVibrate.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.minimulhudvibrate.json
-
-Package: com.manu.networkcc
-Name: NetworkCC
-Version: 1.0.0
-Architecture: iphoneos-arm64
-Author: Manu <nanerasingh@hotmail.com>
-Maintainer: Manu <nanerasingh@hotmail.com>
-Depends: firmware (>= 14.0), com.opa334.ccsupport, preferenceloader
-Section: Tweaks
-Installed-Size: 548
-Description: 4G/5G and Location Services Control Center modules
-Filename: pkgs/com.manu.networkcc_1.0.0_iphoneos-arm64.deb
-Size: 18946
-MD5sum: 3aadbba52fe9777f0cc4dd03fca6d0bf
-SHA1: da107b89d23f9e51b260f30cb6476e07dd87c7b8
-SHA256: 43b7bd95ef4bc4cf578f1b556137d4e9398fde5d3abc79c2a10e9db59e6f7414
-Depiction: https://nanerasingh.github.io/depicts/NetworkCC/NetworkCC.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.networkcc.json
+Description: Colors in iMessage.
+ -Colors in iMessage.
+ -Gradient Colors.
+ -Bubble Colors.
+ -Thinking Dot Colors.
+ -Progress Bar Colors.
+ -Text Selction Colors.
+Author: NaneraManu
+Icon: /GradientBubbleColorPrefs/Resources/GradientBubble.png
+Name: GradientBubbleColor
 
 Package: com.manu.scrolltodismisskeyboard
+Version: 1.1
+Architecture: iphoneos-arm
+Maintainer: NaneraManu
+Installed-Size: 964
+Depends: mobilesubstrate, preferenceloader
+Filename: pkgs/com.manu.scrolltodismisskeyboard_1.1_iphoneos-arm.deb
+Size: 141530
+MD5sum: c6955dc0d3e2317690f83ec5c4704912
+SHA1: 34f73f48fa9d248a11df81df37906adcb628b296
+SHA256: 093a581a6ff2c1b1588f6afc6755f29b6efc82a9e363b58fc87be3f36e6a6d18
+Section: Tweaks
+Description: Auto Dismiss Keyboard during Scroll Systemwise.
+Author: NaneraManu
+Icon: /ScrollToDismissKeyBoardPrefs/Resources/Scroll1.png
 Name: ScrollToDismissKeyBoard
+
+Package: com.manu.scrolltodismisskeyboard
 Version: 1.2
 Architecture: iphoneos-arm
-Author: NaneraManu
 Maintainer: NaneraManu
-Depends: mobilesubstrate, preferenceloader
-Section: Tweaks
 Installed-Size: 980
-Description: Auto Dismiss Keyboard during Scroll Systemwise.
+Depends: mobilesubstrate, preferenceloader
 Filename: pkgs/com.manu.scrolltodismisskeyboard_1.2_iphoneos-arm.deb
 Size: 128026
 MD5sum: 051d9f4dc948359c80ee07947fad526c
 SHA1: bea135b23c38f9c5010baebb131fca3c2cf3da52
 SHA256: 0602402ebb30daa71a7b0d7a78e348a39a2eafeffdd1d378b2e50add362a5dbe
-Depiction: https://nanerasingh.github.io/depicts/ScrollToDismissKeyBaord/ScrollToDismissKeyBaord.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.scrolltodismisskeyboard.json
+Section: Tweaks
+Description: Auto Dismiss Keyboard during Scroll Systemwise.
+Author: NaneraManu
+Icon: /ScrollToDismissKeyBoardPrefs/Resources/Scroll1.png
+Name: ScrollToDismissKeyBoard
 
 Package: com.manu.time
-Name: Time
-Version: 7.1
+Version: 6.5
 Architecture: iphoneos-arm
-Author: NaneraManu
 Maintainer: NaneraManu
+Installed-Size: 1964
 Depends: mobilesubstrate, org.thebigboss.libcolorpicker, preferenceloader,firmware (<= 14.99)
 Conflicts: com.manu.timedemo
+Filename: pkgs/6.5com.manu.time_6.5_iphoneos-arm.deb
+Size: 377362
+MD5sum: 6f2b660317b27281dec95cf30ece0029
+SHA1: 24eb2f78d361e2e3651b44d375d3815ae97d0ec7
+SHA256: b3e86bc69527757ea5557635b1761fd0e0f92cdc737e297f9a455305d339997d
 Section: Tweaks
-Installed-Size: 4624
+Description: Your Time in your way.
+ Your Time in your way.
+ -All iPhones & iPAD supported(Tested on ipad pro 12.9 by user).
+ -Statusbar(Right,Left,Control Center).
+ -Lockscreen Date & Time Can be Customization.
+ -Setting to display diffrent Timezone time at left top bottom,right,CC.
+ -What's new
+ -System storage used,free space.
+ -Network speed.
+ -WLan Network Name.
+ -Ram speed.
+ -iOS Version.
+ -CC Time with same options as in Home page.
+ -CC Network Customization,cellular text,etc.
+ -All includes with custom size ,fonts. WiFi, Cellular colors,4G to 5G or else.
+ -http://www.nsdateformatter.com/ for more date time format settings
+ ver3.0~6.0
+ -WifiNetwork or else instead of Cellular Network,Change display option in prefrence settting,
+ -Volume Sound while pressing button,
+ -Mute Toggle sound if unmute,
+ -HS Clock Icon label customization,
+ -HS Calander Icon label customization,
+ -Switches color systemwides,
+ -Double tap Wifi icon to disable wifi(Default is disabled,Enable to see the action),
+ -Battery Icon & %age change colors based on battery level(fixes),Also it will gave conflict with other battery tweak,Disable battery option in setting if you dont use Time,
+ -Display options feature addition.
+ -refrences are easy to adjust and mostly user friendly & user required setting is already defaults.
+ -Custom Image in Time String
+ -Display Options.
+ -Prefrences Customizations for user friendly
+ -Tweak UI Haptic Feedbacks
+ -Languages Support
+Author: NaneraManu
+Icon: /Timeprefs/Resources/Timelarge.png
+Name: Time
+
+Package: com.manu.time
+Version: 7.0
+Architecture: iphoneos-arm
+Maintainer: NaneraManu
+Installed-Size: 4400
+Depends: mobilesubstrate, org.thebigboss.libcolorpicker, preferenceloader,firmware (<= 14.99)
+Conflicts: com.manu.timedemo
+Filename: pkgs/com.manu.time_7.0_iphoneos-arm.deb
+Size: 901068
+MD5sum: 1db5bec2857ccb6f6d09d9a497a001c2
+SHA1: d1c5060986d2c1b04cf46b93e6e3edce9bd31ef8
+SHA256: fd91117c124476fabf8fdef8c20ab983b8b18f407eadd46709e4319e425eeb9e
+Section: Tweaks
 Description: Your Time in your way.
  Your Time in your way.
  -All iPhones & iPAD supported(Tested on ipad pro 12.9 by user).
@@ -175,10 +468,58 @@ Description: Your Time in your way.
  -Languages Support
  -Battery Pulse
  -Many More presets added
+Author: NaneraManu
+Icon: /Timeprefs/Resources/Timelarge.png
+Name: Time
+
+Package: com.manu.time
+Version: 7.1
+Architecture: iphoneos-arm
+Maintainer: NaneraManu
+Installed-Size: 4624
+Depends: mobilesubstrate, org.thebigboss.libcolorpicker, preferenceloader,firmware (<= 14.99)
+Conflicts: com.manu.timedemo
 Filename: pkgs/com.manu.time_7.1_iphoneos-arm.deb
 Size: 985276
 MD5sum: 6c653afab21f6171e7e75ed6b3dacf04
 SHA1: ea9ee3438ef3048fa4102e1ec39bd82125a213ff
 SHA256: f03256e01fae8cbf891b284044c4c7973fc727445e04471bce1263dfd76c552a
-Depiction: https://nanerasingh.github.io/depicts/Time/Time.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.time.json
+Section: Tweaks
+Description: Your Time in your way.
+ Your Time in your way.
+ -All iPhones & iPAD supported(Tested on ipad pro 12.9 by user).
+ -Statusbar(Right,Left,Control Center).
+ -Lockscreen Date & Time Can be Customization.
+ -Setting to display diffrent Timezone time at left top bottom,right,CC.
+ -What's new
+ -System storage used,free space.
+ -Network speed.
+ -WLan Network Name.
+ -Ram speed.
+ -iOS Version.
+ -CC Time with same options as in Home page.
+ -CC Network Customization,cellular text,etc.
+ -All includes with custom size ,fonts. WiFi, Cellular colors,4G to 5G or else.
+ -http://www.nsdateformatter.com/ for more date time format settings
+ ver3.0~6.0
+ -WifiNetwork or else instead of Cellular Network,Change display option in prefrence settting,
+ -Volume Sound while pressing button,
+ -Mute Toggle sound if unmute,
+ -HS Clock Icon label customization,
+ -HS Calander Icon label customization,
+ -Switches color systemwides,
+ -Double tap Wifi icon to disable wifi(Default is disabled,Enable to see the action),
+ -Battery Icon & %age change colors based on battery level(fixes),Also it will gave conflict with other battery tweak,Disable battery option in setting if you dont use Time,
+ -Display options feature addition.
+ -refrences are easy to adjust and mostly user friendly & user required setting is already defaults.
+ -Custom Image in Time String
+ -Display Options.
+ -Prefrences Customizations for user friendly
+ -Tweak UI Haptic Feedbacks
+ -Languages Support
+ -Battery Pulse
+ -Many More presets added
+Author: NaneraManu
+Icon: /Timeprefs/Resources/Timelarge.png
+Name: Time
+
