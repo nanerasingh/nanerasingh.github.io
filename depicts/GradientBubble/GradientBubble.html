@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script>
+    (function() {
+        const saved = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', saved);
+    })();
+</script>
 <title>Manu singh(nanerasingh)</title>
 <link rel="stylesheet" type="text/css" href="../css/style.css">
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -8,6 +14,23 @@
 <script type="text/javascript" src="../js/thankssaurik.js"></script>
 </head>
 <body>
+<button class="theme-toggle-depict" onclick="toggleDepictTheme()" id="depict-theme-btn">☀️ Light</button>
+<script>
+    function updateDepictBtn(t) {
+        const btn = document.getElementById('depict-theme-btn');
+        if (btn) btn.innerText = t === 'dark' ? '☀️ Light' : '🌙 Dark';
+    }
+    function toggleDepictTheme() {
+        const cur = document.documentElement.getAttribute('data-theme') || 'dark';
+        const next = cur === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        updateDepictBtn(next);
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        updateDepictBtn(document.documentElement.getAttribute('data-theme') || 'dark');
+    });
+</script>
 	<panel>
 		<label>GradientBubble</label>
 	<fieldset>
@@ -98,6 +121,15 @@
 </fieldset>
 	
 	
-	</panel>
+	
+	<label>Support & Donate</label>
+	<fieldset style="text-align: center;">
+		<p style="margin-bottom: 8px; font-size: 14px;">If you enjoy this tweak, consider supporting future updates and development!</p>
+		<a href="https://www.paypal.me/nanerasingh" target="_blank" rel="noopener" class="donate-btn-depict">
+			☕ Donate via PayPal (@nanerasingh)
+		</a>
+	</fieldset>
+
+</panel>
 </body>
 </html>

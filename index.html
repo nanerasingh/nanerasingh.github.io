@@ -1,18 +1,734 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 	<head>
-		<title>Welcome To Manu Page</title>
+		<title>Nanerasingh Repo — iOS Tweaks & Developer Tools</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<!--[if lte IE 8]>
-		<script src="assets/js/ie/html5shiv.js"></script>
-		<![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 9]>
-		<link rel="stylesheet" href="assets/css/ie9.css" />
-		<![endif]-->
-		<!--[if lte IE 8]>
-		<link rel="stylesheet" href="assets/css/ie8.css" />
-		<![endif]-->
+		<meta name="description" content="Official Cydia & Sileo repository for Nanerasingh iOS tweaks including TheosManagerPro, Time, NetworkCCX, AutoScrollx, NCEffectsPro, and ScreenFreezeX." />
+		<meta name="theme-color" content="#4a90d9" />
+
+		<!-- Favicon Icons -->
+		<link rel="icon" type="image/png" href="SileoIcon.png" />
+		<link rel="apple-touch-icon" href="SileoIcon.png" />
+
+		<!-- OpenGraph / Social Media Previews -->
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content="Nanerasingh Repo — iOS Tweaks &amp; Developer Tools" />
+		<meta property="og:description" content="Official Cydia &amp; Sileo repository for Nanerasingh iOS tweaks including TheosManagerPro, Time, NetworkCCX, AutoScrollx, NCEffectsPro, and ScreenFreezeX." />
+		<meta property="og:url" content="https://nanerasingh.github.io/" />
+		<meta property="og:image" content="https://nanerasingh.github.io/images/header.png" />
+
+		<!-- Twitter Card Previews -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:site" content="@nanerasingh" />
+		<meta name="twitter:creator" content="@nanerasingh" />
+		<meta name="twitter:title" content="Nanerasingh Repo — iOS Tweaks &amp; Developer Tools" />
+		<meta name="twitter:description" content="Official Cydia &amp; Sileo repository for Nanerasingh iOS tweaks including TheosManagerPro, Time, NetworkCCX, AutoScrollx, NCEffectsPro, and ScreenFreezeX." />
+		<meta name="twitter:image" content="https://nanerasingh.github.io/images/header.png" />
+		<!-- Theme Initialization (Instant Dark Mode Default) -->
+		<script>
+			(function() {
+				const savedTheme = localStorage.getItem('theme') || 'dark';
+				document.documentElement.setAttribute('data-theme', savedTheme);
+			})();
+		</script>
+
+		<style>
+			/* CSS Custom Properties — Dark Mode Default */
+			:root {
+				--bg-body: #0a0b0e;
+				--bg-main: #0f1117;
+				--bg-sidebar: #161822;
+				--bg-card: #1c1c1e;
+				--bg-img-container: #121316;
+				--border-card: #2c2c2e;
+				--text-main: #f2f2f7;
+				--text-muted: #a1a1aa;
+				--title-color: #64d2ff;
+				--badge-bg: rgba(10, 132, 255, 0.18);
+				--badge-color: #64d2ff;
+				--repo-box-bg: rgba(74, 144, 217, 0.12);
+				--repo-box-border: rgba(74, 144, 217, 0.3);
+				--input-bg: #1c1c1e;
+				--input-border: #2c2c2e;
+				--header-border: #2c2c2e;
+				--btn-default-bg: #27272a;
+				--btn-default-text: #f4f4f5;
+			}
+
+			/* Light Mode Overrides */
+			html[data-theme="light"] {
+				--bg-body: #f8fafc;
+				--bg-main: #ffffff;
+				--bg-sidebar: #f1f5f9;
+				--bg-card: #ffffff;
+				--bg-img-container: #f0f3f8;
+				--border-card: #e2e8f0;
+				--text-main: #1e293b;
+				--text-muted: #64748b;
+				--title-color: #0056b3;
+				--badge-bg: #eef5fc;
+				--badge-color: #007aff;
+				--repo-box-bg: rgba(74, 144, 217, 0.08);
+				--repo-box-border: rgba(74, 144, 217, 0.25);
+				--input-bg: #ffffff;
+				--input-border: #cbd5e1;
+				--header-border: #e2e8f0;
+				--btn-default-bg: #e2e8f0;
+				--btn-default-text: #1e293b;
+			}
+
+			/* Ambient Glow Background Effects */
+			body {
+				position: relative;
+				overflow-x: hidden;
+				-webkit-text-size-adjust: 100%;
+				-webkit-tap-highlight-color: transparent;
+				background-color: var(--bg-main) !important;
+				color: var(--text-main) !important;
+			}
+
+			body::before {
+				content: "";
+				position: fixed;
+				top: -120px;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 900px;
+				height: 550px;
+				background: radial-gradient(circle, rgba(10, 132, 255, 0.16) 0%, rgba(94, 92, 230, 0.1) 45%, transparent 75%);
+				pointer-events: none;
+				z-index: 0;
+				filter: blur(70px);
+			}
+
+			body::after {
+				content: "";
+				position: fixed;
+				bottom: -150px;
+				right: -100px;
+				width: 700px;
+				height: 700px;
+				background: radial-gradient(circle, rgba(100, 210, 255, 0.14) 0%, rgba(191, 90, 242, 0.08) 45%, transparent 75%);
+				pointer-events: none;
+				z-index: 0;
+				filter: blur(90px);
+			}
+
+			#sidebar {
+				display: none !important;
+			}
+
+			#main {
+				width: 100% !important;
+				max-width: 100% !important;
+				margin: 0 !important;
+				padding: 0 !important;
+				background-color: var(--bg-main) !important;
+				color: var(--text-main) !important;
+			}
+
+			#main > .inner {
+				max-width: 1360px !important;
+				margin: 0 auto !important;
+				padding: 0 2em 0.1em 2em !important;
+			}
+
+			#wrapper {
+				background-color: var(--bg-main) !important;
+				color: var(--text-main) !important;
+				padding: 0 !important;
+			}
+
+			#sidebar {
+				background-color: var(--bg-sidebar) !important;
+			}
+
+			/* Sidebar Developer Profile (No Overlapping) */
+			#sidebar .image {
+				margin: 0 0 14px 0 !important;
+				display: block !important;
+				float: none !important;
+				width: 100% !important;
+			}
+			#sidebar .image img {
+				width: 100% !important;
+				max-width: 160px !important;
+				height: auto !important;
+				border-radius: 16px !important;
+				box-shadow: 0 0 20px rgba(10, 132, 255, 0.35) !important;
+			}
+
+			#header {
+				border-bottom-color: var(--header-border) !important;
+			}
+
+			#header .logo, #header .logo strong {
+				color: var(--text-main) !important;
+			}
+
+			h1, h2, h3, h4, h5, h6 {
+				color: var(--text-main) !important;
+			}
+
+			p, span, label, li {
+				color: inherit;
+			}
+
+			/* Banner Layout & Developer Profile Avatar (No Overlapping) */
+			#banner {
+				display: flex !important;
+				flex-direction: row !important;
+				align-items: center !important;
+				justify-content: space-between !important;
+				gap: 40px !important;
+				padding: 3em 0 2em 0 !important;
+			}
+
+			#banner .content {
+				flex: 1 1 auto !important;
+				width: auto !important;
+				min-width: 0 !important;
+			}
+
+			#banner .image.object, #banner .image {
+				flex: 0 0 220px !important;
+				width: 220px !important;
+				height: 220px !important;
+				max-width: 220px !important;
+				max-height: 220px !important;
+				margin: 0 !important;
+				display: flex !important;
+				align-items: center !important;
+				justify-content: center !important;
+			}
+
+			#banner .image.object img, #banner .image img {
+				width: 210px !important;
+				height: 210px !important;
+				max-width: 210px !important;
+				max-height: 210px !important;
+				object-fit: cover !important;
+				border-radius: 50% !important;
+				border: 3px solid rgba(10, 132, 255, 0.6) !important;
+				box-shadow: 0 0 30px rgba(10, 132, 255, 0.45), 0 10px 30px rgba(0, 0, 0, 0.35) !important;
+				transition: transform 0.3s ease, box-shadow 0.3s ease;
+			}
+
+			#banner .image.object img:hover {
+				transform: scale(1.04);
+				box-shadow: 0 0 45px rgba(10, 132, 255, 0.65), 0 12px 35px rgba(0, 0, 0, 0.4) !important;
+			}
+
+			@media screen and (max-width: 980px) {
+				#banner {
+					flex-direction: column-reverse !important;
+					text-align: center !important;
+				}
+				#banner .image.object, #banner .image {
+					margin: 0 auto 24px auto !important;
+				}
+				#banner .image.object img, #banner .image img {
+					width: 170px !important;
+					height: 170px !important;
+				}
+				.repo-url-container {
+					margin-left: auto !important;
+					margin-right: auto !important;
+				}
+				.pm-buttons {
+					justify-content: center !important;
+				}
+			}
+
+			#sidebar .toggle {
+				display: none !important;
+			}
+
+			.repo-box {
+				background: var(--repo-box-bg) !important;
+				border: 1px solid var(--repo-box-border) !important;
+				border-radius: 16px;
+				padding: 24px;
+				margin: 24px 0;
+				box-shadow: 0 0 30px rgba(10, 132, 255, 0.15);
+			}
+
+			.repo-url-container {
+				display: flex;
+				align-items: center;
+				background: var(--input-bg) !important;
+				border: 1px solid var(--input-border) !important;
+				color: var(--text-main) !important;
+				border-radius: 8px;
+				padding: 6px 12px;
+				max-width: 480px;
+				margin-top: 10px;
+			}
+
+			.repo-url-text {
+				flex: 1;
+				font-family: monospace;
+				font-weight: 600;
+				font-size: 14px;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				color: var(--text-main) !important;
+			}
+
+			.copy-btn {
+				background: #007aff;
+				color: #fff !important;
+				border: none;
+				border-radius: 6px;
+				padding: 6px 14px;
+				font-size: 13px;
+				font-weight: 600;
+				cursor: pointer;
+				transition: background 0.2s;
+			}
+
+			.copy-btn:hover {
+				background: #0056b3;
+			}
+
+			.pm-buttons {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 12px;
+				margin-top: 16px;
+			}
+
+			.pm-btn {
+				display: inline-flex;
+				align-items: center;
+				gap: 8px;
+				padding: 10px 18px;
+				border-radius: 8px;
+				text-decoration: none;
+				font-weight: 600;
+				font-size: 14px;
+				color: #fff !important;
+				box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+				transition: transform 0.15s, opacity 0.15s;
+			}
+
+			.pm-btn:hover {
+				transform: translateY(-2px);
+				opacity: 0.95;
+			}
+
+			.pm-btn img {
+				width: 22px;
+				height: 22px;
+				object-fit: contain;
+			}
+
+			.pm-sileo { background: linear-gradient(135deg, #4A90D9, #007AFF); }
+			.pm-zebra { background: linear-gradient(135deg, #2D3748, #1A202C); }
+			.pm-cydia { background: linear-gradient(135deg, #C54432, #A02B1D); }
+			
+			/* Theme Toggle Header Button */
+			.theme-toggle-btn {
+				background: var(--btn-default-bg);
+				color: var(--btn-default-text) !important;
+				border: 1px solid var(--border-card);
+				border-radius: 20px;
+				padding: 7px 16px;
+				font-size: 13px;
+				font-weight: 600;
+				cursor: pointer;
+				display: inline-flex;
+				align-items: center;
+				gap: 6px;
+				transition: transform 0.15s ease, background 0.2s ease;
+			}
+			.theme-toggle-btn:hover {
+				transform: scale(1.04);
+			}
+
+			.posts {
+				display: flex !important;
+				flex-direction: column !important;
+				gap: 36px !important;
+				margin: 0 0 2em 0 !important;
+				width: 100% !important;
+			}
+
+			.posts article, .tweak-card {
+				width: 100% !important;
+				max-width: 100% !important;
+				margin: 0 0 1.2em 0 !important;
+				box-sizing: border-box !important;
+				clear: both !important;
+			}
+
+			.posts article:before, .posts article:after {
+				display: none !important;
+			}
+
+			.tweak-card {
+				background: var(--bg-card) !important;
+				border: 1px solid var(--border-card) !important;
+				color: var(--text-main) !important;
+				border-radius: 24px;
+				overflow: hidden;
+				transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+				display: flex !important;
+				flex-direction: row !important;
+				align-items: stretch;
+				min-height: 800px;
+				box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+			}
+
+			.tweak-card:hover {
+				transform: translateY(-6px) scale(1.003);
+				border-color: rgba(10, 132, 255, 0.4) !important;
+				box-shadow: 0 24px 60px rgba(10, 132, 255, 0.25);
+			}
+
+			.tweak-card .image-container {
+				flex: 0 0 60%;
+				width: 60%;
+				max-width: 60%;
+				background: var(--bg-img-container) !important;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				overflow: hidden;
+				border-right: 1px solid var(--border-card) !important;
+				padding: 14px;
+				box-sizing: border-box;
+				cursor: zoom-in;
+				transition: background-color 0.25s ease, border-color 0.25s ease;
+			}
+
+			.tweak-card .image-container img {
+				max-height: 780px;
+				max-width: 100%;
+				width: 100%;
+				height: auto;
+				object-fit: contain;
+				border-radius: 16px;
+				box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+				transition: transform 0.3s ease;
+				-webkit-user-drag: none;
+			}
+
+			/* Compact Image Card Layout for Icon / Graphic PNG Tweaks */
+			.tweak-card.compact-img-card {
+				min-height: 420px !important;
+			}
+			.tweak-card.compact-img-card .image-container {
+				flex: 0 0 45% !important;
+				width: 45% !important;
+				max-width: 45% !important;
+				padding: 24px !important;
+			}
+			.tweak-card.compact-img-card .image-container img {
+				max-height: 340px !important;
+				max-width: 80% !important;
+				width: auto !important;
+				object-fit: contain !important;
+			}
+			.tweak-card.compact-img-card .tweak-content {
+				flex: 0 0 55% !important;
+				width: 55% !important;
+				max-width: 55% !important;
+				padding: 32px 36px !important;
+			}
+			@media screen and (max-width: 1024px) {
+				.tweak-card.compact-img-card .image-container {
+					min-height: 320px !important;
+					max-height: 400px !important;
+				}
+				.tweak-card.compact-img-card .image-container img {
+					max-height: 320px !important;
+				}
+			}
+			@media screen and (max-width: 767px) {
+				.tweak-card.compact-img-card .image-container {
+					min-height: 240px !important;
+					max-height: 300px !important;
+					padding: 16px !important;
+				}
+				.tweak-card.compact-img-card .image-container img {
+					max-height: 240px !important;
+				}
+			}
+
+			.tweak-content {
+				padding: 44px 38px;
+				flex: 0 0 40%;
+				width: 40%;
+				max-width: 40%;
+				box-sizing: border-box;
+				min-width: 0;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+
+			.tweak-badge {
+				display: inline-flex;
+				align-items: center;
+				background: linear-gradient(135deg, rgba(10, 132, 255, 0.18), rgba(94, 92, 230, 0.18)) !important;
+				border: 1px solid rgba(10, 132, 255, 0.35) !important;
+				color: #64d2ff !important;
+				font-size: 12px;
+				font-weight: 700;
+				padding: 6px 14px;
+				border-radius: 20px;
+				margin-bottom: 16px;
+				text-transform: uppercase;
+				letter-spacing: 0.6px;
+				align-self: flex-start;
+			}
+			html[data-theme="light"] .tweak-badge {
+				background: linear-gradient(135deg, rgba(0, 122, 255, 0.1), rgba(88, 86, 214, 0.1)) !important;
+				border-color: rgba(0, 122, 255, 0.25) !important;
+				color: #007aff !important;
+			}
+
+			.tweak-title {
+				font-size: 28px;
+				font-weight: 800;
+				letter-spacing: -0.5px;
+				margin: 0 0 16px 0;
+				word-wrap: break-word;
+				background: linear-gradient(135deg, #64d2ff 0%, #0a84ff 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				transition: opacity 0.2s ease;
+			}
+
+			.tweak-title a {
+				background: linear-gradient(135deg, #64d2ff 0%, #0a84ff 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+				text-decoration: none !important;
+				border-bottom: none !important;
+			}
+			html[data-theme="light"] .tweak-title, html[data-theme="light"] .tweak-title a {
+				background: linear-gradient(135deg, #0056b3 0%, #5856d6 100%);
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+
+			.tweak-title a:hover {
+				opacity: 0.85;
+			}
+
+			.tweak-desc {
+				font-size: 16px;
+				color: var(--text-muted) !important;
+				margin-bottom: 16px;
+				line-height: 1.65;
+				display: block !important;
+				visibility: visible !important;
+				opacity: 1 !important;
+				word-wrap: break-word;
+				overflow-wrap: break-word;
+			}
+
+			.tweak-features {
+				margin: 12px 0 20px 0;
+				padding: 14px 16px;
+				background: rgba(255, 255, 255, 0.03);
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				border-radius: 14px;
+				flex: 1;
+			}
+			html[data-theme="light"] .tweak-features {
+				background: rgba(0, 0, 0, 0.03);
+				border-color: rgba(0, 0, 0, 0.08);
+			}
+			.tweak-features h4 {
+				font-size: 12px;
+				font-weight: 700;
+				text-transform: uppercase;
+				letter-spacing: 0.6px;
+				color: var(--title-color) !important;
+				margin: 0 0 10px 0;
+			}
+			.tweak-features ul {
+				list-style: none !important;
+				padding: 0 !important;
+				margin: 0 !important;
+				display: flex;
+				flex-direction: column;
+				gap: 8px;
+			}
+			.tweak-features li {
+				font-size: 13.5px;
+				color: var(--text-main);
+				display: flex;
+				align-items: flex-start;
+				gap: 8px;
+				line-height: 1.4;
+				padding-left: 0 !important;
+			}
+			.tweak-features li::before {
+				content: "✓";
+				color: #64d2ff;
+				font-weight: bold;
+				font-size: 14px;
+				flex-shrink: 0;
+			}
+			html[data-theme="light"] .tweak-features li::before {
+				color: #007aff;
+			}
+
+			.tweak-actions {
+				display: flex;
+				gap: 12px;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+
+			.tweak-actions li {
+				margin: 0;
+				padding: 0;
+			}
+
+			.tweak-actions .btn-detail {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				gap: 8px;
+				background: linear-gradient(135deg, #007aff, #0056b3);
+				color: #fff !important;
+				padding: 14px 34px;
+				border-radius: 12px;
+				font-size: 16px;
+				font-weight: 600;
+				text-decoration: none;
+				box-shadow: 0 4px 16px rgba(0, 122, 255, 0.35);
+				transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+				touch-action: manipulation;
+			}
+
+			.tweak-actions .btn-detail:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 8px 24px rgba(0, 122, 255, 0.5);
+				background: linear-gradient(135deg, #0062cc, #004499);
+			}
+
+			/* Input and Search Styling */
+			input[type="text"], input[type="search"] {
+				background-color: var(--input-bg) !important;
+				border: 1px solid var(--input-border) !important;
+				color: var(--text-main) !important;
+				border-radius: 8px;
+			}
+			.tweak-actions {
+				display: flex;
+				gap: 12px;
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			.tweak-actions li {
+				margin: 0;
+				padding: 0;
+			}
+			.tweak-actions .btn-detail {
+				display: inline-block;
+				text-align: center;
+				background: #007aff;
+				color: #fff !important;
+				padding: 14px 32px;
+				border-radius: 10px;
+				font-size: 16px;
+				font-weight: 600;
+				text-decoration: none;
+				transition: background 0.2s ease;
+				touch-action: manipulation;
+			}
+			.tweak-actions .btn-detail:hover {
+				background: #0056b3;
+			}
+
+			/* iPad Responsive Layout (Portrait & Medium Displays: 768px - 1024px) */
+			@media screen and (max-width: 1024px) {
+				.tweak-card {
+					flex-direction: column !important;
+					min-height: auto !important;
+				}
+				.tweak-card .image-container {
+					width: 100% !important;
+					max-width: 100% !important;
+					flex: none !important;
+					height: auto !important;
+					min-height: 550px;
+					max-height: 720px;
+					padding: 16px;
+					border-right: none;
+					border-bottom: 1px solid #e1e4e8;
+				}
+				@media (prefers-color-scheme: dark) {
+					.tweak-card .image-container {
+						border-bottom-color: #2c2c2e;
+					}
+				}
+				.tweak-card .image-container img {
+					max-height: 680px;
+				}
+				.tweak-content {
+					width: 100% !important;
+					max-width: 100% !important;
+					flex: none !important;
+					padding: 32px 28px;
+				}
+			}
+
+			/* iPhone Mobile Responsive Layout (< 768px) */
+			@media screen and (max-width: 767px) {
+				#main > .inner {
+					padding: 0 14px 0.1em 14px !important;
+				}
+				.tweak-card {
+					border-radius: 16px;
+					margin-bottom: 24px !important;
+				}
+				.tweak-card .image-container {
+					min-height: 400px;
+					max-height: 70vh;
+					padding: 10px;
+				}
+				.tweak-card .image-container img {
+					max-height: 65vh;
+					border-radius: 10px;
+				}
+				.tweak-content {
+					padding: 22px 16px;
+				}
+				.tweak-title {
+					font-size: 21px;
+					margin-bottom: 10px;
+				}
+				.tweak-desc {
+					font-size: 15px;
+					line-height: 1.55;
+					margin-bottom: 18px;
+				}
+				.tweak-actions {
+					width: 100%;
+				}
+				.tweak-actions li {
+					width: 100%;
+				}
+				.tweak-actions .btn-detail {
+					display: block;
+					width: 100%;
+					box-sizing: border-box;
+					padding: 14px;
+					font-size: 16px;
+				}
+			}
+		</style>
 	</head>
 	<body>
 		<!-- Wrapper -->
@@ -21,385 +737,575 @@
 			<div id="main">
 				<div class="inner">
 					<!-- Header -->
-					<header id="header">
+					<header id="header" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
 						<a href="index.html" class="logo">
-							<strong>Welcome To My HomePage</strong> (Manu)
+							<strong>Nanerasingh Repo</strong> — iOS Developer &amp; Tweaks
 						</a>
 						<ul class="icons">
+							<li style="float: right; margin-left: 8px;">
+								<button id="theme-toggle-btn" class="theme-toggle-btn" onclick="toggleTheme()" aria-label="Toggle Theme">☀️ Light Mode</button>
+							</li>
 							<li>
-								<a href="http://twitter.com/nanerasingh" class="icon fa-twitter">
+								<a href="https://twitter.com/nanerasingh" class="icon fa-twitter" target="_blank" rel="noopener">
 									<span class="label">Twitter</span>
 								</a>
 							</li>
 							<li>
-								<a href="http://github.com/nanerasingh" class="icon fa-github-alt">
-									<span class="label">Open Source</span>
+								<a href="https://github.com/nanerasingh" class="icon fa-github-alt" target="_blank" rel="noopener">
+									<span class="label">GitHub</span>
 								</a>
 							</li>
 							<li>
-								<a href="MAILTO:" class="icon fa-envelope-o">
+								<a href="mailto:nanerasingh@hotmail.com" class="icon fa-envelope-o">
 									<span class="label">Email</span>
 								</a>
 							</li>
 							<li class="navbar" style="float: right">
-								<a href="https://www.paypal.me/nanerasing1">Donate</a>
+								<a href="https://www.paypal.me/nanerasingh" target="_blank" rel="noopener" class="button special small">☕ Donate</a>
 							</li>
 						</ul>
 					</header>
-					<!-- Banner -->
+
+					<!-- Banner / Hero -->
 					<section id="banner">
 						<div class="content">
 							<header>
-								<h2>Hi, I'm 
-									<b> Developer</b>
-								</h2>
-								<h3>Add My Repo
-									<h3>
-										<fieldset>
-											<a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://nanerasingh.github.io/" class=" cytyle-in">
-												<img class="icon" src="./images/cydia.png">
-													<label>
-														<h4>Add to Cydia
-															<h4>
-															</label>
-														</a>
-											&nbsp;&nbsp;
-											<a href="sileo://source/https://nanerasingh.github.io/" class=" cytyle-in">
-												<img class="icon" src="./SileoIcon.png">
-													<label>
-														<h4>Add to Sileo
-															<h4>
-															</label>
-														</a>
-													</header>
-													<ul class="actions">
-														<li>
-															<a href="#Available Tweaks" class="button big">Available Tweaks</a>
-														</li>
-														<li>
-															<a href="#About more" class="button big">About more</a>
-														</li>
-														<li>
-															<a href="#Support" class="button big">Support</a>
-														</li>
-													</ul>
-												</div>
-												<span class="image object">
-													<img src="images/header.png" width="200" />
-												</a>
-											</section>
-														<header class="major">
-															<header class="major" id="Available Tweaks">
-																<h2>Available Tweaks</h2>
-															</header>
-															<div class="posts">
-																<article>
-																	<a href="depicts/TheosManagerPro/TheosManager.html" class="image">
-																		<img src="depicts/TheosManagerPro/TheosManager.PNG" alt="TheosManagerPro" />
-																	</a>
-																	<h3>TheosManagerPro</h3>
-																	<p>All-in-one GUI for managing local Theos workflows on jailbroken iOS devices with scaffolding, preference generation, log terminal &amp; deployment.</p>
-																	<ul class="actions">
-																		<li>
-																			<a href="depicts/TheosManagerPro/TheosManager.html" class="button">More</a>
-																		</li>
-																		<li>
-																			<a href="depicts/com.manu.theosmanagerpro.json" class="button">Sileo JSON</a>
-																		</li>
-																	</ul>
-																</article>
-																<article>
-																	<a href="depicts/AutoScrollx/AutoScrollx.html" class="image">
-																		<img src="depicts/AutoScrollx/Autoscrollx.PNG" alt="AutoScrollx" />
-																	</a>
-																	<h3>AutoScrollx</h3>
-																	<p>Auto scroll content/pages smoothly system-wide across iOS with customizable speed and controls.</p>
-																	<ul class="actions">
-																		<li>
-																			<a href="depicts/AutoScrollx/AutoScrollx.html" class="button">More</a>
-																		</li>
-																		<li>
-																			<a href="depicts/com.manu.autoscrollx.json" class="button">Sileo JSON</a>
-																		</li>
-																	</ul>
-																</article>
-																<article>
-																	<a href="depicts/NCEffectsPro/NCEffectsPro.html" class="image">
-																		<img src="depicts/NCEffectsPro/NceEffects.PNG" alt="NCEffectsPro" />
-																	</a>
-																	<h3>NCEffectsPro</h3>
-																	<p>Custom visual effects, blurs, color gradients, and animations for iOS Notification Center &amp; Cover Sheet.</p>
-																	<ul class="actions">
-																		<li>
-																			<a href="depicts/NCEffectsPro/NCEffectsPro.html" class="button">More</a>
-																		</li>
-																		<li>
-																			<a href="depicts/com.manu.nceffectspro.json" class="button">Sileo JSON</a>
-																		</li>
-																	</ul>
-																</article>
-																<article>
-																	<a href="depicts/NetworkCCX/NetworkCCX.html" class="image">
-																		<img src="depicts/NetworkCCX/NetworkCCX.PNG" alt="NetworkCCX" />
-																	</a>
-																	<h3>NetworkCCX</h3>
-																	<p>Control Center network module to toggle 4G/5G radio modes, Wi-Fi, and Location Services with custom CCSupport integration.</p>
-																	<ul class="actions">
-																		<li>
-																			<a href="depicts/NetworkCCX/NetworkCCX.html" class="button">More</a>
-																		</li>
-																		<li>
-																			<a href="depicts/com.manu.networkccx.json" class="button">Sileo JSON</a>
-																		</li>
-																	</ul>
-																</article>
-																<article>
-																	<a href="depicts/ScreenFreezeX/ScreenFreezeX.html" class="image">
-																		<img src="depicts/ScreenFreezeX/ScreenFreezex.PNG" alt="ScreenFreezeX" />
-																	</a>
-																	<h3>ScreenFreezeX</h3>
-																	<p>Instantly freeze current display screen with custom gestures or triggers for privacy &amp; presentation protection.</p>
-																	<ul class="actions">
-																		<li>
-																			<a href="depicts/ScreenFreezeX/ScreenFreezeX.html" class="button">More</a>
-																		</li>
-																		<li>
-																			<a href="depicts/com.manu.screenfreezex.json" class="button">Sileo JSON</a>
-																		</li>
-																	</ul>
-																</article>
-																<article>
-																	<a href="depicts/LastUnlockX/LastUnlockX.html" class="image">
-																		<img src="depicts/LastUnlockX/LastUnlock.PNG" alt="LastUnlockX" />
-																	</a>
-																	<h3>LastUnlockX</h3>
-																	<p>Displays device's last unlocked timestamp and security log info right on the Lock Screen &amp; Status Bar.</p>
-																	<ul class="actions">
-																		<li>
-																			<a href="depicts/LastUnlockX/LastUnlockX.html" class="button">More</a>
-																		</li>
-																		<li>
-																			<a href="depicts/com.manu.lastunlockx.json" class="button">Sileo JSON</a>
-																		</li>
-																	</ul>
-																</article>
-																<article>
-																	<a href="depicts/Time/Time.html" class="image">
-																		<img src="depicts/Time/Time.png" alt="" />
-																	</a>
-																	<h3>TIME(The Ultimate tweak)</h3>
-																	<p>Tweak allows you to customise Clock for IphoneX,Non-X model,Ipad too</p>
-																	<ul class="actions">
-																		<li>
-																			<a href="depicts/Time/Time.html" class="button">More</a>
-																		</li>
-																		<li>
-																			<a href="depicts/com.manu.time.json" class="button">Sileo JSON</a>
-																		</li>
-																	</ul>
-																</article>
-																<article>
-																	<a href="depicts/GradientBubble/GradientBubble.html" class="image">
-																		<img src="depicts/GradientBubble/GradientBubble.png" alt="" />
-																	</a>
-																	<h3>GradientBubble</h3>
-																	<p>GradientBubble</p>
-																	<ul class="actions">
-																		<li>
-																			<a href="depicts/GradientBubble/GradientBubble.html" class="button">More</a>
-																		</li>
-																		<li>
-																			<a href="depicts/com.manu.gradientgububblecolor.json" class="button">Sileo JSON</a>
-																		</li>
-																	</ul>
-																</article>
-																<article>
-																	<a href="depicts/DialerGradient/DialerGradient.html" class="image">
-																		<img src="depicts/DialerGradient/DialerGradient.png" alt="" />
-																	</a>
-																	<h3>DialerGradient</h3>
-																	<p>DialerGradient</p>
-																	<ul class="actions">
-																		<li>
-																			<a href="depicts/DialerGradient/DialerGradient.html" class="button">More</a>
-																		</li>
-																		<li>
-																			<a href="depicts/com.manu.dialergradient.json" class="button">Sileo JSON</a>
-																		</li>
-																	</ul>
-																</article>
-																<article>
-																	<a href="depicts/FlashSound/FlashSound.html" class="image">
-																		<img src="depicts/FlashSound/FlashSound.png" alt="" />
-																	</a>
-																	<h3>FlashSound</h3>
-																	<p>FlashSound</p>
-																	<ul class="actions">
-																		<li>
-																			<a href="depicts/FlashSound/FlashSound.html" class="button">More</a>
-																		</li>
-																		<li>
-																			<a href="depicts/com.manu.flashsound.json" class="button">Sileo JSON</a>
-																		</li>
-																	</ul>
-																</article>
-																<article>
-																	<a href="depicts/Battery/Battery.html" class="image">
-																		<img src="depicts/Battery/Battery.png" alt="" />
-																	</a>
-																	<h3>Battery</h3>
-																	<p>Battery</p>
-																	<ul class="actions">
-																		<li>
-																			<a href="depicts/Battery/Battery.html" class="button">More</a>
-																		</li>
-																		<li>
-																			<a href="depicts/com.manu.battery.json" class="button">Sileo JSON</a>
-																		</li>
-																	</ul>
-																</article>
-																<article>
-																	<a href="depicts/ScrollToDismissKeyBaord/ScrollToDismissKeyBaord.html" class="image">
-																		<img src="depicts/ScrollToDismissKeyBaord/ScrollToDismissKeyBaord.png" alt="" />
-																	</a>
-																	<h3>ScrollToDismissKeyBaord</h3>
-																	<p>ScrollToDismissKeyBaord</p>
-																	<ul class="actions">
-																		<li>
-																			<a href="depicts/ScrollToDismissKeyBaord/ScrollToDismissKeyBaord.html" class="button">More</a>
-																		</li>
-																		<li>
-																			<a href="depicts/com.manu.scrolltodismisskeyboard.json" class="button">Sileo JSON</a>
-																		</li>
-																	</ul>
-																</article>
-																<article>
-																	<a href="depicts/NetworkCC/NetworkCC.html" class="image">
-																		<img src="depicts/NetworkCCX/NetworkCCX.PNG" alt="NetworkCC" />
-																	</a>
-																	<h3>NetworkCC</h3>
-																	<p>4G/5G &amp; Location Services Control Center modules for rootless jailbreak. Switch network mode and toggle Location Services directly from Control Center.</p>
-																	<ul class="actions">
-																		<li>
-																			<a href="depicts/NetworkCC/NetworkCC.html" class="button">More</a>
-																		</li>
-																		<li>
-																			<a href="depicts/com.manu.networkcc.json" class="button">Sileo JSON</a>
-																		</li>
-																	</ul>
-																</article>
-																<article>
-																	<a href="depicts/MinimulHudVibrate/MinimulHudVibrate.html" class="image">
-																		<img src="depicts/MinimulHudVibrate/MinimulHudVibrate.png" alt="" />
-																	</a>
-																	<h3>Minimul HudVibrate</h3>
-																	<p>Tweak allows Volume HUD Vibrate(Tapticfeedback) with volume button clicks, Other Customisations(iOS 11~11.3.1,(Maybe lower version too not tested))</p>
-																	<ul class="actions">
-																		<li>
-																			<a href="depicts/MinimulHudVibrate/MinimulHudVibrate.html" class="button">More</a>
-																		</li>
-																		<li>
-																			<a href="depicts/com.manu.minimulhudvibrate.json" class="button">Sileo JSON</a>
-																		</li>
-																	</ul>
-																</article>
-															</div>
-															<section>
-															<div  class="major" id="About more">
-																	<h2>About</h2>
-																</header>
-																<div class="features">
-																	<article>
-																		<span class="icon fa-apple"></span>
-																		<div class="content">
-																			<h3>Developed for iOS</h3>
-																			<p>Each tweak comes a new beginning along with it's own options, features.</p>
-																		</div>
-																	</article>
-																	<article>
-																		<span class="icon fa-user"></span>
-																		<div class="content">
-																			<h3>User Friendly</h3>
-																			<p>User requested tweaks are coded in there language.</p>
-																		</div>
-																	</article>
-																	<article>
-																		<span class="icon fa-github"></span>
-																		<div class="content">
-																			<h3>DISCLAIMER</h3>
-																			<p>1.Please do not release a tweak using my code under a different name.All my tweaks are free.Have Fun.</p>
-																		</div>
-																	</article>
-																</div>
-															</div>
-															<footer id="footer">
-																<p class="copyright">  &copy;Nanerasingh,Since 2017</p>
-															</footer>
-														</div>
-														<section>
-														<!-- Sidebar -->
-														<div id="sidebar">
-															<div class="inner">
-																<!-- Search -->
-																<section id="search" class="alt">
-																	<form method="post" action="#">
-																		<input type="text" name="query" id="query" placeholder="Search" />
-																	</form>
-																</section>
-																<!-- Menu -->
-																<nav id="menu">
-																	<header class="major">
-																		<h2>Menu</h2>
-																	</header>
-																</nav>
-																<!-- Section -->
-																<section>
-																	<header class="major">
-																		<h2>About</h2>
-																	</header>
-																	<div class="mini-posts">
-																		<article>
-																			<a href="#" class="image">
-																				<img src="images/Nanerasingh.png" alt="" />
-																			</a>
-																			<p style="font-size:10px">
-																				<b>i </b>am an iOS new to tweak developer. 
-																				<br>I'm new to developing, jailbreak enthusiast, and an beginner iOS developer, among other things.He is also known as the developer who takes user requests/dreams and turns them into reality.
-																				</font>
-																			</p>
-																		</article>
-																	</div>
-																	<ul class="actions">
-																		<li>
-																			<a href="#" class="button">More</a>
-																		</li>
-																	</ul>
-																	<!-- Footer -->
-																	<footer id="footer">
-																		<p class="copyright">&copy; Nanerasingh 2021</p>
-																	</footer>
-																</section>
-																<!-- Section -->
-																<section>
-																	<header class="major">
-																		<h2>Get in touch</h2>
-																	</header>
-																	<p>For requests, tweak updates and more. Contact me on the links below</p>
-																	<ul class="contact">
-																		<li class="fa-envelope-o">nanerasingh@hotmail.com
-																		</a>
-																	</li>
-																	<li class="fa-twitter">@nanerasingh</li>
-																</ul>
-															</section>
-									<!-- Scripts -->
-									<script src="https://code.jquery.com/jquery.min.js"></script>
-									<script src="assets/js/jquery.min.js"></script>
-									<script src="assets/js/skel.min.js"></script>
-									<script src="assets/js/util.js"></script>
-									<!--[if lte IE 8]>
-									<script src="assets/js/ie/respond.min.js"></script>
-									<![endif]-->
-									<script src="assets/js/main.js"></script>
-								</body>
-							</html>
+								<h2>Hi, I'm <strong>Manu (Nanerasingh)</strong></h2>
+								<p style="font-size: 16px; color: #6a737d;">iOS Tweak Developer turning user requests and ideas into reality.</p>
+							</header>
+
+							<div class="repo-box">
+								<h3 style="margin: 0 0 6px 0; font-size: 18px;">📱 Add Repository</h3>
+								<p style="font-size: 13px; margin: 0 0 10px 0;">Tap your package manager below or copy the source URL:</p>
+								
+								<div class="repo-url-container">
+									<span class="repo-url-text" id="repo-url">https://nanerasingh.github.io/</span>
+									<button class="copy-btn" onclick="copyRepoUrl()">Copy URL</button>
+								</div>
+
+								<div class="pm-buttons">
+									<a href="sileo://source/https://nanerasingh.github.io/" class="pm-btn pm-sileo">
+										<img src="SileoIcon.png" alt="Sileo"> Add to Sileo
+									</a>
+									<a href="zbra://sources/add/https://nanerasingh.github.io/" class="pm-btn pm-zebra">
+										<img src="SileoIcon.png" alt="Zebra" style="filter: grayscale(1);"> Add to Zebra
+									</a>
+									<a href="cydia://url/https://cydia.saurik.com/api/share#?source=https://nanerasingh.github.io/" class="pm-btn pm-cydia">
+										<img src="images/cydia.png" alt="Cydia"> Add to Cydia
+									</a>
+									<a href="https://www.paypal.me/nanerasingh" target="_blank" rel="noopener" class="pm-btn" style="background: linear-gradient(135deg, #003087, #0079C1);">
+										💳 PayPal @nanerasingh
+									</a>
+								</div>
+							</div>
+
+							<ul class="actions">
+								<li>
+									<a href="#available-tweaks" class="button big">Browse Tweaks</a>
+								</li>
+								<li>
+									<a href="#about-section" class="button big">About</a>
+								</li>
+							</ul>
+						</div>
+						<span class="image object">
+							<img src="images/header.png" alt="Nanerasingh Profile Header" style="max-width: 220px; border-radius: 12px;" />
+						</span>
+					</section>
+
+					<!-- Tweaks Showcase Grid -->
+					<section>
+						<header class="major" id="available-tweaks">
+							<h2>Available Tweaks</h2>
+						</header>
+
+						<div class="posts" id="tweaks-grid">
+
+							<!-- TheosManagerPro -->
+							<article class="tweak-card">
+								<a href="depicts/TheosManagerPro/TheosManager.html" class="image-container">
+									<img src="depicts/TheosManagerPro/TheosManager.PNG" alt="TheosManagerPro" />
+								</a>
+								<div class="tweak-content">
+									<span class="tweak-badge">GUI &amp; Dev Tool</span>
+									<h3 class="tweak-title"><a href="depicts/TheosManagerPro/TheosManager.html">TheosManagerPro</a></h3>
+									<p class="tweak-desc">All-in-one GUI for managing local Theos workflows on jailbroken iOS devices with scaffolding, preference generator, interactive log terminal &amp; SSH deployer.</p>
+									<div class="tweak-features">
+										<h4>Key Features</h4>
+										<ul>
+											<li>Clean Logos, Standalone App &amp; CCModule templates</li>
+											<li>Visual Preference Builder with Alderis &amp; Cephei color pickers</li>
+											<li>Real-time interactive log terminal &amp; step status tracking</li>
+											<li>One-tap "Make Do" local install/respring &amp; Remote SSH deployer</li>
+										</ul>
+									</div>
+									<ul class="tweak-actions">
+										<li><a href="depicts/TheosManagerPro/TheosManager.html" class="btn-detail">View Details</a></li>
+									</ul>
+								</div>
+							</article>
+
+							<!-- AutoScrollx -->
+							<article class="tweak-card">
+								<a href="depicts/AutoScrollx/AutoScrollx.html" class="image-container">
+									<img src="depicts/AutoScrollx/Autoscrollx.PNG" alt="AutoScrollx" />
+								</a>
+								<div class="tweak-content">
+									<span class="tweak-badge">Utility • iOS 14-16+</span>
+									<h3 class="tweak-title"><a href="depicts/AutoScrollx/AutoScrollx.html">AutoScrollx</a></h3>
+									<p class="tweak-desc">Auto scroll content/pages smoothly system-wide across iOS with customizable speed, pause gestures, and table view acceleration.</p>
+									<div class="tweak-features">
+										<h4>Key Features</h4>
+										<ul>
+											<li>Smooth auto-scrolling in Safari, social apps &amp; table views</li>
+											<li>Customizable scroll speed velocity &amp; pause gestures</li>
+											<li>Per-app toggles &amp; quick activation presets</li>
+										</ul>
+									</div>
+									<ul class="tweak-actions">
+										<li><a href="depicts/AutoScrollx/AutoScrollx.html" class="btn-detail">View Details</a></li>
+									</ul>
+								</div>
+							</article>
+
+							<!-- NCEffectsPro -->
+							<article class="tweak-card">
+								<a href="depicts/NCEffectsPro/NCEffectsPro.html" class="image-container">
+									<img src="depicts/NCEffectsPro/NceEffects.PNG" alt="NCEffectsPro" />
+								</a>
+								<div class="tweak-content">
+									<span class="tweak-badge">Customization</span>
+									<h3 class="tweak-title"><a href="depicts/NCEffectsPro/NCEffectsPro.html">NCEffectsPro</a></h3>
+									<p class="tweak-desc">Custom visual effects, blurs, color gradients, and particle animations for iOS Notification Center &amp; Cover Sheet.</p>
+									<div class="tweak-features">
+										<h4>Key Features</h4>
+										<ul>
+											<li>Smooth blur overlays, color gradients &amp; ambient particle animations</li>
+											<li>Custom banner borders, opacity &amp; highlight colors</li>
+											<li>Full Settings preference panel with live color pickers</li>
+										</ul>
+									</div>
+									<ul class="tweak-actions">
+										<li><a href="depicts/NCEffectsPro/NCEffectsPro.html" class="btn-detail">View Details</a></li>
+									</ul>
+								</div>
+							</article>
+
+							<!-- NetworkCCX -->
+							<article class="tweak-card">
+								<a href="depicts/NetworkCCX/NetworkCCX.html" class="image-container">
+									<img src="depicts/NetworkCCX/NetworkCCX.PNG" alt="NetworkCCX" />
+								</a>
+								<div class="tweak-content">
+									<span class="tweak-badge">CC Module</span>
+									<h3 class="tweak-title"><a href="depicts/NetworkCCX/NetworkCCX.html">NetworkCCX</a></h3>
+									<p class="tweak-desc">Control Center network module to toggle 4G/5G radio modes, Wi-Fi, and Location Services with custom CCSupport integration.</p>
+									<div class="tweak-features">
+										<h4>Key Features</h4>
+										<ul>
+											<li>Single-tap Control Center switcher for 5G Auto, 5G On &amp; LTE</li>
+											<li>Direct Location Services ON/OFF Control Center module</li>
+											<li>Live state module icons with Taptic Engine haptic feedback</li>
+										</ul>
+									</div>
+									<ul class="tweak-actions">
+										<li><a href="depicts/NetworkCCX/NetworkCCX.html" class="btn-detail">View Details</a></li>
+									</ul>
+								</div>
+							</article>
+
+							<!-- ScreenFreezeX -->
+							<article class="tweak-card">
+								<a href="depicts/ScreenFreezeX/ScreenFreezeX.html" class="image-container">
+									<img src="depicts/ScreenFreezeX/ScreenFreezex.PNG" alt="ScreenFreezeX" />
+								</a>
+								<div class="tweak-content">
+									<span class="tweak-badge">Privacy &amp; Security</span>
+									<h3 class="tweak-title"><a href="depicts/ScreenFreezeX/ScreenFreezeX.html">ScreenFreezeX</a></h3>
+									<p class="tweak-desc">Instantly freeze current display screen with custom gestures, touch locking, and passcode unfreeze for privacy protection.</p>
+									<div class="tweak-features">
+										<h4>Key Features</h4>
+										<ul>
+											<li>Freeze display frame while background tasks continue running</li>
+											<li>Touch locking to prevent accidental or unauthorized input</li>
+											<li>Require Face ID, Touch ID, or Passcode PIN to unfreeze</li>
+										</ul>
+									</div>
+									<ul class="tweak-actions">
+										<li><a href="depicts/ScreenFreezeX/ScreenFreezeX.html" class="btn-detail">View Details</a></li>
+									</ul>
+								</div>
+							</article>
+
+							<!-- LastUnlockX -->
+							<article class="tweak-card">
+								<a href="depicts/LastUnlockX/LastUnlockX.html" class="image-container">
+									<img src="depicts/LastUnlockX/LastUnlock.PNG" alt="LastUnlockX" />
+								</a>
+								<div class="tweak-content">
+									<span class="tweak-badge">Lockscreen</span>
+									<h3 class="tweak-title"><a href="depicts/LastUnlockX/LastUnlockX.html">LastUnlockX</a></h3>
+									<p class="tweak-desc">Displays device's last unlocked timestamp and security log info right on the Lock Screen &amp; Status Bar.</p>
+									<div class="tweak-features">
+										<h4>Key Features</h4>
+										<ul>
+											<li>Display exact last unlock date &amp; time on Lock Screen/Status Bar</li>
+											<li>Detailed unlock log &amp; failed unlock attempt counter</li>
+											<li>Full customization for date format strings, fonts &amp; colors</li>
+										</ul>
+									</div>
+									<ul class="tweak-actions">
+										<li><a href="depicts/LastUnlockX/LastUnlockX.html" class="btn-detail">View Details</a></li>
+									</ul>
+								</div>
+							</article>
+
+							<!-- Time -->
+							<article class="tweak-card">
+								<a href="depicts/Time/Time.html" class="image-container">
+									<img src="depicts/Time/Time.png" alt="Time Tweak" />
+								</a>
+								<div class="tweak-content">
+									<span class="tweak-badge">Statusbar &amp; LS</span>
+									<h3 class="tweak-title"><a href="depicts/Time/Time.html">TIME (Ultimate Tweak)</a></h3>
+									<p class="tweak-desc">Comprehensive statusbar and lockscreen clock customization supporting notched/non-notched iPhones, iPads, dual timezones, RAM, and network speeds.</p>
+									<div class="tweak-features">
+										<h4>Key Features</h4>
+										<ul>
+											<li>Statusbar &amp; LS clock customization for notched/non-notched devices</li>
+											<li>Dual, Triple &amp; Quad timezones with tap-to-swap gestures</li>
+											<li>Battery pulse charging animations, RAM info &amp; network monitor</li>
+										</ul>
+									</div>
+									<ul class="tweak-actions">
+										<li><a href="depicts/Time/Time.html" class="btn-detail">View Details</a></li>
+									</ul>
+								</div>
+							</article>
+
+							<!-- GradientBubble -->
+							<article class="tweak-card compact-img-card">
+								<a href="depicts/GradientBubble/GradientBubble.html" class="image-container">
+									<img src="depicts/GradientBubble/GradientBubble.png" alt="GradientBubble" />
+								</a>
+								<div class="tweak-content">
+									<span class="tweak-badge">Messages</span>
+									<h3 class="tweak-title"><a href="depicts/GradientBubble/GradientBubble.html">GradientBubble</a></h3>
+									<p class="tweak-desc">Colorize iMessage bubbles with dynamic gradient colors, custom thinking dots, progress bar styling, and text selection highlights.</p>
+									<div class="tweak-features">
+										<h4>Key Features</h4>
+										<ul>
+											<li>Dynamic gradient colors for incoming &amp; outgoing iMessage bubbles</li>
+											<li>Custom background images/colors &amp; separate SMS/iMessage options</li>
+											<li>Custom thinking dots, typing bar gradient &amp; text selection highlights</li>
+										</ul>
+									</div>
+									<ul class="tweak-actions">
+										<li><a href="depicts/GradientBubble/GradientBubble.html" class="btn-detail">View Details</a></li>
+									</ul>
+								</div>
+							</article>
+
+							<!-- DialerGradient -->
+							<article class="tweak-card compact-img-card">
+								<a href="depicts/DialerGradient/DialerGradient.html" class="image-container">
+									<img src="depicts/DialerGradient/DialerGradient.png" alt="DialerGradient" />
+								</a>
+								<div class="tweak-content">
+									<span class="tweak-badge">Phone App</span>
+									<h3 class="tweak-title"><a href="depicts/DialerGradient/DialerGradient.html">DialerGradient</a></h3>
+									<p class="tweak-desc">Custom gradient color picker for Phone app dialer buttons, keypads, and call screens.</p>
+									<div class="tweak-features">
+										<h4>Key Features</h4>
+										<ul>
+											<li>Gradient color picker for Phone app keypad, call screen &amp; passcode buttons</li>
+											<li>Speed dial long-press contact shortcut &amp; keypad sounds with haptics</li>
+											<li>Set custom or random background images from local photo albums or web URLs</li>
+										</ul>
+									</div>
+									<ul class="tweak-actions">
+										<li><a href="depicts/DialerGradient/DialerGradient.html" class="btn-detail">View Details</a></li>
+									</ul>
+								</div>
+							</article>
+
+							<!-- FlashSound -->
+							<article class="tweak-card compact-img-card">
+								<a href="depicts/FlashSound/FlashSound.html" class="image-container">
+									<img src="depicts/FlashSound/FlashSound.png" alt="FlashSound" />
+								</a>
+								<div class="tweak-content">
+									<span class="tweak-badge">Audio Alert</span>
+									<h3 class="tweak-title"><a href="depicts/FlashSound/FlashSound.html">FlashSound</a></h3>
+									<p class="tweak-desc">Plays custom audio alerts and sound effects when toggling the device flashlight ON or OFF.</p>
+									<div class="tweak-features">
+										<h4>Key Features</h4>
+										<ul>
+											<li>Custom audio alerts &amp; sound effects for flashlight toggles</li>
+											<li>Custom sound picker support in Settings preferences</li>
+											<li>Lightweight, battery-efficient design for iOS 14.0 – 16.x+</li>
+										</ul>
+									</div>
+									<ul class="tweak-actions">
+										<li><a href="depicts/FlashSound/FlashSound.html" class="btn-detail">View Details</a></li>
+									</ul>
+								</div>
+							</article>
+
+							<!-- Battery -->
+							<article class="tweak-card compact-img-card">
+								<a href="depicts/Battery/Battery.html" class="image-container">
+									<img src="depicts/Battery/Battery.png" alt="Battery Tweak" />
+								</a>
+								<div class="tweak-content">
+									<span class="tweak-badge">Statusbar</span>
+									<h3 class="tweak-title"><a href="depicts/Battery/Battery.html">Battery</a></h3>
+									<p class="tweak-desc">Colored battery percentage and pulse charging animations for statusbar bolt, fill color, and body.</p>
+									<div class="tweak-features">
+										<h4>Key Features</h4>
+										<ul>
+											<li>Dynamic statusbar battery percentage color customization</li>
+											<li>Custom pulse charging animations for battery fill, body &amp; bolt</li>
+											<li>Built-in colorpicker integration for custom battery themes</li>
+										</ul>
+									</div>
+									<ul class="tweak-actions">
+										<li><a href="depicts/Battery/Battery.html" class="btn-detail">View Details</a></li>
+									</ul>
+								</div>
+							</article>
+
+							<!-- ScrollToDismissKeyboard -->
+							<article class="tweak-card compact-img-card">
+								<a href="depicts/ScrollToDismissKeyBaord/ScrollToDismissKeyBaord.html" class="image-container">
+									<img src="depicts/ScrollToDismissKeyBaord/ScrollToDismissKeyBaord.png" alt="ScrollToDismissKeyboard" />
+								</a>
+								<div class="tweak-content">
+									<span class="tweak-badge">System Utility</span>
+									<h3 class="tweak-title"><a href="depicts/ScrollToDismissKeyBaord/ScrollToDismissKeyBaord.html">ScrollToDismissKeyboard</a></h3>
+									<p class="tweak-desc">System-wide auto dismiss keyboard when scrolling through content or table views.</p>
+									<div class="tweak-features">
+										<h4>Key Features</h4>
+										<ul>
+											<li>Auto-dismiss keyboard when scrolling table views &amp; conversation threads</li>
+											<li>Prevents keyboard from blocking lower screen UI in social/chat apps</li>
+											<li>Smooth gesture detection optimized for iOS 14.0 – 16.x+</li>
+										</ul>
+									</div>
+									<ul class="tweak-actions">
+										<li><a href="depicts/ScrollToDismissKeyBaord/ScrollToDismissKeyBaord.html" class="btn-detail">View Details</a></li>
+									</ul>
+								</div>
+							</article>
+
+							<!-- NetworkCC -->
+							<article class="tweak-card">
+								<a href="depicts/NetworkCC/NetworkCC.html" class="image-container">
+									<img src="depicts/NetworkCCX/NetworkCCX.PNG" alt="NetworkCC" />
+								</a>
+								<div class="tweak-content">
+									<span class="tweak-badge">Control Center</span>
+									<h3 class="tweak-title"><a href="depicts/NetworkCC/NetworkCC.html">NetworkCC</a></h3>
+									<p class="tweak-desc">4G/5G radio mode switcher and Location Services Control Center modules for iOS 14.0+ rootless jailbreaks.</p>
+									<div class="tweak-features">
+										<h4>Key Features</h4>
+										<ul>
+											<li>CC module toggling Auto → 5G On → LTE on each tap</li>
+											<li>Dedicated Location Services ON/OFF Control Center module</li>
+											<li>Full rootless jailbreak compatibility (Dopamine &amp; palera1n)</li>
+										</ul>
+									</div>
+									<ul class="tweak-actions">
+										<li><a href="depicts/NetworkCC/NetworkCC.html" class="btn-detail">View Details</a></li>
+									</ul>
+								</div>
+							</article>
+
+							<!-- MinimulHudVibrate -->
+							<article class="tweak-card compact-img-card">
+								<a href="depicts/MinimulHudVibrate/MinimulHudVibrate.html" class="image-container">
+									<img src="depicts/MinimulHudVibrate/MinimulHudVibrate.png" alt="MinimulHudVibrate" />
+								</a>
+								<div class="tweak-content">
+									<span class="tweak-badge">HUD &amp; Haptics</span>
+									<h3 class="tweak-title"><a href="depicts/MinimulHudVibrate/MinimulHudVibrate.html">Minimul HudVibrate</a></h3>
+									<p class="tweak-desc">Minimal volume HUD with Taptic Engine vibration feedback on volume button clicks.</p>
+									<div class="tweak-features">
+										<h4>Key Features</h4>
+										<ul>
+											<li>Non-intrusive minimal volume HUD overlay for video &amp; media playback</li>
+											<li>Taptic Engine haptic vibration feedback on volume button presses</li>
+											<li>Ultra-lightweight execution with zero video playback interruption</li>
+										</ul>
+									</div>
+									<ul class="tweak-actions">
+										<li><a href="depicts/MinimulHudVibrate/MinimulHudVibrate.html" class="btn-detail">View Details</a></li>
+									</ul>
+								</div>
+							</article>
+
+						</div>
+					</section>
+
+					<!-- About Section -->
+					<section id="about-section">
+						<header class="major">
+							<h2>About the Developer</h2>
+						</header>
+						<div class="features">
+							<article>
+								<span class="icon fa-apple"></span>
+								<div class="content">
+									<h3>Developed for iOS</h3>
+									<p>Tweaks built with native Objective-C / C++ for maximum performance, battery efficiency, and compatibility across iOS 14.0 through iOS 16+ on both Rootless &amp; Rootful jailbreaks.</p>
+								</div>
+							</article>
+							<article>
+								<span class="icon fa-user"></span>
+								<div class="content">
+									<h3>User-Centric Features</h3>
+									<p>Community and user-requested feature concepts transformed into clean, intuitive preference panels and reliable software.</p>
+								</div>
+							</article>
+							<article>
+								<span class="icon fa-github"></span>
+								<div class="content">
+									<h3>Open Source &amp; Community</h3>
+									<p>Free tweaks and open-source contributions to help fellow developers and iOS jailbreak enthusiasts learn and innovate.</p>
+								</div>
+							</article>
+						</div>
+					</section>
+
+					<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; Nanerasingh, Since 2017. All rights reserved.</p>
+					</footer>
+
+				</div>
+			</div>
+		</div>
+
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/skel.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<!--[if lte IE 8]>
+		<script src="assets/js/ie/respond.min.js"></script>
+		<![endif]-->
+		<script src="assets/js/main.js"></script>
+
+		<script>
+			// Sidebar Navigation Toggle Logic
+			function updateNavToggleBtn(isVisible) {
+				const btn = document.getElementById('nav-toggle-btn');
+				if (btn) {
+					btn.innerHTML = isVisible ? '✖ Hide Nav' : '☰ Navigation';
+				}
+			}
+
+			function toggleSidebarNav() {
+				const sidebar = document.getElementById('sidebar');
+				if (!sidebar) return;
+				const isInactive = sidebar.classList.contains('inactive');
+				if (isInactive) {
+					sidebar.classList.remove('inactive');
+					localStorage.setItem('sidebarVisible', 'true');
+					updateNavToggleBtn(true);
+				} else {
+					sidebar.classList.add('inactive');
+					localStorage.setItem('sidebarVisible', 'false');
+					updateNavToggleBtn(false);
+				}
+			}
+
+			// Theme switcher logic
+			function updateThemeButton(theme) {
+				const btn = document.getElementById('theme-toggle-btn');
+				if (btn) {
+					btn.innerHTML = theme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode';
+				}
+			}
+
+			function toggleTheme() {
+				const current = document.documentElement.getAttribute('data-theme') || 'dark';
+				const next = current === 'dark' ? 'light' : 'dark';
+				document.documentElement.setAttribute('data-theme', next);
+				localStorage.setItem('theme', next);
+				updateThemeButton(next);
+			}
+
+			// Initialize theme & navigation states on DOM load
+			document.addEventListener('DOMContentLoaded', () => {
+				const current = document.documentElement.getAttribute('data-theme') || 'dark';
+				updateThemeButton(current);
+
+				const sidebar = document.getElementById('sidebar');
+				if (sidebar) {
+					const savedState = localStorage.getItem('sidebarVisible');
+					if (savedState === 'false') {
+						sidebar.classList.add('inactive');
+						updateNavToggleBtn(false);
+					} else {
+						updateNavToggleBtn(!sidebar.classList.contains('inactive'));
+					}
+				}
+			});
+
+			// Copy repo URL helper
+			function copyRepoUrl() {
+				const url = "https://nanerasingh.github.io/";
+				navigator.clipboard.writeText(url).then(() => {
+					const btn = document.querySelector('.copy-btn');
+					const origText = btn.innerText;
+					btn.innerText = "Copied!";
+					btn.style.background = "#34c759";
+					setTimeout(() => {
+						btn.innerText = origText;
+						btn.style.background = "#007aff";
+					}, 2000);
+				}).catch(err => {
+					alert("Repo URL: " + url);
+				});
+			}
+
+			// Interactive tweak search filter
+			function filterTweaks() {
+				const input = document.getElementById('query').value.toLowerCase();
+				const cards = document.querySelectorAll('.tweak-card');
+				
+				cards.forEach(card => {
+					const text = card.innerText.toLowerCase();
+					if (text.includes(input)) {
+						card.style.display = "";
+					} else {
+						card.style.display = "none";
+					}
+				});
+			}
+
+			// Image Lightbox Modal for Full View
+			document.addEventListener('DOMContentLoaded', () => {
+				const modal = document.createElement('div');
+				modal.id = 'img-modal';
+				modal.style.cssText = 'display:none; position:fixed; z-index:99999; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.88); align-items:center; justify-content:center; cursor:zoom-out; -webkit-backdrop-filter:blur(8px); backdrop-filter:blur(8px); padding:16px; box-sizing:border-box;';
+				modal.innerHTML = '<img id="modal-img" style="max-width:90%; max-height:90%; border-radius:12px; box-shadow:0 10px 40px rgba(0,0,0,0.5); transition:transform 0.2s;" />';
+				document.body.appendChild(modal);
+
+				const modalImg = document.getElementById('modal-img');
+				document.querySelectorAll('.image-container img').forEach(img => {
+					img.addEventListener('click', (e) => {
+						e.preventDefault();
+						e.stopPropagation();
+						modalImg.src = img.src;
+						modal.style.display = 'flex';
+					});
+				});
+
+				modal.addEventListener('click', () => {
+					modal.style.display = 'none';
+				});
+			});
+		</script>
+	</body>
+</html>

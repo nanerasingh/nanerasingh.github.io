@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>
+    (function() {
+        const saved = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', saved);
+    })();
+</script>
     <meta charset="utf-8">
     <title>TheosManagerPro — Manu (nanerasingh)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" type="image/png" href="../../SileoIcon.png">
+    <link rel="apple-touch-icon" href="../../SileoIcon.png">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="TheosManagerPro — Manu (nanerasingh)">
+    <meta property="og:description" content="All-in-one GUI for managing local Theos workflows on jailbroken iOS devices with scaffolding, preference generation, log terminal &amp; deployment.">
+    <meta property="og:image" content="https://nanerasingh.github.io/depicts/TheosManagerPro/TheosManager.PNG">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@nanerasingh">
+    <meta name="twitter:title" content="TheosManagerPro — Manu (nanerasingh)">
+    <meta name="twitter:description" content="All-in-one GUI for managing local Theos workflows on jailbroken iOS devices with scaffolding, preference generation, log terminal &amp; deployment.">
+    <meta name="twitter:image" content="https://nanerasingh.github.io/depicts/TheosManagerPro/TheosManager.PNG">
     <style>
+        
+        html[data-theme="light"] {
+            --bg-color: #f2f2f7;
+            --card-bg: #ffffff;
+            --card-border: #e5e5ea;
+            --text-color: #000000;
+            --text-secondary: #6c6c70;
+            --accent-color: #007aff;
+            --accent-gradient: linear-gradient(135deg, #007aff, #5856d6);
+            --code-bg: #eef1f5;
+        }
+
+        .theme-toggle-depict {
+            position: fixed;
+            top: 12px;
+            right: 12px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            z-index: 9999;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: background 0.2s, color 0.2s;
+        }
+
         :root {
             --bg-color: #121214;
             --card-bg: #1c1c1e;
@@ -18,7 +64,36 @@
         }
 
         @media (prefers-color-scheme: light) {
-            :root {
+            
+        html[data-theme="light"] {
+            --bg-color: #f2f2f7;
+            --card-bg: #ffffff;
+            --card-border: #e5e5ea;
+            --text-color: #000000;
+            --text-secondary: #6c6c70;
+            --accent-color: #007aff;
+            --accent-gradient: linear-gradient(135deg, #007aff, #5856d6);
+            --code-bg: #eef1f5;
+        }
+
+        .theme-toggle-depict {
+            position: fixed;
+            top: 12px;
+            right: 12px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            z-index: 9999;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: background 0.2s, color 0.2s;
+        }
+
+        :root {
                 --bg-color: #f2f2f7;
                 --card-bg: #ffffff;
                 --card-border: #e5e5ea;
@@ -178,6 +253,23 @@
     </style>
 </head>
 <body>
+<button class="theme-toggle-depict" onclick="toggleDepictTheme()" id="depict-theme-btn">☀️ Light</button>
+<script>
+    function updateDepictBtn(t) {
+        const btn = document.getElementById('depict-theme-btn');
+        if (btn) btn.innerText = t === 'dark' ? '☀️ Light' : '🌙 Dark';
+    }
+    function toggleDepictTheme() {
+        const cur = document.documentElement.getAttribute('data-theme') || 'dark';
+        const next = cur === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        updateDepictBtn(next);
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        updateDepictBtn(document.documentElement.getAttribute('data-theme') || 'dark');
+    });
+</script>
 
     <div class="header">
         <h1>✨ TheosManagerPro</h1>
@@ -272,6 +364,15 @@
 
     <div class="footer">
         &copy; Nanerasingh. Feedback, feature suggestions, and bug reports are welcome!
+    </div>
+
+
+    <div class="donate-card-depict">
+        <h3 style="margin: 0 0 6px 0; font-size: 16px; color: var(--text-color);">❤️ Support Tweak Development</h3>
+        <p style="font-size: 13px; color: var(--text-secondary); margin: 0 0 10px 0;">If you enjoy this tweak, consider supporting future updates and development!</p>
+        <a href="https://www.paypal.me/nanerasingh" target="_blank" rel="noopener" class="donate-btn-depict">
+            ☕ Donate via PayPal (@nanerasingh)
+        </a>
     </div>
 
 </body>

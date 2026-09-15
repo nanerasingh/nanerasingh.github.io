@@ -1,0 +1,176 @@
+/* Universal Depiction Stylesheet — Premium iOS Aesthetic & Dark Mode Default */
+
+:root {
+    --bg-color: #0f1117;
+    --card-bg: #1c1c1e;
+    --card-border: #2c2c2e;
+    --text-color: #f2f2f7;
+    --text-secondary: #a1a1aa;
+    --accent-color: #64d2ff;
+    --accent-gradient: linear-gradient(135deg, #64d2ff, #0a84ff);
+    --code-bg: #2c2c2e;
+    --btn-bg: #0a84ff;
+    --btn-text: #ffffff;
+}
+
+html[data-theme="light"] {
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --card-border: #e2e8f0;
+    --text-color: #1e293b;
+    --text-secondary: #64748b;
+    --accent-color: #007aff;
+    --accent-gradient: linear-gradient(135deg, #0056b3, #5856d6);
+    --code-bg: #eef1f5;
+    --btn-bg: #007aff;
+    --btn-text: #ffffff;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 20px 16px;
+    line-height: 1.6;
+    -webkit-text-size-adjust: 100%;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(10, 132, 255, 0.15) 0%, rgba(94, 92, 230, 0.08) 45%, transparent 75%);
+    pointer-events: none;
+    z-index: 0;
+    filter: blur(60px);
+}
+
+panel {
+    display: block;
+    max-width: 780px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: var(--text-secondary);
+    margin: 22px 0 8px 12px;
+}
+
+fieldset {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 18px;
+    padding: 20px 24px;
+    margin: 0 0 18px 0;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2), 0 0 15px rgba(10, 132, 255, 0.05);
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+fieldset:hover {
+    border-color: rgba(10, 132, 255, 0.5);
+    box-shadow: 0 12px 40px rgba(10, 132, 255, 0.25);
+}
+
+fieldset p {
+    margin: 8px 0;
+    font-size: 15px;
+    color: var(--text-color);
+}
+
+fieldset img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 14px;
+    margin: 14px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+    display: block;
+    transition: transform 0.25s ease;
+}
+
+fieldset img:hover {
+    transform: scale(1.02);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.theme-toggle-depict {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    color: var(--text-color);
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 9999;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.25), 0 0 12px rgba(10, 132, 255, 0.2);
+    transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.theme-toggle-depict:hover {
+    transform: scale(1.05);
+    background: var(--accent-color);
+    color: #ffffff;
+    box-shadow: 0 0 20px rgba(10, 132, 255, 0.5);
+}
+
+/* Donate Section & Button Styles */
+.donate-card-depict {
+    background: linear-gradient(135deg, rgba(0, 122, 255, 0.12), rgba(94, 92, 230, 0.12));
+    border: 1px solid rgba(0, 122, 255, 0.4);
+    border-radius: 18px;
+    padding: 22px;
+    margin: 24px 0 16px 0;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15), 0 0 20px rgba(0, 122, 255, 0.15);
+}
+
+.donate-btn-depict {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #003087, #0079C1);
+    color: #ffffff !important;
+    padding: 12px 26px;
+    border-radius: 24px;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none !important;
+    box-shadow: 0 4px 16px rgba(0, 121, 193, 0.4), 0 0 15px rgba(0, 121, 193, 0.25);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 10px;
+}
+
+.donate-btn-depict:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 121, 193, 0.6), 0 0 25px rgba(0, 121, 193, 0.4);
+    text-decoration: none !important;
+}
