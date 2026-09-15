@@ -1,0 +1,94 @@
+{
+  "minVersion": "0.1",
+  "headerImage": "https://nanerasingh.github.io/depicts/ScreenFreezeX/ScreenFreezex.PNG",
+  "tintColor": "#FF9500",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "ScreenFreezeX",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**ScreenFreezeX** allows you to instantly freeze your screen display with a custom gesture, shortcut, or toggle for privacy and presentation purposes.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "screenshots": [
+            {
+              "url": "https://nanerasingh.github.io/depicts/ScreenFreezeX/ScreenFreezex.PNG",
+              "accessibilityText": "ScreenFreezeX Preview"
+            }
+          ],
+          "itemCornerRadius": 10,
+          "itemSize": "{160,320}"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "✨ Key Features",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Instant Screen Freeze**: Freeze current display content on command while keeping background processes active.\n- **Privacy Protection**: Prevent unwanted touch input when handing your device to someone.\n- **Custom Trigger Gestures**: Configure Activator / Control Center / Status bar gestures to trigger or release screen freeze.\n- **PIN & Passcode Unfreeze**: Require passcode or biometrics to unfreeze screen.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "📱 Compatibility",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "iOS / iPadOS",
+          "text": "iOS 14.0 – 16.x"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak Support",
+          "text": "Rootless & Rootful (Dopamine, palera1n)"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Developer",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Author",
+          "text": "Manu (Nanerasingh)"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Twitter — @nanerasingh",
+          "action": "https://twitter.com/nanerasingh",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "View Web Depiction",
+          "action": "https://nanerasingh.github.io/depicts/ScreenFreezeX/ScreenFreezeX.html",
+          "openExternal": true
+        }
+      ]
+    }
+  ]
+}
+

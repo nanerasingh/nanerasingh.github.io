@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>TheosManagerPro — Manu (nanerasingh)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <style>
+        :root {
+            --bg-color: #121214;
+            --card-bg: #1c1c1e;
+            --card-border: #2c2c2e;
+            --text-color: #f2f2f7;
+            --text-secondary: #8e8e93;
+            --accent-color: #0a84ff;
+            --accent-gradient: linear-gradient(135deg, #0a84ff, #5e5ce6);
+            --code-bg: #2c2c2e;
+        }
+
+        @media (prefers-color-scheme: light) {
+            :root {
+                --bg-color: #f2f2f7;
+                --card-bg: #ffffff;
+                --card-border: #e5e5ea;
+                --text-color: #000000;
+                --text-secondary: #6c6c70;
+                --accent-color: #007aff;
+                --accent-gradient: linear-gradient(135deg, #007aff, #5856d6);
+                --code-bg: #eef1f5;
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 16px;
+            line-height: 1.6;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px 0 10px;
+        }
+
+        .header h1 {
+            font-size: 26px;
+            margin: 0 0 6px 0;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        .header p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-title {
+            font-size: 17px;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-color);
+        }
+
+        .feature-group {
+            margin-bottom: 16px;
+        }
+
+        .feature-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-title {
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 4px;
+            color: var(--text-color);
+        }
+
+        ul {
+            margin: 4px 0 12px 20px;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        code {
+            background-color: var(--code-bg);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+            font-size: 13px;
+        }
+
+        .screenshots {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .screenshots img {
+            max-width: 240px;
+            border-radius: 10px;
+            border: 1px solid var(--card-border);
+            object-fit: cover;
+        }
+
+        .table-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--card-border);
+            font-size: 14px;
+        }
+
+        .table-row:last-child {
+            border-bottom: none;
+        }
+
+        .table-label {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .table-value {
+            text-align: right;
+            font-weight: 500;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            background: var(--accent-gradient);
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            padding: 12px;
+            border-radius: 10px;
+            margin-top: 10px;
+            transition: opacity 0.2s;
+        }
+
+        .btn:active {
+            opacity: 0.8;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 24px;
+            padding-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>✨ TheosManagerPro</h1>
+        <p>All-in-One GUI for Local Theos Workflow Management</p>
+    </div>
+
+    <div class="card">
+        <div class="card-title">✨ What is TheosManager?</div>
+        <p style="font-size: 14px; margin: 0;">
+            <strong>TheosManager</strong> is an all-in-one GUI for managing Theos workflows locally on jailbroken devices. It automates repetitive setup steps like writing Makefiles, generating bundle resources, configuring Darwin notifications, and running build commands with real-time log tracking.
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="card-title">📸 Screenshots</div>
+        <div class="screenshots">
+            <img src="./TheosManager.PNG" alt="TheosManager Interface">
+            <img src="./Theosmanager2.PNG" alt="TheosManager Build Terminal">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">🚀 Core Features</div>
+
+        <div class="feature-group">
+            <div class="feature-title">🛠️ Comprehensive Project Scaffolding</div>
+            <ul>
+                <li><strong>Tweaks:</strong> Generates clean Logos (<code>Tweak.x</code>) templates with SpringBoard/app filter plists.</li>
+                <li><strong>Standalone Applications:</strong> Creates full application structures with <code>main.m</code>, <code>AppDelegate</code>, <code>RootViewController</code>, default application icons, and an embedded <code>entitlements.plist</code>.</li>
+                <li><strong>Control Center Modules:</strong> Generates <code>CCUIToggleModule</code> bundles with aggregate makefile hierarchies and proper install destinations.</li>
+                <li><strong>Command-Line Tools &amp; LaunchDaemons:</strong> Generates daemon entry points, layout launch plists, and executable directories.</li>
+            </ul>
+        </div>
+
+        <div class="feature-group">
+            <div class="feature-title">⚙️ Automated Preference Bundle Generator</div>
+            <ul>
+                <li>Visually build and configure Settings panels (<code>RootListController</code>, <code>Root.plist</code>).</li>
+                <li>Built-in support for standard specifiers (<code>PSSwitchCell</code>, <code>PSSliderCell</code>, <code>PSLinkListCell</code>, etc.) as well as third-party cells like <strong>Alderis Color Picker</strong> and <strong>Cephei</strong>.</li>
+                <li>Auto-generates Darwin notification listeners (<code>&lt;PackageID&gt;/Reload</code>) and preference-reading code.</li>
+            </ul>
+        </div>
+
+        <div class="feature-group">
+            <div class="feature-title">💻 Smart Compilation &amp; Log Viewer</div>
+            <ul>
+                <li>Interactive log terminal running <code>make package</code> via local subprocesses.</li>
+                <li>Filters out messy ANSI escape color codes, directory timestamps, and noise.</li>
+                <li>Clean, stage-by-stage status indicators for <strong>Compiling</strong>, <strong>Linking</strong>, <strong>Stripping</strong>, <strong>Signing</strong>, and <strong>Packaging</strong>.</li>
+            </ul>
+        </div>
+
+        <div class="feature-group">
+            <div class="feature-title">📦 Flexible Deployment</div>
+            <ul>
+                <li>🔥 <strong>"Make Do" Mode:</strong> One-tap action that builds the project, installs the <code>.deb</code> locally via root execution, and performs a clean respring or uicache refresh.</li>
+                <li>📡 <strong>Remote SSH Deployer:</strong> Transfer and install <code>.deb</code> packages over local Wi-Fi to secondary test devices via <code>scp</code>/<code>ssh</code>.</li>
+                <li>📤 <strong>Share Sheet Integration:</strong> Quick-share <code>.deb</code> outputs directly to Sileo, Zebra, Filza, or AirDrop.</li>
+            </ul>
+        </div>
+
+        <div class="feature-group">
+            <div class="feature-title">🏗️ Architecture Support</div>
+            <ul>
+                <li>Built with native support for both <strong>Rootless</strong> (<code>/var/jb</code>, Dopamine) and legacy <strong>Rootful</strong> jailbreak environments on iOS 14 through iOS 16+.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">📱 Compatibility &amp; Requirements</div>
+        <div class="table-row">
+            <span class="table-label">iOS / iPadOS</span>
+            <span class="table-value">iOS 14.0 – 16.x</span>
+        </div>
+        <div class="table-row">
+            <span class="table-label">Jailbreaks</span>
+            <span class="table-value">Rootless (Dopamine, palera1n) &amp; Rootful</span>
+        </div>
+        <div class="table-row">
+            <span class="table-label">Requirements</span>
+            <span class="table-value">Theos (<code>/var/jb/opt/theos</code> or <code>/opt/theos</code>), <code>clang</code>, <code>make</code>, <code>ldid</code>, <code>dpkg-deb</code>, <code>sudo</code></span>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">📥 Source &amp; Developer Links</div>
+        <a href="https://nanerasingh.github.io/" class="btn">Add Repository to Package Manager</a>
+        <a href="https://github.com/nanerasingh" class="btn" style="background: #2c2c2e;">GitHub / Source Code</a>
+        <a href="https://twitter.com/nanerasingh" class="btn" style="background: #1da1f2;">Twitter (@nanerasingh)</a>
+    </div>
+
+    <div class="footer">
+        &copy; Nanerasingh. Feedback, feature suggestions, and bug reports are welcome!
+    </div>
+
+</body>
+</html>
+

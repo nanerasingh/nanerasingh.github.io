@@ -1,0 +1,94 @@
+{
+  "minVersion": "0.1",
+  "headerImage": "https://nanerasingh.github.io/depicts/AutoScrollx/Autoscrollx.PNG",
+  "tintColor": "#007AFF",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "AutoScrollx",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**AutoScrollx** lets you automatically and smoothly scroll through long pages, articles, feeds, and web pages system-wide on iOS. Features customizable scrolling speeds, tap-to-pause controls, and smooth acceleration.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "screenshots": [
+            {
+              "url": "https://nanerasingh.github.io/depicts/AutoScrollx/Autoscrollx.PNG",
+              "accessibilityText": "AutoScrollx Preview"
+            }
+          ],
+          "itemCornerRadius": 10,
+          "itemSize": "{160,320}"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "✨ Key Features",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **System-wide Auto-Scrolling**: Works inside Safari, social media feeds, reading apps, and standard table views.\n- **Adjustable Speed Controls**: Fine-tune scroll velocity from slow reading to fast browsing.\n- **Gesture & Button Toggles**: Easily start, pause, or stop auto-scrolling with intuitive gestures.\n- **Customizable Preferences**: Configure default speed, scroll direction, and activation shortcuts via Settings.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "📱 Compatibility",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "iOS / iPadOS",
+          "text": "iOS 14.0 – 16.x"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak Support",
+          "text": "Rootless & Rootful (Dopamine, palera1n)"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Developer",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Author",
+          "text": "Manu (Nanerasingh)"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Twitter — @nanerasingh",
+          "action": "https://twitter.com/nanerasingh",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "View Web Depiction",
+          "action": "https://nanerasingh.github.io/depicts/AutoScrollx/AutoScrollx.html",
+          "openExternal": true
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,115 @@
+{
+  "minVersion": "0.1",
+  "headerImage": "https://nanerasingh.github.io/depicts/TheosManagerPro/TheosManager.PNG",
+  "tintColor": "#4A90D9",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "✨ What is TheosManager?",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**TheosManager** is an all-in-one GUI for managing Theos workflows locally on jailbroken devices. It automates repetitive setup steps like writing Makefiles, generating bundle resources, configuring Darwin notifications, and running build commands with real-time log tracking.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "screenshots": [
+            {
+              "url": "https://nanerasingh.github.io/depicts/TheosManagerPro/TheosManager.PNG",
+              "accessibilityText": "TheosManager Dashboard"
+            },
+            {
+              "url": "https://nanerasingh.github.io/depicts/TheosManagerPro/Theosmanager2.PNG",
+              "accessibilityText": "TheosManager Log Viewer & Build Tools"
+            }
+          ],
+          "itemCornerRadius": 10,
+          "itemSize": "{160,320}"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "🚀 Core Features",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "### Comprehensive Project Scaffolding\n- **Tweaks**: Generates clean Logos (`Tweak.x`) templates with SpringBoard/app filter plists.\n- **Standalone Applications**: Creates full application structures with `main.m`, `AppDelegate`, `RootViewController`, default application icons, and an embedded `entitlements.plist`.\n- **Control Center Modules**: Generates `CCUIToggleModule` bundles with aggregate makefile hierarchies and proper install destinations.\n- **Command-Line Tools & LaunchDaemons**: Generates daemon entry points, layout launch plists, and executable directories.\n\n### Automated Preference Bundle Generator\n- Visually build and configure Settings panels (`RootListController`, `Root.plist`).\n- Built-in support for standard specifiers (`PSSwitchCell`, `PSSliderCell`, `PSLinkListCell`, etc.) as well as third-party cells like **Alderis Color Picker** and **Cephei**.\n- Auto-generates Darwin notification listeners (`<PackageID>/Reload`) and preference-reading code.\n\n### Smart Compilation & Log Viewer\n- Interactive log terminal running `make package` via local subprocesses.\n- Filters out messy ANSI escape color codes, directory timestamps, and noise.\n- Clean, stage-by-stage status indicators for **Compiling**, **Linking**, **Stripping**, **Signing**, and **Packaging**.\n\n### Flexible Deployment\n- 🔥 **\"Make Do\" Mode**: One-tap action that builds the project, installs the `.deb` locally via root execution, and performs a clean respring or uicache refresh.\n- **Remote SSH Deployer**: Transfer and install `.deb` packages over local Wi-Fi to secondary test devices via `scp`/`ssh`.\n- **Share Sheet Integration**: Quick-share `.deb` outputs directly to Sileo, Zebra, Filza, or AirDrop.\n\n### Architecture Support\n- Native support for both **Rootless** (`/var/jb`, Dopamine) and legacy **Rootful** jailbreak environments on iOS 14 through iOS 16+.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "📱 Compatibility & Requirements",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "iOS / iPadOS",
+          "text": "iOS 14.0 – 16.x"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak Environments",
+          "text": "Rootless (Dopamine, palera1n) & Rootful"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "On-Device Requirements",
+          "text": "Theos (/var/jb/opt/theos or /opt/theos), clang, make, ldid, dpkg-deb, sudo"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "📥 Installation & Source",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Developer",
+          "text": "Manu (Nanerasingh)"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Repository",
+          "action": "https://nanerasingh.github.io/",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "GitHub / Source Code",
+          "action": "https://github.com/nanerasingh",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Twitter — @nanerasingh",
+          "action": "https://twitter.com/nanerasingh",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "View Full Web Depiction",
+          "action": "https://nanerasingh.github.io/depicts/TheosManagerPro/TheosManagerPro.html",
+          "openExternal": true
+        }
+      ]
+    }
+  ]
+}
+

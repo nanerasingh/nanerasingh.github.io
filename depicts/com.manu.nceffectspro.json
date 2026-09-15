@@ -1,0 +1,94 @@
+{
+  "minVersion": "0.1",
+  "headerImage": "https://nanerasingh.github.io/depicts/NCEffectsPro/NceEffects.PNG",
+  "tintColor": "#5856D6",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "NCEffectsPro",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**NCEffectsPro** brings rich customizable visual effects, background blurs, color gradients, and animations to your iOS Notification Center & Cover Sheet.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "screenshots": [
+            {
+              "url": "https://nanerasingh.github.io/depicts/NCEffectsPro/NceEffects.PNG",
+              "accessibilityText": "NCEffectsPro Preview"
+            }
+          ],
+          "itemCornerRadius": 10,
+          "itemSize": "{160,320}"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "✨ Key Features",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Custom Background Effects**: Add smooth color gradients, blur overlays, and ambient animations to Notification Center.\n- **Notification Banners**: Customize notification banner styles, border highlights, and opacity.\n- **Haptic & Visual Feedback**: Enhanced interaction feedback when pulling down or clearing notifications.\n- **Full Preference Panel**: Easily switch presets and tweak colors in real-time.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "📱 Compatibility",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "iOS / iPadOS",
+          "text": "iOS 14.0 – 16.x"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak Support",
+          "text": "Rootless & Rootful (Dopamine, palera1n)"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Developer",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Author",
+          "text": "Manu (Nanerasingh)"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Twitter — @nanerasingh",
+          "action": "https://twitter.com/nanerasingh",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "View Web Depiction",
+          "action": "https://nanerasingh.github.io/depicts/NCEffectsPro/NCEffectsPro.html",
+          "openExternal": true
+        }
+      ]
+    }
+  ]
+}
+

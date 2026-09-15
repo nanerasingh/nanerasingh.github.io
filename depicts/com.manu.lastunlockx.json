@@ -1,0 +1,94 @@
+{
+  "minVersion": "0.1",
+  "headerImage": "https://nanerasingh.github.io/depicts/LastUnlockX/LastUnlock.PNG",
+  "tintColor": "#FF2D55",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "LastUnlockX",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**LastUnlockX** displays your device's last unlocked timestamp, time elapsed since previous unlock, and security log right on your Lock Screen / Status Bar.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "screenshots": [
+            {
+              "url": "https://nanerasingh.github.io/depicts/LastUnlockX/LastUnlock.PNG",
+              "accessibilityText": "LastUnlockX Preview"
+            }
+          ],
+          "itemCornerRadius": 10,
+          "itemSize": "{160,320}"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "✨ Key Features",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Last Unlocked Timestamp**: Display exact date and time of the last successful device unlock.\n- **Lock Screen Integration**: Customizable placement on Lock Screen header or Status Bar.\n- **Security & Failed Attempts Log**: Option to track failed passcode / Face ID unlock attempts.\n- **Custom Fonts & Colors**: Fully customizable text colors, font styles, and date format strings.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "📱 Compatibility",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "iOS / iPadOS",
+          "text": "iOS 14.0 – 16.x"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak Support",
+          "text": "Rootless & Rootful (Dopamine, palera1n)"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Developer",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Author",
+          "text": "Manu (Nanerasingh)"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Twitter — @nanerasingh",
+          "action": "https://twitter.com/nanerasingh",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "View Web Depiction",
+          "action": "https://nanerasingh.github.io/depicts/LastUnlockX/LastUnlockX.html",
+          "openExternal": true
+        }
+      ]
+    }
+  ]
+}
+

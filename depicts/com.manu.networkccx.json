@@ -1,0 +1,99 @@
+{
+  "minVersion": "0.1",
+  "headerImage": "https://nanerasingh.github.io/depicts/NetworkCCX/NetworkCCX.PNG",
+  "tintColor": "#34C759",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "NetworkCCX",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**NetworkCCX** brings advanced Control Center network toggles to quickly switch between 5G Auto, 5G On, LTE, Wi-Fi, and Location Services directly from your CC modules.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "screenshots": [
+            {
+              "url": "https://nanerasingh.github.io/depicts/NetworkCCX/NetworkCCX.PNG",
+              "accessibilityText": "NetworkCCX Preview"
+            }
+          ],
+          "itemCornerRadius": 10,
+          "itemSize": "{160,320}"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "✨ Key Features",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Control Center Modules**: Quickly switch 4G/5G radio modes (LTE, 5G Auto, 5G On) with custom CCSupport modules.\n- **Location Services Toggle**: One-tap toggle for system-wide Location Services.\n- **Haptic & Visual Feedback**: Custom icons and Taptic Engine feedback on tap.\n- **Rootless & CCSupport Compatible**: Seamless integration with Dopamine, palera1n, and CCSupport.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "📱 Compatibility",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "iOS / iPadOS",
+          "text": "iOS 14.0 – 16.x"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak Support",
+          "text": "Rootless & Rootful (Dopamine, palera1n)"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Dependencies",
+          "text": "CCSupport (by opa334), PreferenceLoader"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "Developer",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Author",
+          "text": "Manu (Nanerasingh)"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Twitter — @nanerasingh",
+          "action": "https://twitter.com/nanerasingh",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "View Web Depiction",
+          "action": "https://nanerasingh.github.io/depicts/NetworkCCX/NetworkCCX.html",
+          "openExternal": true
+        }
+      ]
+    }
+  ]
+}
+

@@ -15,6 +15,12 @@
     },
     {
       "class": "FeaturedBanner",
+      "title": "TheosManagerPro",
+      "package": "com.manu.theosmanagerpro",
+      "hideShadow": false
+    },
+    {
+      "class": "FeaturedBanner",
       "title": "DialerGradient",
       "package": "com.manu.dialergradient",
       "hideShadow": false
