@@ -26,6 +26,29 @@ depiction_map = {
     'com.manu.lastunlockx': ('https://nanerasingh.github.io/depicts/LastUnlockX/LastUnlockX.html', 'https://nanerasingh.github.io/depicts/com.manu.lastunlockx.json')
 }
 
+def auto_resolve_depiction(pkg_id):
+    if pkg_id in depiction_map:
+        return depiction_map[pkg_id]
+    
+    clean_name = pkg_id.split('.')[-1].lower()
+    html_url, json_url = None, None
+    
+    if os.path.exists('depicts'):
+        for folder in os.listdir('depicts'):
+            folder_path = os.path.join('depicts', folder)
+            if os.path.isdir(folder_path) and folder.lower() == clean_name:
+                for file in os.listdir(folder_path):
+                    if file.endswith('.html'):
+                        html_url = f'https://nanerasingh.github.io/depicts/{folder}/{file}'
+                        break
+                break
+        
+        json_file = f'depicts/{pkg_id.lower()}.json'
+        if os.path.exists(json_file):
+            json_url = f'https://nanerasingh.github.io/{json_file}'
+
+    return (html_url, json_url)
+
 def extract_control(data):
     if not data.startswith(b'!<arch>\n'): return None
     pos = 8
@@ -48,10 +71,15 @@ def extract_control(data):
     return None
 
 entries = []
-for deb_path in sorted(glob.glob('pkgs/*.deb')):
+deb_files = sorted(glob.glob('pkgs/*.deb'))
+print(f'Found {len(deb_files)} .deb package(s) in pkgs/...')
+
+for deb_path in deb_files:
     with open(deb_path, 'rb') as f: data = f.read()
     ctrl = extract_control(data)
-    if not ctrl: continue
+    if not ctrl:
+        print(f'⚠️ Warning: Could not extract control file from {deb_path}')
+        continue
     lines = ctrl.strip().split('\n')
     pkg_id = ''
     has_dep = has_sileo = False
@@ -59,11 +87,16 @@ for deb_path in sorted(glob.glob('pkgs/*.deb')):
         if l.startswith('Package: '): pkg_id = l.split(': ', 1)[1].strip()
         elif l.lower().startswith('depiction:'): has_dep = True
         elif l.lower().startswith('sileodepiction:'): has_sileo = True
-    lines.extend([f'Filename: {deb_path}', f'Size: {len(data)}', f'MD5sum: {hashlib.md5(data).hexdigest()}', f'SHA1: {hashlib.sha1(data).hexdigest()}', f'SHA256: {hashlib.sha256(data).hexdigest()}'])
-    if pkg_id in depiction_map:
-        html_url, json_url = depiction_map[pkg_id]
-        if not has_dep: lines.append(f'Depiction: {html_url}')
-        if not has_sileo: lines.append(f'SileoDepiction: {json_url}')
+    lines.extend([
+        f'Filename: {deb_path}',
+        f'Size: {len(data)}',
+        f'MD5sum: {hashlib.md5(data).hexdigest()}',
+        f'SHA1: {hashlib.sha1(data).hexdigest()}',
+        f'SHA256: {hashlib.sha256(data).hexdigest()}'
+    ])
+    html_url, json_url = auto_resolve_depiction(pkg_id)
+    if html_url and not has_dep: lines.append(f'Depiction: {html_url}')
+    if json_url and not has_sileo: lines.append(f'SileoDepiction: {json_url}')
     entries.append('\n'.join(lines))
 
 pkg_bytes = ('\n\n'.join(entries) + '\n').encode('utf-8')
@@ -80,5 +113,5 @@ with open('Packages.gz', 'wb') as f:
 with open('Packages.xz', 'wb') as f:
     f.write(lzma.compress(pkg_bytes))
 
-print(f'Packages and archives (bz2, gz, xz) updated successfully with {len(entries)} entries!')
+print(f'✅ Successfully updated Packages, Packages.bz2, Packages.gz, and Packages.xz with {len(entries)} package entries!')
 "

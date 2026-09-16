@@ -640,6 +640,25 @@ MD5sum: 0086c4b6f0e338c8d72c7a9fb871c9f6
 SHA1: 62a1cf67ac70e8ee99b19e11530d590318802655
 SHA256: ba84931930645448f9890234ff854ab87dae520e4a52f208af08cfe2059361a8
 
+Package: com.nanerasingh.dialergradientx
+Name: DialerGradientx
+Depends: mobilesubstrate | org.coolstar.libhooker | com.opa334.ellekit, org.thebigboss.libcolorpicker | me.alfhaily.libhybridcolorpicker, preferenceloader
+Conflicts: com.nanerasingh.dialergradientxprefsdemo
+Maintainer: Nanerasingh <nanerasingh@hotmail.com>
+Author: Nanerasingh <nanerasingh@hotmail.com>
+Section: Tweaks
+Description: Gradient Dialer Colors — Rootless (iOS 14+)
+Depiction: https://nanerasingh.github.io/depicts/DialerGradient/DialerGradient.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.dialergradient.json
+Architecture: iphoneos-arm64
+Version: 6.4
+Installed-Size: 816
+Filename: pkgs/com.nanerasingh.dialergradientx_6.4_iphoneos-arm64.deb
+Size: 130988
+MD5sum: 784d8a5b54841b13e7a3f4ee53cd6510
+SHA1: e40f72e04e6e0c9f128e17354266d397afb5bb8b
+SHA256: 0ad45c4a63479b76d49b55c6dcfa7c69463b4985a6a9623e2fa8f1603215390c
+
 Package: com.nanerasingh.gradientbubblex
 Name: GradientBubblex
 Description: Colors in iMessage.
