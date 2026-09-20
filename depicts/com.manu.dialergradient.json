@@ -35,6 +35,20 @@
         },
         {
           "class": "DepictionSubheaderView",
+          "title": "Changelog",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **v6.5**: iOS 14 above rootless & rootful support.\n- **v1.4**: Bug fixes and feature additions.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
           "title": "Developer Information",
           "useBoldText": true,
           "useBottomMargin": false

@@ -714,6 +714,25 @@ MD5sum: 784d8a5b54841b13e7a3f4ee53cd6510
 SHA1: e40f72e04e6e0c9f128e17354266d397afb5bb8b
 SHA256: 0ad45c4a63479b76d49b55c6dcfa7c69463b4985a6a9623e2fa8f1603215390c
 
+Package: com.nanerasingh.dialergradientx
+Name: DialerGradientx
+Depends: mobilesubstrate | org.coolstar.libhooker | com.opa334.ellekit, org.thebigboss.libcolorpicker | me.alfhaily.libhybridcolorpicker, preferenceloader
+Conflicts: com.nanerasingh.dialergradientxprefsdemo
+Maintainer: Nanerasingh <nanerasingh@hotmail.com>
+Author: Nanerasingh <nanerasingh@hotmail.com>
+Section: Tweaks
+Description: Gradient Dialer Colors — Rootless (iOS 14+)
+Depiction: https://nanerasingh.github.io/depicts/DialerGradient/DialerGradient.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.dialergradient.json
+Architecture: iphoneos-arm64
+Version: 6.5
+Installed-Size: 816
+Filename: pkgs/com.nanerasingh.dialergradientx_6.5_iphoneos-arm64.deb
+Size: 130310
+MD5sum: b652d100d2aa23858338571618ef80cb
+SHA1: 1db0276afc55c9f2d9d62ed0efa99018a713a3ee
+SHA256: 5e57d631e10f78611f6768a3956d430e0206db8b84cb2f5b35b5c617f4b6eee7
+
 Package: com.nanerasingh.gradientbubblex
 Name: GradientBubblex
 Description: Colors in iMessage.
@@ -924,3 +943,20 @@ Size: 1301700
 MD5sum: 4e71b35f6ed102849f7bd0aeb8faa82b
 SHA1: 6a2321eb000eb5952cba869224ccb3fb0bbe7dc0
 SHA256: 36a4202c5f515b344e1933d2731244db4f42c865ceb833644460d754c32a0745
+
+Package: com.nanerasingh.theosmanager
+Name: TheosManager
+Description: An on-device Theos project manager and GUI generator.
+Maintainer: nanerasingh
+Author: nanerasingh
+Section: Applications
+Depiction: https://nanerasingh.github.io/depicts/TheosManagerPro/TheosManagerPro.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.theosmanagerpro.json
+Architecture: iphoneos-arm64
+Version: 1.2
+Installed-Size: 2484
+Filename: pkgs/com.nanerasingh.theosmanager_1.2_iphoneos-arm64.deb
+Size: 1315164
+MD5sum: ddd69c7b6eeb78daf10622feb07c8bb1
+SHA1: 63e9f62e411761425f7795481369fc47b1de7e3f
+SHA256: 0387f5803b7d9cd6087253f54969d6ad7f59fb9e7a6c4ad349a779406c1cfbb9
