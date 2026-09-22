@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+    (function() {
+        const saved = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', saved);
+    })();
+</script>
+    <meta charset="utf-8">
+    <title>Fullscreenshot — Manu (nanerasingh)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <style>
+        html[data-theme="light"] {
+            --bg-color: #f2f2f7;
+            --card-bg: #ffffff;
+            --card-border: #e5e5ea;
+            --text-color: #000000;
+            --text-secondary: #6c6c70;
+            --accent-color: #34c759;
+            --accent-gradient: linear-gradient(135deg, #34c759, #30d158);
+            --code-bg: #eef1f5;
+        }
+
+        .theme-toggle-depict {
+            position: fixed;
+            top: 12px;
+            right: 12px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            z-index: 9999;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: background 0.2s, color 0.2s;
+        }
+
+        :root {
+            --bg-color: #121214;
+            --card-bg: #1c1c1e;
+            --card-border: #2c2c2e;
+            --text-color: #f2f2f7;
+            --text-secondary: #8e8e93;
+            --accent-color: #30d158;
+            --accent-gradient: linear-gradient(135deg, #30d158, #34c759);
+        }
+
+        @media (prefers-color-scheme: light) {
+            html[data-theme="light"] {
+                --bg-color: #f2f2f7;
+                --card-bg: #ffffff;
+                --card-border: #e5e5ea;
+                --text-color: #000000;
+                --text-secondary: #6c6c70;
+                --accent-color: #34c759;
+                --accent-gradient: linear-gradient(135deg, #34c759, #30d158);
+                --code-bg: #eef1f5;
+            }
+
+            .theme-toggle-depict {
+                position: fixed;
+                top: 12px;
+                right: 12px;
+                background: var(--card-bg);
+                border: 1px solid var(--card-border);
+                color: var(--text-color);
+                padding: 6px 14px;
+                border-radius: 20px;
+                font-size: 13px;
+                font-weight: 600;
+                cursor: pointer;
+                z-index: 9999;
+                box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+                transition: background 0.2s, color 0.2s;
+            }
+
+            :root {
+                --bg-color: #f2f2f7;
+                --card-bg: #ffffff;
+                --card-border: #e5e5ea;
+                --text-color: #000000;
+                --text-secondary: #6c6c70;
+                --accent-color: #34c759;
+                --accent-gradient: linear-gradient(135deg, #34c759, #30d158);
+            }
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 16px;
+            line-height: 1.6;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px 0 10px;
+        }
+
+        .header h1 {
+            font-size: 26px;
+            margin: 0 0 6px 0;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        .header p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-title {
+            font-size: 17px;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 12px;
+            color: var(--accent-color);
+        }
+
+        ul {
+            margin: 4px 0 12px 20px;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .table-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--card-border);
+            font-size: 14px;
+        }
+
+        .table-row:last-child {
+            border-bottom: none;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            background: var(--accent-gradient);
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            padding: 12px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 24px;
+            padding-bottom: 16px;
+        }
+
+        .donate-card-depict {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .donate-btn-depict {
+            display: inline-block;
+            background: #0070ba;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+<button class="theme-toggle-depict" onclick="toggleDepictTheme()" id="depict-theme-btn">☀️ Light</button>
+<script>
+    function updateDepictBtn(t) {
+        const btn = document.getElementById('depict-theme-btn');
+        if (btn) btn.innerText = t === 'dark' ? '☀️ Light' : '🌙 Dark';
+    }
+    function toggleDepictTheme() {
+        const cur = document.documentElement.getAttribute('data-theme') || 'dark';
+        const next = cur === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        updateDepictBtn(next);
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        updateDepictBtn(document.documentElement.getAttribute('data-theme') || 'dark');
+    });
+</script>
+
+    <div class="header">
+        <h1>📸 Fullscreenshot</h1>
+        <p>The ultimate native scrolling screenshot experience for iOS.</p>
+    </div>
+
+    <div class="card">
+        <div class="card-title">✨ Description</div>
+        <p style="font-size: 14px; margin: 0 0 10px 0;">
+            Have you ever wanted to capture an entire conversation, a long list of tweaks, or an endless article, but hated manually stitching multiple images together? <strong>Fullscreenshot</strong> solves this natively.
+        </p>
+        <p style="font-size: 14px; margin: 0;">
+            <strong>Fullscreenshot</strong> deeply integrates into iOS so that when you trigger a standard screenshot (Volume Up + Power), it automatically scans the screen for a scrollable area and smoothly captures the entire length of the page—saving one massive, high-quality image directly to your Camera Roll.
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="card-title">🚀 Core Features</div>
+        <ul>
+            <li><strong>Seamless Native Integration:</strong> No extra apps or weird gestures required. Just take a screenshot like you normally do (Volume Up + Power).</li>
+            <li><strong>Smart Stitching Engine:</strong> Bypasses "Estimated Row Heights" bugs by silently pre-measuring the entire scroll view before capturing, ensuring no cutoffs and no repeating sticky headers.</li>
+            <li><strong>Native Screenshot Blocker:</strong> Intelligent daemon hook that completely suppresses default Apple screenshots, keeping your Photos app uncluttered by duplicate short images (Supports iOS 16 <code>ScreenshotServicesService</code>).</li>
+            <li><strong>Memory Safe:</strong> Automatically scales down image resolution on massive captures (over 12,000 pixels) to prevent Out-Of-Memory (OOM) crashes.</li>
+            <li><strong>Haptic Feedback:</strong> Satisfying Apple-style Heavy Impact and Success haptic vibrations when a capture starts and finishes.</li>
+            <li><strong>Custom Toast Notifications:</strong> Clean, non-intrusive popup confirming your massive screenshot was saved successfully.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <div class="card-title">⚙️ Preferences</div>
+        <p style="font-size: 14px; margin-bottom: 10px;">Lightweight preferences panel built into Settings:</p>
+        <ul>
+            <li><strong>Enable/Disable Tweak:</strong> Master killswitch to toggle the tweak.</li>
+            <li><strong>Save Native Screenshot:</strong> Option to keep original short iOS screenshot or discard it automatically.</li>
+            <li><strong>Haptic Feedback:</strong> Toggle haptic vibration feedback on or off.</li>
+            <li><strong>Max Screenshot Height:</strong> Adjustable slider (up to 30,000px) limiting screenshot height before scrolling stops.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <div class="card-title">📱 Compatibility</div>
+        <div class="table-row">
+            <span style="color: var(--text-secondary);">iOS / iPadOS</span>
+            <span>iOS 14.0 – 16.x</span>
+        </div>
+        <div class="table-row">
+            <span style="color: var(--text-secondary);">Jailbreak Support</span>
+            <span>Rootless (Dopamine, palera1n) &amp; Rootful</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">📥 Links &amp; Community</div>
+        <a href="https://nanerasingh.github.io/" class="btn">Add Repository</a>
+        <a href="https://twitter.com/nanerasingh" class="btn" style="background: #1da1f2;">Twitter (@nanerasingh)</a>
+        <a href="https://github.com/nanerasingh" class="btn" style="background: #24292e;">GitHub (nanerasingh)</a>
+    </div>
+
+    <div class="donate-card-depict">
+        <h3 style="margin: 0 0 6px 0; font-size: 16px; color: var(--text-color);">❤️ Support Tweak Development</h3>
+        <p style="font-size: 13px; color: var(--text-secondary); margin: 0 0 10px 0;">If you enjoy Fullscreenshot, consider supporting future updates and development!</p>
+        <a href="https://www.paypal.me/nanerasingh" target="_blank" rel="noopener" class="donate-btn-depict">
+            ☕ Donate via PayPal (@nanerasingh)
+        </a>
+    </div>
+
+    <div class="footer">
+        &copy; Nanerasingh, Since 2017
+    </div>
+
+</body>
+</html>
+

@@ -23,7 +23,9 @@ depiction_map = {
     'com.nanerasingh.nceffectspro': ('https://nanerasingh.github.io/depicts/NCEffectsPro/NCEffectsPro.html', 'https://nanerasingh.github.io/depicts/com.manu.nceffectspro.json'),
     'com.manu.screenfreezex': ('https://nanerasingh.github.io/depicts/ScreenFreezeX/ScreenFreezeX.html', 'https://nanerasingh.github.io/depicts/com.manu.screenfreezex.json'),
     'com.nanerasingh.screenfreezex': ('https://nanerasingh.github.io/depicts/ScreenFreezeX/ScreenFreezeX.html', 'https://nanerasingh.github.io/depicts/com.manu.screenfreezex.json'),
-    'com.manu.lastunlockx': ('https://nanerasingh.github.io/depicts/LastUnlockX/LastUnlockX.html', 'https://nanerasingh.github.io/depicts/com.manu.lastunlockx.json')
+    'com.manu.lastunlockx': ('https://nanerasingh.github.io/depicts/LastUnlockX/LastUnlockX.html', 'https://nanerasingh.github.io/depicts/com.manu.lastunlockx.json'),
+    'com.manu.fullscreenshot': ('https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.html', 'https://nanerasingh.github.io/depicts/com.manu.fullscreenshot.json'),
+    'com.nanerasingh.fullscreenshot': ('https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.html', 'https://nanerasingh.github.io/depicts/com.manu.fullscreenshot.json')
 }
 
 def auto_resolve_depiction(pkg_id):

@@ -1,0 +1,108 @@
+{
+  "minVersion": "0.1",
+  "tintColor": "#30D158",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "✨ What is Fullscreenshot?",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "The ultimate native scrolling screenshot experience for iOS.\n\nHave you ever wanted to capture an entire conversation, a long list of tweaks, or an endless article, but hated manually stitching multiple images together? **Fullscreenshot** solves this natively.\n\nFullscreenshot deeply integrates into iOS so that when you trigger a standard screenshot (Volume Up + Power), it automatically scans the screen for a scrollable area and smoothly captures the entire length of the page—saving one massive, high-quality image directly to your Camera Roll.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "🚀 Core Features",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "### ✨ Seamless Native Integration\n- No extra apps or weird gestures required. Just take a screenshot like you normally do (Volume Up + Power).\n\n### 🧠 Smart Stitching Engine\n- Bypasses \"Estimated Row Heights\" bugs by silently pre-measuring the entire scroll view before capturing, ensuring no cutoffs and no repeating sticky headers.\n\n### 🚫 Native Screenshot Blocker\n- Intelligent daemon hook that completely suppresses default Apple screenshots, keeping your Photos app uncluttered by duplicate short images (Supports iOS 16 `ScreenshotServicesService`).\n\n### 🛡️ Memory Safe\n- Automatically scales down image resolution on massive captures (over 12,000 pixels) to prevent Out-Of-Memory (OOM) crashes.\n\n### 📳 Haptic Feedback & Custom Toasts\n- Apple-style Heavy Impact & Success haptics with non-intrusive confirmation popups.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "⚙️ Preferences",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Enable/Disable Tweak**: Master killswitch.\n- **Save Native Screenshot**: Toggle keeping or discarding short iOS screenshot.\n- **Haptic Feedback**: Toggle vibration feedback.\n- **Max Screenshot Height**: Slider (up to 30,000px) limiting max scrolling height.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "📱 Compatibility",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "iOS / iPadOS",
+          "text": "iOS 14.0 – 16.x"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak Environments",
+          "text": "Rootless (Dopamine, palera1n) & Rootful"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "📥 Links & Support",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Developer",
+          "text": "Manu (Nanerasingh)"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Repository",
+          "action": "https://nanerasingh.github.io/",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Twitter — @nanerasingh",
+          "action": "https://twitter.com/nanerasingh",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Donate via PayPal",
+          "action": "https://www.paypal.me/nanerasingh",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "View Full Web Depiction",
+          "action": "https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.html",
+          "openExternal": true
+        }
+      ]
+    }
+  ]
+}
+
