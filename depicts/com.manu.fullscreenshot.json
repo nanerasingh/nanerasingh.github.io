@@ -49,6 +49,20 @@
         },
         {
           "class": "DepictionSubheaderView",
+          "title": "📋 Changelog",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **v1.1**: Bug fixes, Added Finger gesture.\n- **v1.0**: Initial release.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
           "title": "📱 Compatibility",
           "useBoldText": true,
           "useBottomMargin": false

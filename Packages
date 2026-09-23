@@ -788,6 +788,42 @@ MD5sum: faa08d8d56f28b21e2fa9f2551a224ef
 SHA1: 8350d32595cf803e7d82ee304733f168bf531a34
 SHA256: 7decc6d9bd2e2f6728c86529239a998fc5eb448db920b442b25f6f1306e00881
 
+Package: com.nanerasingh.fullscreenshot
+Name: Fullscreenshot
+Depends: mobilesubstrate, preferenceloader
+Description: Fullscreen Shot Tweak that takes screen shot of full view.
+Maintainer: Nanerasingh <nanerasingh@hotmail.com>
+Author: Nanerasingh <nanerasingh@hotmail.com>
+Section: Tweaks
+Depiction: https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.html
+SileoDepiction: https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.json
+Architecture: iphoneos-arm
+Version: 1.1
+Installed-Size: 408
+Filename: pkgs/com.nanerasingh.fullscreenshot_1.1_iphoneos-arm.deb
+Size: 28136
+MD5sum: ca4f335cd9b91610060d4d03b60074cf
+SHA1: f36cf25e0cc1d757091e284705d394948165e5f7
+SHA256: 46114183bf15f979564c9ca11a4ab52ae67f4c50bdbaca598344bb6da7fc99c0
+
+Package: com.nanerasingh.fullscreenshot
+Name: Fullscreenshot
+Depends: mobilesubstrate, preferenceloader
+Description: Fullscreen Shot Tweak that takes screen shot of full view.
+Maintainer: Nanerasingh <nanerasingh@hotmail.com>
+Author: Nanerasingh <nanerasingh@hotmail.com>
+Section: Tweaks
+Depiction: https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.html
+SileoDepiction: https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.json
+Architecture: iphoneos-arm64
+Version: 1.1
+Installed-Size: 408
+Filename: pkgs/com.nanerasingh.fullscreenshot_1.1_iphoneos-arm64.deb
+Size: 28246
+MD5sum: 3b23b84b99ea3f770ef6a916214eb124
+SHA1: c0941b5ee15af6244f83576035de76a7059a8895
+SHA256: 87bcb0c881daf21cb65d645e7c950c5b985dc6eb9ab5bee87784349758510d3f
+
 Package: com.nanerasingh.gradientbubblex
 Name: GradientBubblex
 Description: Colors in iMessage.
