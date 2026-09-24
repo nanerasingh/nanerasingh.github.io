@@ -57,7 +57,6 @@ Description: Finally, no more annoying volume pop-up over the video you're watch
 Maintainer: manu
 Author: manu
 Section: Tweaks
-Depiction: https://nanerasingh.github.io/repo/depicts/MinimulHudVibrate.html
 Version: 1.0-1+debug
 Installed-Size: 388
 Filename: pkgs/com.manu.MinimulHudVibrate_1.0-1+debug_iphoneos-arm.deb
@@ -65,6 +64,7 @@ Size: 45950
 MD5sum: 4497092860b2c010ecb0406174c2586a
 SHA1: 3306fc561ebe1be5d6e9a3012b0303b21d52b770
 SHA256: c2eb7bf0505b1b4d93d5d17dad48a660d32ef57a13d7622b2a08208e2a34bbbc
+Depiction: https://nanerasingh.github.io/depicts/MinimulHudVibrate/MinimulHudVibrate.html
 SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.minimulhudvibrate.json
 
 Package: com.manu.autoscrollx
@@ -74,8 +74,6 @@ Maintainer: manu
 Author: manu
 Section: Tweaks
 Depends: mobilesubstrate, preferenceloader, com.opa334.altlist
-Depiction: https://nanerasingh.github.io/depicts/AutoScrollx/AutoScrollx.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.autoscrollx.json
 Architecture: iphoneos-arm
 Version: 1.0
 Installed-Size: 512
@@ -84,6 +82,8 @@ Size: 60698
 MD5sum: 9704a383d37e574f9989b21a21c2ea8f
 SHA1: 5699762887533e0474b6315e4af7e584a9a3ba6a
 SHA256: 0b6ac2d700716098da067ee44e94c6c29080652e4f6921b7fd8d1371607c3762
+Depiction: https://nanerasingh.github.io/depicts/AutoScrollx/AutoScrollx.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.autoscrollx.json
 
 Package: com.manu.autoscrollx
 Name: AutoScrollX
@@ -92,8 +92,6 @@ Maintainer: manu
 Author: manu
 Section: Tweaks
 Depends: mobilesubstrate, preferenceloader, com.opa334.altlist
-Depiction: https://nanerasingh.github.io/depicts/AutoScrollx/AutoScrollx.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.autoscrollx.json
 Architecture: iphoneos-arm64
 Version: 1.0
 Installed-Size: 512
@@ -102,6 +100,8 @@ Size: 60868
 MD5sum: b60b13d6eaf662fc046c22893468cc6a
 SHA1: 24af24c7ea6082c8a003e31d21c6403e2c0a101d
 SHA256: 5f44e7f3fd344c5dfb018f6921d6a99d55e9c0ed568ad526f7e178ab10b938fb
+Depiction: https://nanerasingh.github.io/depicts/AutoScrollx/AutoScrollx.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.autoscrollx.json
 
 Package: com.manu.battery
 Name: Battery
@@ -465,8 +465,6 @@ Maintainer: naneramanu
 Author: naneramanu
 Section: Tweaks
 Depends: firmware (>= 14.0), mobilesubstrate, preferenceloader
-Depiction: https://nanerasingh.github.io/depicts/LastUnlockX/LastUnlockX.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.lastunlockx.json
 Architecture: iphoneos-arm
 Version: 1.0
 Installed-Size: 452
@@ -475,6 +473,8 @@ Size: 46074
 MD5sum: bd411ab39e9784da834142d0f14941cc
 SHA1: 513d7e4c51bb2bf492a11a9955c99ee60e1523d1
 SHA256: a374f21f0571d49ed79ac47dff01e5a1452d9ca53750d57cc1ca0e1a0c31e3ce
+Depiction: https://nanerasingh.github.io/depicts/LastUnlockX/LastUnlockX.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.lastunlockx.json
 
 Package: com.manu.lastunlockx
 Name: LastUnlockX
@@ -483,8 +483,6 @@ Maintainer: naneramanu
 Author: naneramanu
 Section: Tweaks
 Depends: firmware (>= 14.0), mobilesubstrate, preferenceloader
-Depiction: https://nanerasingh.github.io/depicts/LastUnlockX/LastUnlockX.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.lastunlockx.json
 Architecture: iphoneos-arm64
 Version: 1.0
 Installed-Size: 452
@@ -493,6 +491,8 @@ Size: 46080
 MD5sum: 4edf97c81a4e9bd209d9ee436e511550
 SHA1: 0670fe2338a587ba9d7b7d6549d89388d6a2f280
 SHA256: e8e966650ef3cea36ff2dd2d4209d04abf57bd190953a4e3bb98e086c845bb51
+Depiction: https://nanerasingh.github.io/depicts/LastUnlockX/LastUnlockX.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.lastunlockx.json
 
 Package: com.manu.networkcc
 Name: NetworkCC
@@ -665,8 +665,6 @@ Maintainer: Nanerasingh <nanerasingh@hotmail.com>
 Author: Nanerasingh <nanerasingh@hotmail.com>
 Section: Tweaks
 Description: Gradient Dialer Colors — Rootless (iOS 14+)
-Depiction: https://nanerasingh.github.io/depicts/DialerGradient/DialerGradient.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.dialergradient.json
 Architecture: iphoneos-arm64
 Version: 6.3
 Installed-Size: 816
@@ -675,6 +673,8 @@ Size: 131098
 MD5sum: 0086c4b6f0e338c8d72c7a9fb871c9f6
 SHA1: 62a1cf67ac70e8ee99b19e11530d590318802655
 SHA256: ba84931930645448f9890234ff854ab87dae520e4a52f208af08cfe2059361a8
+Depiction: https://nanerasingh.github.io/depicts/DialerGradient/DialerGradient.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.dialergradient.json
 
 Package: com.nanerasingh.dialergradientx
 Name: DialerGradientx
@@ -684,8 +684,6 @@ Maintainer: Nanerasingh <nanerasingh@hotmail.com>
 Author: Nanerasingh <nanerasingh@hotmail.com>
 Section: Tweaks
 Description: Gradient Dialer Colors — Rootless (iOS 14+)
-Depiction: https://nanerasingh.github.io/depicts/DialerGradient/DialerGradient.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.dialergradient.json
 Architecture: iphoneos-arm
 Version: 6.4
 Installed-Size: 816
@@ -694,6 +692,8 @@ Size: 130414
 MD5sum: 40b0c3f65399b82d8a1a2d1b2dbfbf07
 SHA1: c9b3d3abbf08bd75dbf2de957e05bd282e871eca
 SHA256: 37baf87b26097601b7ca332146e0c3ee359109085d69a3a14509c62dbcf1e0c6
+Depiction: https://nanerasingh.github.io/depicts/DialerGradient/DialerGradient.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.dialergradient.json
 
 Package: com.nanerasingh.dialergradientx
 Name: DialerGradientx
@@ -703,8 +703,6 @@ Maintainer: Nanerasingh <nanerasingh@hotmail.com>
 Author: Nanerasingh <nanerasingh@hotmail.com>
 Section: Tweaks
 Description: Gradient Dialer Colors — Rootless (iOS 14+)
-Depiction: https://nanerasingh.github.io/depicts/DialerGradient/DialerGradient.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.dialergradient.json
 Architecture: iphoneos-arm64
 Version: 6.4
 Installed-Size: 816
@@ -713,6 +711,8 @@ Size: 130988
 MD5sum: 784d8a5b54841b13e7a3f4ee53cd6510
 SHA1: e40f72e04e6e0c9f128e17354266d397afb5bb8b
 SHA256: 0ad45c4a63479b76d49b55c6dcfa7c69463b4985a6a9623e2fa8f1603215390c
+Depiction: https://nanerasingh.github.io/depicts/DialerGradient/DialerGradient.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.dialergradient.json
 
 Package: com.nanerasingh.dialergradientx
 Name: DialerGradientx
@@ -722,8 +722,6 @@ Maintainer: Nanerasingh <nanerasingh@hotmail.com>
 Author: Nanerasingh <nanerasingh@hotmail.com>
 Section: Tweaks
 Description: Gradient Dialer Colors — Rootless (iOS 14+)
-Depiction: https://nanerasingh.github.io/depicts/DialerGradient/DialerGradient.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.dialergradient.json
 Architecture: iphoneos-arm
 Version: 6.5
 Installed-Size: 816
@@ -732,6 +730,8 @@ Size: 130764
 MD5sum: f28d1f987d4067ff084aa54d6ef0d525
 SHA1: d5fc7d297c55965c8eba6458a9c92eb4693e6fe4
 SHA256: 54be6236412bc76ec137e13b3ef65690a200608fa802f0ee90c8670f458f7f86
+Depiction: https://nanerasingh.github.io/depicts/DialerGradient/DialerGradient.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.dialergradient.json
 
 Package: com.nanerasingh.dialergradientx
 Name: DialerGradientx
@@ -741,8 +741,6 @@ Maintainer: Nanerasingh <nanerasingh@hotmail.com>
 Author: Nanerasingh <nanerasingh@hotmail.com>
 Section: Tweaks
 Description: Gradient Dialer Colors — Rootless (iOS 14+)
-Depiction: https://nanerasingh.github.io/depicts/DialerGradient/DialerGradient.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.dialergradient.json
 Architecture: iphoneos-arm64
 Version: 6.5
 Installed-Size: 816
@@ -751,6 +749,8 @@ Size: 130550
 MD5sum: 5284b64a021bf29ad02c3ee4cab25fb4
 SHA1: 409309041ec4a893248bdf4569a1d9326a372522
 SHA256: 7e74ba6259ae6d6c3743f3647fdf9b4e17840fae7293e6eb26ed279e0be8aa47
+Depiction: https://nanerasingh.github.io/depicts/DialerGradient/DialerGradient.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.dialergradient.json
 
 Package: com.nanerasingh.fullscreenshot
 Name: Fullscreenshot
@@ -759,8 +759,6 @@ Description: Fullscreen Shot Tweak that takes screen shot of full view.
 Maintainer: Nanerasingh <nanerasingh@hotmail.com>
 Author: Nanerasingh <nanerasingh@hotmail.com>
 Section: Tweaks
-Depiction: https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.html
-SileoDepiction: https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.json
 Architecture: iphoneos-arm
 Version: 1.0.0
 Installed-Size: 368
@@ -769,6 +767,8 @@ Size: 22782
 MD5sum: 1e8de4d8000d5ec8080c43efc68fbaa8
 SHA1: a4bc449fe11b523c856b4de0a22b680fb0f90e3e
 SHA256: 16ef7b1930104d11d6c17156616f371f939f7b6f17d49daaa7cfb92c52e75461
+Depiction: https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.fullscreenshot.json
 
 Package: com.nanerasingh.fullscreenshot
 Name: Fullscreenshot
@@ -777,8 +777,6 @@ Description: Fullscreen Shot Tweak that takes screen shot of full view.
 Maintainer: Nanerasingh <nanerasingh@hotmail.com>
 Author: Nanerasingh <nanerasingh@hotmail.com>
 Section: Tweaks
-Depiction: https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.html
-SileoDepiction: https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.json
 Architecture: iphoneos-arm64
 Version: 1.0.0
 Installed-Size: 368
@@ -787,6 +785,8 @@ Size: 22836
 MD5sum: faa08d8d56f28b21e2fa9f2551a224ef
 SHA1: 8350d32595cf803e7d82ee304733f168bf531a34
 SHA256: 7decc6d9bd2e2f6728c86529239a998fc5eb448db920b442b25f6f1306e00881
+Depiction: https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.fullscreenshot.json
 
 Package: com.nanerasingh.fullscreenshot
 Name: Fullscreenshot
@@ -795,8 +795,6 @@ Description: Fullscreen Shot Tweak that takes screen shot of full view.
 Maintainer: Nanerasingh <nanerasingh@hotmail.com>
 Author: Nanerasingh <nanerasingh@hotmail.com>
 Section: Tweaks
-Depiction: https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.html
-SileoDepiction: https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.json
 Architecture: iphoneos-arm
 Version: 1.1
 Installed-Size: 408
@@ -805,6 +803,8 @@ Size: 28136
 MD5sum: ca4f335cd9b91610060d4d03b60074cf
 SHA1: f36cf25e0cc1d757091e284705d394948165e5f7
 SHA256: 46114183bf15f979564c9ca11a4ab52ae67f4c50bdbaca598344bb6da7fc99c0
+Depiction: https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.fullscreenshot.json
 
 Package: com.nanerasingh.fullscreenshot
 Name: Fullscreenshot
@@ -813,8 +813,6 @@ Description: Fullscreen Shot Tweak that takes screen shot of full view.
 Maintainer: Nanerasingh <nanerasingh@hotmail.com>
 Author: Nanerasingh <nanerasingh@hotmail.com>
 Section: Tweaks
-Depiction: https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.html
-SileoDepiction: https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.json
 Architecture: iphoneos-arm64
 Version: 1.1
 Installed-Size: 408
@@ -823,6 +821,8 @@ Size: 28246
 MD5sum: 3b23b84b99ea3f770ef6a916214eb124
 SHA1: c0941b5ee15af6244f83576035de76a7059a8895
 SHA256: 87bcb0c881daf21cb65d645e7c950c5b985dc6eb9ab5bee87784349758510d3f
+Depiction: https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.fullscreenshot.json
 
 Package: com.nanerasingh.gradientbubblex
 Name: GradientBubblex
@@ -838,8 +838,6 @@ Author: Nanerasingh <nanerasingh@hotmail.com>
 Section: Tweaks
 Depends: firmware (>= 14.0), mobilesubstrate | ellekit, preferenceloader, org.thebigboss.libcolorpicker
 Icon: /Library/PreferenceBundles/GradientBubblexPrefs.bundle/GradientBubble.png
-Depiction: https://nanerasingh.github.io/depicts/GradientBubble/GradientBubble.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.gradientgububblecolor.json
 Architecture: iphoneos-arm64
 Version: 2.0.0
 Installed-Size: 812
@@ -848,6 +846,8 @@ Size: 308916
 MD5sum: b4bc503b162d3c99aa7dc15226d8c2ef
 SHA1: b2d1b341a96f7d75cb70e7f2285450bbd75fa7e6
 SHA256: 634dd9f67021ebcac599851269c1430eb6d87af379c1adff0670bf430463f10d
+Depiction: https://nanerasingh.github.io/depicts/GradientBubble/GradientBubble.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.gradientgububblecolor.json
 
 Package: com.nanerasingh.gradientbubblex
 Name: GradientBubblex
@@ -863,8 +863,6 @@ Author: Nanerasingh <nanerasingh@hotmail.com>
 Section: Tweaks
 Depends: firmware (>= 14.0), mobilesubstrate | ellekit, preferenceloader, org.thebigboss.libcolorpicker
 Icon: /Library/PreferenceBundles/GradientBubblexPrefs.bundle/GradientBubble.png
-Depiction: https://nanerasingh.github.io/depicts/GradientBubble/GradientBubble.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.gradientgububblecolor.json
 Architecture: iphoneos-arm
 Version: 2.1
 Installed-Size: 812
@@ -873,6 +871,8 @@ Size: 308852
 MD5sum: 69c9fe87abd164da3f0156f4849cd3ad
 SHA1: 106cdd09d1f01a1471852577ce1fe734de9c35e0
 SHA256: d407b41caca21287986b6c2756a29a2e3fcb09fb5950f7d66079265ad040910e
+Depiction: https://nanerasingh.github.io/depicts/GradientBubble/GradientBubble.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.gradientgububblecolor.json
 
 Package: com.nanerasingh.nceffectspro
 Name: NCEffectsPro
@@ -881,8 +881,6 @@ Description: Beautiful visual effects and particle animations for iOS notificati
 Maintainer: Nanerasingh <nanerasingh@hotmail.com>
 Author: Nanerasingh <nanerasingh@hotmail.com>
 Section: Tweaks
-Depiction: https://nanerasingh.github.io/depicts/NCEffectsPro/NCEffectsPro.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.nceffectspro.json
 Architecture: iphoneos-arm
 Version: 1.0.0
 Installed-Size: 612
@@ -891,6 +889,8 @@ Size: 75940
 MD5sum: d53d31317cdb13ba2d0a4597c7a4a42b
 SHA1: d98c96ec5fa533224bc7082703c7933f6d5aa71a
 SHA256: a0892221f0cec4c6f902be9332e05543fbfa47c2b914c487ac0a089ebc02eb27
+Depiction: https://nanerasingh.github.io/depicts/NCEffectsPro/NCEffectsPro.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.nceffectspro.json
 
 Package: com.nanerasingh.nceffectspro
 Name: NCEffectsPro
@@ -899,8 +899,6 @@ Description: Beautiful visual effects and particle animations for iOS notificati
 Maintainer: Nanerasingh <nanerasingh@hotmail.com>
 Author: Nanerasingh <nanerasingh@hotmail.com>
 Section: Tweaks
-Depiction: https://nanerasingh.github.io/depicts/NCEffectsPro/NCEffectsPro.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.nceffectspro.json
 Architecture: iphoneos-arm64
 Version: 1.0.0
 Installed-Size: 612
@@ -909,6 +907,8 @@ Size: 76224
 MD5sum: 8c003ff522457fd577330867fa7e2866
 SHA1: 10e0a0a448ebde2fbdd1dc2b52ba42b4010b1a99
 SHA256: aaf94952cd23de8e78431bd089f0d9bcdbec2e3723a5c36340051b7e2eabcbb5
+Depiction: https://nanerasingh.github.io/depicts/NCEffectsPro/NCEffectsPro.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.nceffectspro.json
 
 Package: com.nanerasingh.networkccmodulesx
 Name: NetworkCCModulesX
@@ -918,8 +918,6 @@ Maintainer: nanerasingh <nanerasingh@hotmail.com>
 Section: Tweaks
 Depends: firmware (>= 14.0), com.opa334.ccsupport, preferenceloader
 Twitter: @nanerasingh
-Depiction: https://nanerasingh.github.io/depicts/NetworkCCX/NetworkCCX.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.networkccx.json
 Architecture: iphoneos-arm
 Version: 1.0
 Installed-Size: 1152
@@ -928,6 +926,8 @@ Size: 73930
 MD5sum: a805d194872cb643c9d93f9fe4e6ff17
 SHA1: a69cd3ba27ee589808865d15f08f9693ad382f33
 SHA256: 4f10bc2ea937376ded51af55491fca579af449d28f19ed0a2be8ba865e03809f
+Depiction: https://nanerasingh.github.io/depicts/NetworkCCX/NetworkCCX.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.networkccx.json
 
 Package: com.nanerasingh.networkccmodulesx
 Name: NetworkCCModulesX
@@ -937,8 +937,6 @@ Maintainer: nanerasingh <nanerasingh@hotmail.com>
 Section: Tweaks
 Depends: firmware (>= 14.0), com.opa334.ccsupport, preferenceloader
 Twitter: @nanerasingh
-Depiction: https://nanerasingh.github.io/depicts/NetworkCCX/NetworkCCX.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.networkccx.json
 Architecture: iphoneos-arm64
 Version: 1.0
 Installed-Size: 1152
@@ -947,6 +945,8 @@ Size: 74042
 MD5sum: cd0e99626aed3b4f918ed36df6bab69e
 SHA1: f447d4051f4027da4473c84976f81499a5d994f5
 SHA256: d84f6cea8a2a8a5fd0953704e3b9ad74f0fa8322c39c9e0a62bd7879d7d96e32
+Depiction: https://nanerasingh.github.io/depicts/NetworkCCX/NetworkCCX.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.networkccx.json
 
 Package: com.nanerasingh.screenfreezex
 Name: ScreenFreezeX
@@ -955,8 +955,6 @@ Author: Nanerasingh <nanerasingh@hotmail.com>
 Section: Tweaks
 Depends: mobilesubstrate, preferenceloader
 Description: Freeze your screen with rich visual effects, custom haptics & sounds, iMessage-style invisible ink overlay, and configurable freeze AND unfreeze tap-count gestures (1–4 taps each).
-Depiction: https://nanerasingh.github.io/depicts/ScreenFreezeX/ScreenFreezeX.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.screenfreezex.json
 Architecture: iphoneos-arm
 Version: 1.0.0
 Installed-Size: 676
@@ -965,6 +963,8 @@ Size: 85270
 MD5sum: 33363ddffdfbfd612f2a47a9b421f374
 SHA1: 212aff1a29d169ec0e61e7a439f6cf9579d0ce1e
 SHA256: 3396208f4ec7b6e30f055f25dc75860211ca719312277097ebea43ad5193ec46
+Depiction: https://nanerasingh.github.io/depicts/ScreenFreezeX/ScreenFreezeX.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.screenfreezex.json
 
 Package: com.nanerasingh.screenfreezex
 Name: ScreenFreezeX
@@ -973,8 +973,6 @@ Author: Nanerasingh <nanerasingh@hotmail.com>
 Section: Tweaks
 Depends: mobilesubstrate, preferenceloader
 Description: Freeze your screen with rich visual effects, custom haptics & sounds, iMessage-style invisible ink overlay, and configurable freeze AND unfreeze tap-count gestures (1–4 taps each).
-Depiction: https://nanerasingh.github.io/depicts/ScreenFreezeX/ScreenFreezeX.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.screenfreezex.json
 Architecture: iphoneos-arm64
 Version: 1.0.0
 Installed-Size: 676
@@ -983,6 +981,8 @@ Size: 85586
 MD5sum: 27564403a709b5b637810e290122dfff
 SHA1: 70db65088ac89715af929dc0a330197305230cf3
 SHA256: 5221c3c24b6ac8761e386a7c13400d8ae12c7cc2078a68ee32d7bf8fa1e486a4
+Depiction: https://nanerasingh.github.io/depicts/ScreenFreezeX/ScreenFreezeX.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.screenfreezex.json
 
 Package: com.nanerasingh.theosmanager
 Name: TheosManager
@@ -990,8 +990,6 @@ Description: An on-device Theos project manager and GUI generator.
 Maintainer: nanerasingh
 Author: nanerasingh
 Section: Applications
-Depiction: https://nanerasingh.github.io/depicts/TheosManagerPro/TheosManagerPro.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.theosmanagerpro.json
 Architecture: iphoneos-arm64
 Version: 1.0
 Installed-Size: 2420
@@ -1000,6 +998,8 @@ Size: 1297050
 MD5sum: 0ae0b4082e7c5f07f8a93b04aa2e00d5
 SHA1: ace40b12f43a1ef4f080ba863a8efeef5e47473e
 SHA256: 9eb013a48a8d242ba483f797138c17016792e44d0cd497ef3a00072515a09055
+Depiction: https://nanerasingh.github.io/depicts/TheosManagerPro/TheosManagerPro.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.theosmanagerpro.json
 
 Package: com.nanerasingh.theosmanager
 Name: TheosManager
@@ -1007,8 +1007,6 @@ Description: An on-device Theos project manager and GUI generator.
 Maintainer: nanerasingh
 Author: nanerasingh
 Section: Applications
-Depiction: https://nanerasingh.github.io/depicts/TheosManagerPro/TheosManagerPro.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.theosmanagerpro.json
 Architecture: iphoneos-arm
 Version: 1.1
 Installed-Size: 2420
@@ -1017,6 +1015,8 @@ Size: 1299214
 MD5sum: a0a0778cb50bcab8ac4581b839733843
 SHA1: 641ed63229131671022acbd8db68edd51f517573
 SHA256: 5294668ee337ddee043a3027e0cd0134697c885ed4623ff110283864b1854f42
+Depiction: https://nanerasingh.github.io/depicts/TheosManagerPro/TheosManagerPro.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.theosmanagerpro.json
 
 Package: com.nanerasingh.theosmanager
 Name: TheosManager
@@ -1024,8 +1024,6 @@ Description: An on-device Theos project manager and GUI generator.
 Maintainer: nanerasingh
 Author: nanerasingh
 Section: Applications
-Depiction: https://nanerasingh.github.io/depicts/TheosManagerPro/TheosManagerPro.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.theosmanagerpro.json
 Architecture: iphoneos-arm64
 Version: 1.1
 Installed-Size: 2420
@@ -1034,6 +1032,8 @@ Size: 1301700
 MD5sum: 4e71b35f6ed102849f7bd0aeb8faa82b
 SHA1: 6a2321eb000eb5952cba869224ccb3fb0bbe7dc0
 SHA256: 36a4202c5f515b344e1933d2731244db4f42c865ceb833644460d754c32a0745
+Depiction: https://nanerasingh.github.io/depicts/TheosManagerPro/TheosManagerPro.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.theosmanagerpro.json
 
 Package: com.nanerasingh.theosmanager
 Name: TheosManager
@@ -1041,8 +1041,6 @@ Description: An on-device Theos project manager and GUI generator.
 Maintainer: nanerasingh
 Author: nanerasingh
 Section: Applications
-Depiction: https://nanerasingh.github.io/depicts/TheosManagerPro/TheosManagerPro.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.theosmanagerpro.json
 Architecture: iphoneos-arm
 Version: 1.2
 Installed-Size: 2484
@@ -1051,6 +1049,8 @@ Size: 1315298
 MD5sum: 5e6b3e70012d2c34f6d8804790057e39
 SHA1: fd01fb5a07a56ee2eece861d695d4e9eb1db6d1c
 SHA256: 12c441cf81e7e7fa159bc8a7784c272bd6e97e52b73eeeb544a02c5882b3a7c5
+Depiction: https://nanerasingh.github.io/depicts/TheosManagerPro/TheosManagerPro.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.theosmanagerpro.json
 
 Package: com.nanerasingh.theosmanager
 Name: TheosManager
@@ -1058,8 +1058,6 @@ Description: An on-device Theos project manager and GUI generator.
 Maintainer: nanerasingh
 Author: nanerasingh
 Section: Applications
-Depiction: https://nanerasingh.github.io/depicts/TheosManagerPro/TheosManagerPro.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.theosmanagerpro.json
 Architecture: iphoneos-arm64
 Version: 1.2
 Installed-Size: 2484
@@ -1068,3 +1066,5 @@ Size: 1315164
 MD5sum: ddd69c7b6eeb78daf10622feb07c8bb1
 SHA1: 63e9f62e411761425f7795481369fc47b1de7e3f
 SHA256: 0387f5803b7d9cd6087253f54969d6ad7f59fb9e7a6c4ad349a779406c1cfbb9
+Depiction: https://nanerasingh.github.io/depicts/TheosManagerPro/TheosManagerPro.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.theosmanagerpro.json

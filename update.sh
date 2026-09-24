@@ -82,13 +82,17 @@ for deb_path in deb_files:
     if not ctrl:
         print(f'⚠️ Warning: Could not extract control file from {deb_path}')
         continue
-    lines = ctrl.strip().split('\n')
+    raw_lines = ctrl.strip().split('\n')
+    lines = []
     pkg_id = ''
-    has_dep = has_sileo = False
-    for l in lines:
-        if l.startswith('Package: '): pkg_id = l.split(': ', 1)[1].strip()
-        elif l.lower().startswith('depiction:'): has_dep = True
-        elif l.lower().startswith('sileodepiction:'): has_sileo = True
+    for l in raw_lines:
+        if l.startswith('Package: '):
+            pkg_id = l.split(': ', 1)[1].strip()
+            lines.append(l)
+        elif l.lower().startswith('depiction:') or l.lower().startswith('sileodepiction:'):
+            continue
+        else:
+            lines.append(l)
     lines.extend([
         f'Filename: {deb_path}',
         f'Size: {len(data)}',
@@ -97,8 +101,8 @@ for deb_path in deb_files:
         f'SHA256: {hashlib.sha256(data).hexdigest()}'
     ])
     html_url, json_url = auto_resolve_depiction(pkg_id)
-    if html_url and not has_dep: lines.append(f'Depiction: {html_url}')
-    if json_url and not has_sileo: lines.append(f'SileoDepiction: {json_url}')
+    if html_url: lines.append(f'Depiction: {html_url}')
+    if json_url: lines.append(f'SileoDepiction: {json_url}')
     entries.append('\n'.join(lines))
 
 pkg_bytes = ('\n\n'.join(entries) + '\n').encode('utf-8')
