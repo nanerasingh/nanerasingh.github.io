@@ -1,7 +1,7 @@
 {
   "minVersion": "0.1",
   "tintColor": "#30D158",
-  "headerImage": "https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.jpg",
+  "headerImage": "https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.png",
   "tabs": [
     {
       "tabname": "Details",
@@ -21,7 +21,7 @@
           "class": "DepictionScreenshotsView",
           "screenshots": [
             {
-              "url": "https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.jpg",
+              "url": "https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.png",
               "accessibilityText": "Fullscreenshot Interface"
             }
           ],
