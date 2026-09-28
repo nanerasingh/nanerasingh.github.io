@@ -657,6 +657,46 @@ SHA256: f03256e01fae8cbf891b284044c4c7973fc727445e04471bce1263dfd76c552a
 Depiction: https://nanerasingh.github.io/depicts/Time/Time.html
 SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.time.json
 
+Package: com.nanerasingh.battery
+Name: Battery
+Depends: mobilesubstrate, preferenceloader
+Conflicts: com.manu.battery
+Replaces: com.manu.battery
+Maintainer: Nanerasingh
+Author: Nanerasingh
+Section: Tweaks
+Icon:/BatteryPrefs/Resources/Battery.png
+Description: Colored Percentage & Pulse in Battery for Bolt,or fillcolor pulse,Body Pulse,etc.
+Architecture: iphoneos-arm
+Version: 1.0
+Installed-Size: 460
+Filename: pkgs/com.nanerasingh.battery_1.0_iphoneos-arm.deb
+Size: 46196
+MD5sum: b64eb1bfad7a815d5c8c70f1c639093a
+SHA1: 1456537c295f4dc31e670b160231aea44c812dd7
+SHA256: 0fbbc851b326bdcab1b57b4d5b6c9f1007a9884ea8257d49acb2131b78f47147
+Depiction: https://nanerasingh.github.io/depicts/Battery/Battery.html
+
+Package: com.nanerasingh.battery
+Name: Battery
+Depends: mobilesubstrate, preferenceloader
+Conflicts: com.manu.battery
+Replaces: com.manu.battery
+Maintainer: Nanerasingh
+Author: Nanerasingh
+Section: Tweaks
+Icon:/BatteryPrefs/Resources/Battery.png
+Description: Colored Percentage & Pulse in Battery for Bolt,or fillcolor pulse,Body Pulse,etc.
+Architecture: iphoneos-arm64
+Version: 1.0
+Installed-Size: 460
+Filename: pkgs/com.nanerasingh.battery_1.0_iphoneos-arm64.deb
+Size: 49030
+MD5sum: 1087d3704d76721f9712dc127b299c3b
+SHA1: 9483c894150d321e914d39c24c4f3590d16558fc
+SHA256: 67c7c190b313312c8c59005d7eaf2ba37c1782886d3e2fafda69f1bdb2d6a554
+Depiction: https://nanerasingh.github.io/depicts/Battery/Battery.html
+
 Package: com.nanerasingh.dialergradientx
 Name: DialerGradientx
 Depends: mobilesubstrate | org.coolstar.libhooker | com.opa334.ellekit, org.thebigboss.libcolorpicker | me.alfhaily.libhybridcolorpicker, preferenceloader
@@ -857,6 +897,42 @@ Size: 28336
 MD5sum: 097fcf6e376cfe22a5e9a1fefe56e696
 SHA1: 7baab24a76d83af343b4314e09f9b758eefc56a3
 SHA256: e5ee9d4cae3daf8498188e1a2b2ec2cbb1dc5aca3de4fba4baec7cb203477d90
+Depiction: https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.fullscreenshot.json
+
+Package: com.nanerasingh.fullscreenshot
+Name: Fullscreenshot
+Depends: mobilesubstrate, preferenceloader
+Description: Fullscreen Shot Tweak that takes screen shot of full view.
+Maintainer: Nanerasingh <nanerasingh@hotmail.com>
+Author: Nanerasingh <nanerasingh@hotmail.com>
+Section: Tweaks
+Architecture: iphoneos-arm
+Version: 1.4
+Installed-Size: 424
+Filename: pkgs/com.nanerasingh.fullscreenshot_1.4_iphoneos-arm.deb
+Size: 28434
+MD5sum: 13d581f85bd4625bc30bac34d5e412d3
+SHA1: 7ccc284e77f942312da97d3c9e806dabf1a3cb4e
+SHA256: 435514a77b579bd830ae6bedece550f256ee6d7381b2999a46ce19e89d726be9
+Depiction: https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.fullscreenshot.json
+
+Package: com.nanerasingh.fullscreenshot
+Name: Fullscreenshot
+Depends: mobilesubstrate, preferenceloader
+Description: Fullscreen Shot Tweak that takes screen shot of full view.
+Maintainer: Nanerasingh <nanerasingh@hotmail.com>
+Author: Nanerasingh <nanerasingh@hotmail.com>
+Section: Tweaks
+Architecture: iphoneos-arm64
+Version: 1.4
+Installed-Size: 424
+Filename: pkgs/com.nanerasingh.fullscreenshot_1.4_iphoneos-arm64.deb
+Size: 28520
+MD5sum: 4fb146b95b038e4f348a9783164d61f1
+SHA1: dea2bc3edd62d5904c064993726439badf1aa0f8
+SHA256: 00f0009ff3edf5b990571d2e69992f76afdac76ea8c43f8b20548debdbe15c05
 Depiction: https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.html
 SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.fullscreenshot.json
 
