@@ -494,25 +494,6 @@ SHA256: e8e966650ef3cea36ff2dd2d4209d04abf57bd190953a4e3bb98e086c845bb51
 Depiction: https://nanerasingh.github.io/depicts/LastUnlockX/LastUnlockX.html
 SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.lastunlockx.json
 
-Package: com.manu.networkcc
-Name: NetworkCC
-Description: 4G/5G and Location Services Control Center modules
-Author: Manu <nanerasingh@hotmail.com>
-Maintainer: Manu <nanerasingh@hotmail.com>
-Section: Tweaks
-Depends: firmware (>= 14.0), com.opa334.ccsupport, preferenceloader
-Twitter: @nanerasingh
-Architecture: iphoneos-arm64
-Version: 1.0.0
-Installed-Size: 548
-Filename: pkgs/com.manu.networkcc_1.0.0_iphoneos-arm64.deb
-Size: 18946
-MD5sum: 3aadbba52fe9777f0cc4dd03fca6d0bf
-SHA1: da107b89d23f9e51b260f30cb6476e07dd87c7b8
-SHA256: 43b7bd95ef4bc4cf578f1b556137d4e9398fde5d3abc79c2a10e9db59e6f7414
-Depiction: https://nanerasingh.github.io/depicts/NetworkCC/NetworkCC.html
-SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.networkcc.json
-
 Package: com.manu.scrolltodismisskeyboard
 Name: ScrollToDismissKeyBoard
 Depends: mobilesubstrate, preferenceloader
@@ -669,12 +650,12 @@ Icon:/BatteryPrefs/Resources/Battery.png
 Description: Colored Percentage & Pulse in Battery for Bolt,or fillcolor pulse,Body Pulse,etc.
 Architecture: iphoneos-arm
 Version: 1.0
-Installed-Size: 460
+Installed-Size: 476
 Filename: pkgs/com.nanerasingh.battery_1.0_iphoneos-arm.deb
-Size: 46196
-MD5sum: b64eb1bfad7a815d5c8c70f1c639093a
-SHA1: 1456537c295f4dc31e670b160231aea44c812dd7
-SHA256: 0fbbc851b326bdcab1b57b4d5b6c9f1007a9884ea8257d49acb2131b78f47147
+Size: 67026
+MD5sum: efd6532bc579d556f3840c82d536fccf
+SHA1: 4191d5b2b54185b8127ffb80aae4df5c020e2d34
+SHA256: c7b129561d97137a15343364d746a6b8c661756d7a50c7a44f2718a43956a969
 Depiction: https://nanerasingh.github.io/depicts/Battery/Battery.html
 
 Package: com.nanerasingh.battery
@@ -689,12 +670,12 @@ Icon:/BatteryPrefs/Resources/Battery.png
 Description: Colored Percentage & Pulse in Battery for Bolt,or fillcolor pulse,Body Pulse,etc.
 Architecture: iphoneos-arm64
 Version: 1.0
-Installed-Size: 460
+Installed-Size: 476
 Filename: pkgs/com.nanerasingh.battery_1.0_iphoneos-arm64.deb
-Size: 49030
-MD5sum: 1087d3704d76721f9712dc127b299c3b
-SHA1: 9483c894150d321e914d39c24c4f3590d16558fc
-SHA256: 67c7c190b313312c8c59005d7eaf2ba37c1782886d3e2fafda69f1bdb2d6a554
+Size: 66920
+MD5sum: 10ca3c3c5f151d86c0e7d8114efd7aa9
+SHA1: f45b651ff8d5ade9fcb65d56da6d8f4ea7429b84
+SHA256: 6eebe218334307176f48e445e43917b4d11266269ff6ba78695335d7ce300f7e
 Depiction: https://nanerasingh.github.io/depicts/Battery/Battery.html
 
 Package: com.nanerasingh.dialergradientx
