@@ -650,12 +650,12 @@ Icon:/BatteryPrefs/Resources/Battery.png
 Description: Colored Percentage & Pulse in Battery for Bolt,or fillcolor pulse,Body Pulse,etc.
 Architecture: iphoneos-arm
 Version: 1.0
-Installed-Size: 476
+Installed-Size: 464
 Filename: pkgs/com.nanerasingh.battery_1.0_iphoneos-arm.deb
-Size: 67026
-MD5sum: efd6532bc579d556f3840c82d536fccf
-SHA1: 4191d5b2b54185b8127ffb80aae4df5c020e2d34
-SHA256: c7b129561d97137a15343364d746a6b8c661756d7a50c7a44f2718a43956a969
+Size: 51734
+MD5sum: 5b839e9cca0354535764f8a6da7d2585
+SHA1: 00d5e8860ff57b54906e76ec733edbe9b8c54d4c
+SHA256: 4e6b81ae02de05b4c0044d273e84d22517d61c5d98f1e4d6707cf5879fc7f8e1
 Depiction: https://nanerasingh.github.io/depicts/Battery/Battery.html
 
 Package: com.nanerasingh.battery
@@ -670,12 +670,12 @@ Icon:/BatteryPrefs/Resources/Battery.png
 Description: Colored Percentage & Pulse in Battery for Bolt,or fillcolor pulse,Body Pulse,etc.
 Architecture: iphoneos-arm64
 Version: 1.0
-Installed-Size: 476
+Installed-Size: 464
 Filename: pkgs/com.nanerasingh.battery_1.0_iphoneos-arm64.deb
-Size: 66920
-MD5sum: 10ca3c3c5f151d86c0e7d8114efd7aa9
-SHA1: f45b651ff8d5ade9fcb65d56da6d8f4ea7429b84
-SHA256: 6eebe218334307176f48e445e43917b4d11266269ff6ba78695335d7ce300f7e
+Size: 51760
+MD5sum: 88e656a61093a2cd4ceada76a5769fd7
+SHA1: c28a1d3749373c646f02dbe09dd76c96d26c12cb
+SHA256: 92f20487f99c845745c4605a02af24c68abdd34457081bc37a815ba769379ebf
 Depiction: https://nanerasingh.github.io/depicts/Battery/Battery.html
 
 Package: com.nanerasingh.dialergradientx
