@@ -678,6 +678,46 @@ SHA1: c28a1d3749373c646f02dbe09dd76c96d26c12cb
 SHA256: 92f20487f99c845745c4605a02af24c68abdd34457081bc37a815ba769379ebf
 Depiction: https://nanerasingh.github.io/depicts/Battery/Battery.html
 
+Package: com.nanerasingh.battery
+Name: Battery
+Depends: mobilesubstrate, preferenceloader
+Conflicts: com.manu.battery
+Replaces: com.manu.battery
+Maintainer: Nanerasingh
+Author: Nanerasingh
+Section: Tweaks
+Icon:/BatteryPrefs/Resources/Battery.png
+Description: Colored Percentage & Pulse in Battery for Bolt,or fillcolor pulse,Body Pulse,etc.
+Architecture: iphoneos-arm
+Version: 1.1
+Installed-Size: 464
+Filename: pkgs/com.nanerasingh.battery_1.1_iphoneos-arm.deb
+Size: 53958
+MD5sum: bd62a3f21142808595f678c62a84634f
+SHA1: 0dcb5615c3a58e1b77011e12611a8e9a8ad6a0ef
+SHA256: 6db1bf4d1ebd55ff4e3f196d370dee80629262eccd4de11468c4f3734964cc77
+Depiction: https://nanerasingh.github.io/depicts/Battery/Battery.html
+
+Package: com.nanerasingh.battery
+Name: Battery
+Depends: mobilesubstrate, preferenceloader
+Conflicts: com.manu.battery
+Replaces: com.manu.battery
+Maintainer: Nanerasingh
+Author: Nanerasingh
+Section: Tweaks
+Icon:/BatteryPrefs/Resources/Battery.png
+Description: Colored Percentage & Pulse in Battery for Bolt,or fillcolor pulse,Body Pulse,etc.
+Architecture: iphoneos-arm64
+Version: 1.1
+Installed-Size: 464
+Filename: pkgs/com.nanerasingh.battery_1.1_iphoneos-arm64.deb
+Size: 53978
+MD5sum: d973a245bdc05267a5aacb0f27d4ca0d
+SHA1: 14398f344b7a5e18703286b91386770eb4f96cb6
+SHA256: c11f90ca120a8023536d05b9ab409fa25af55b36fe546659e275c39d2b2713ab
+Depiction: https://nanerasingh.github.io/depicts/Battery/Battery.html
+
 Package: com.nanerasingh.dialergradientx
 Name: DialerGradientx
 Depends: mobilesubstrate | org.coolstar.libhooker | com.opa334.ellekit, org.thebigboss.libcolorpicker | me.alfhaily.libhybridcolorpicker, preferenceloader
