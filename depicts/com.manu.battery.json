@@ -1,6 +1,6 @@
 {
   "minVersion": "0.1",
-  "headerImage": "https://nanerasingh.github.io/depicts/Battery/Battery1.png",
+  "headerImage": "https://nanerasingh.github.io/depicts/Battery/Battery.png",
   "tintColor": "#4A90D9",
   "tabs": [
     {
@@ -15,12 +15,16 @@
           "class": "DepictionScreenshotsView",
           "screenshots": [
             {
+              "url": "https://nanerasingh.github.io/depicts/Battery/Battery.png",
+              "accessibilityText": "Battery Pulse & Customisations"
+            },
+            {
               "url": "https://nanerasingh.github.io/depicts/Battery/Battery1.png",
-              "accessibilityText": "Battery"
+              "accessibilityText": "Battery Settings"
             },
             {
               "url": "https://nanerasingh.github.io/depicts/Battery/Battery2.png",
-              "accessibilityText": "Battery"
+              "accessibilityText": "Battery Color Options"
             }
           ],
           "itemCornerRadius": 8,
