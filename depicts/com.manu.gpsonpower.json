@@ -1,0 +1,108 @@
+{
+  "minVersion": "0.1",
+  "tintColor": "#FF9500",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "🚀 What is GPSOnPower?",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**GPSOnPower** acts as a smart location manager and anti-theft companion to help you preserve battery life without compromising device security.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "✨ Features in v1.0 (Initial Release)",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "### 🔋 Power-Based GPS Toggling\n- **Location OFF**: When unplugged, Location Services are automatically disabled to save maximum battery.\n- **Location ON**: Connecting to any power source (Wired, Qi, MagSafe) instantly enables Location Services.\n\n### 🛡️ Anti-Theft & Safe Wi-Fi Geofencing\n- **Safe Wi-Fi Networks**: Define a list of \"Safe\" Wi-Fi networks in preferences (e.g., Home or Work).\n- **Smart Geofencing**: Disconnecting from Safe Wi-Fi forces Location Services ON regardless of power state, ensuring your device remains trackable in public.\n- **Interactive Network List**: Easily manage safe SSIDs directly in tweak settings.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "📦 Installation & Setup",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Install**: Download `com.nanerasingh.gpsonpower_1.0_iphoneos-arm64.deb` and install via Sileo or Zebra.\n- **Environment**: Built for modern rootless jailbreaks (Dopamine / Palera1n).\n- **Configure**: Go to **Settings > GPSOnPower** to manage Safe Wi-Fi networks.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "📱 Compatibility",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "iOS / iPadOS",
+          "text": "iOS 14.0 – 16.x+"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak Environments",
+          "text": "Rootless (Dopamine, palera1n) & Rootful"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "📥 Links & Support",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Developer",
+          "text": "Manu (Nanerasingh)"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Repository",
+          "action": "https://nanerasingh.github.io/",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Twitter — @nanerasingh",
+          "action": "https://twitter.com/nanerasingh",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Donate via PayPal",
+          "action": "https://www.paypal.me/nanerasingh",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "View Full Web Depiction",
+          "action": "https://nanerasingh.github.io/depicts/GPSOnPower/GPSOnPower.html",
+          "openExternal": true
+        }
+      ]
+    }
+  ]
+}
+

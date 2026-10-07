@@ -1,0 +1,108 @@
+{
+  "minVersion": "0.1",
+  "tintColor": "#30D158",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "🚀 What is ADBiOS?",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**ADBiOS** empowers power-users to manage, tweak, and debug their Android devices straight from iOS using a sleek, native interface. Control, shell, and manage files on your Android device over ADB!",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "✨ What's New in v1.0 (Initial Release)",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "### 📊 Dashboard Redesign\n- **System Overview**: Clean visual interface showing real-time stats for connected Android devices.\n- **Hardware Status**: Live progress bars for battery capacity and storage usage.\n- **Network & Radios**: One-glance status for Wi-Fi, Bluetooth, and essential radios.\n\n### 📂 Enhanced File Explorer (ES Explorer Style)\n- **Visual Redesign**: Inspired by classic Android file managers like ES File Explorer.\n- **Path Breadcrumbs**: Sticky header breadcrumbs for easy filesystem navigation.\n- **Smart Parsing & Fallbacks**: Provides raw fallback views when directories fail standard parsing.\n\n### 📱 Advanced App Management (Root & Non-Root)\n- **Standard Actions**: Launch, force stop, clear data, uninstall.\n- **Root Actions**: Freeze/unfreeze, enable/disable system apps, deep clear data (`su -c pm clear`), system app debloating.\n\n### 🖥️ Root Terminal & Shell Macros\n- **Interactive Shell**: Interactive terminal with categorized visual macros.\n- **Root Command List**: Quick root-only commands like `setenforce 0`, `reboot bootloader`, and system service restarts.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "🛠️ Installation & Setup",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Install**: Download `com.nanerasingh.adbios_1.0_iphoneos-arm64.deb` and install via Sileo or Zebra.\n- **Environment**: Built for modern rootless jailbreaks (Dopamine / Palera1n).\n- **ADB Setup**: Ensure target Android device has Wireless Debugging enabled or is connected on port 5555.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "📱 Compatibility",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "iOS / iPadOS",
+          "text": "iOS 14.0 – 16.x+"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak Environments",
+          "text": "Rootless (Dopamine, palera1n) & Rootful"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "📥 Links & Support",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Developer",
+          "text": "Manu (Nanerasingh)"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Repository",
+          "action": "https://nanerasingh.github.io/",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Twitter — @nanerasingh",
+          "action": "https://twitter.com/nanerasingh",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Donate via PayPal",
+          "action": "https://www.paypal.me/nanerasingh",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "View Full Web Depiction",
+          "action": "https://nanerasingh.github.io/depicts/ADBiOS/ADBiOS.html",
+          "openExternal": true
+        }
+      ]
+    }
+  ]
+}
+

@@ -1007,6 +1007,74 @@ SHA256: d407b41caca21287986b6c2756a29a2e3fcb09fb5950f7d66079265ad040910e
 Depiction: https://nanerasingh.github.io/depicts/GradientBubble/GradientBubble.html
 SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.gradientgububblecolor.json
 
+Package: com.nanerasingh.locationapp
+Name: LocationApp
+Description: WiFi-triggered app management tweak
+Author: manu
+Maintainer: manu
+Section: Tweaks
+Depends: mobilesubstrate, preferenceloader
+Architecture: iphoneos-arm
+Version: 1.0
+Installed-Size: 772
+Filename: pkgs/com.nanerasingh.locationapp_1.0_iphoneos-arm.deb
+Size: 107046
+MD5sum: ef5c14aab3f55840be2fa3edbece123d
+SHA1: 6c2139501f7992d527e129b72a3bc0a08e5e85cb
+SHA256: cafd689a2a38404a191e949d26f2a481342dde6b2aa8abe3fae51934529f25f1
+Depiction: https://nanerasingh.github.io/depicts/LocationApp/LocationApp.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.locationapp.json
+
+Package: com.nanerasingh.locationapp
+Name: LocationApp
+Description: WiFi-triggered app management tweak
+Author: manu
+Maintainer: manu
+Section: Tweaks
+Depends: mobilesubstrate, preferenceloader
+Architecture: iphoneos-arm64
+Version: 1.0
+Installed-Size: 772
+Filename: pkgs/com.nanerasingh.locationapp_1.0_iphoneos-arm64.deb
+Size: 107146
+MD5sum: e2c77190a419d2489f707a75b58969c9
+SHA1: 7b13524bc42df1738408f9677fc077716ff55eb0
+SHA256: 61310d8522f9cc3387974c458b0da65db63e5118290684b3d40d38815f888596
+Depiction: https://nanerasingh.github.io/depicts/LocationApp/LocationApp.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.locationapp.json
+
+Package: com.nanerasingh.locationonpower
+Name: GPSOnPower
+Depends: mobilesubstrate, preferenceloader
+Description: Enables GPS location when connected to power, and disables it when unplugged.
+Maintainer: Nanera Singh
+Author: Nanera Singh
+Section: Tweaks
+Architecture: iphoneos-arm
+Version: 1.0
+Installed-Size: 932
+Filename: pkgs/com.nanerasingh.locationonpower_1.0_iphoneos-arm.deb
+Size: 515448
+MD5sum: bc5a1bcb34e4993918ae2a6950829598
+SHA1: 1fabb5bda086b4c8a0460bcde64ee44de86144e1
+SHA256: b30aa50bb27855a642aab908b7544e604f885e1698bf590e46951ca90be28629
+
+Package: com.nanerasingh.locationonpower
+Name: GPSOnPower
+Depends: mobilesubstrate, preferenceloader
+Description: Enables GPS location when connected to power, and disables it when unplugged.
+Maintainer: Nanera Singh
+Author: Nanera Singh
+Section: Tweaks
+Architecture: iphoneos-arm64
+Version: 1.0
+Installed-Size: 928
+Filename: pkgs/com.nanerasingh.locationonpower_1.0_iphoneos-arm64.deb
+Size: 515376
+MD5sum: 632e8881d928ba05120001b5ea389061
+SHA1: 28f975b98bde27b914939aa4aeac35f84257db84
+SHA256: 81e0d4d107439bba6e052737b06d8ae54a9e9fa0b14631662e784f427373ec88
+
 Package: com.nanerasingh.nceffectspro
 Name: NCEffectsPro
 Depends: mobilesubstrate, preferenceloader

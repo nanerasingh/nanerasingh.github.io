@@ -1,0 +1,108 @@
+{
+  "minVersion": "0.1",
+  "tintColor": "#0A84FF",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "📶 What is LocationApp?",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**LocationApp** is a powerful rootless iOS tweak that automatically manages and changes state of your selected applications based on your WiFi connection state. Perfect for managing specific apps when connected to work, school, or public networks.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "🎉 What's New in v1.1",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "### 🎨 Completely Revamped Preferences UI\n- **Dynamic Master Switch**: Smooth animated expandable settings menu.\n- **Modern Aesthetic**: Beautiful LastUnlockX-style header banner with glowing gradient theme and transparent icon.\n- **Streamlined Actions**: Quick-action buttons for Reset Defaults, Respring, and direct developer support.\n\n### 🛠️ Smarter Action Log & System Health\n- **Action Log Redesign**: Intelligently groups logs by application and preserves the single most recent log per app when cleared.\n- **System Health Integration**: Real-time daemon & root environment health checks right in the primary SSH Helper UI.\n\n### ⚙️ Under-the-Hood Improvements\n- **Robust WiFi Scanning**: Improved `known-networks.plist` parsing on iOS 15/16+.\n- **Daemon Reliability**: Swapped `system()` calls for native `posix_spawn` integrations for crash-free background app renaming (`.app` ↔ `.appp`) and `uicache` execution.\n- **Rootless Optimized**: Tailored for Dopamine & Palera1n jailbreaks.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "📦 Installation & Notes",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- **Install**: Download `.deb` and install via Sileo or Zebra.\n- **Configure**: Go to **Settings > LocationApp** to select managed apps and blacklisted WiFi networks.\n- **SSH Helper**: If setting up SSH actions for the first time, visit the SSH Helper page in settings to complete background setup.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "📱 Compatibility",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "iOS / iPadOS",
+          "text": "iOS 14.0 – 16.x+"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak Environments",
+          "text": "Rootless (Dopamine, palera1n) & Rootful"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "📥 Links & Support",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Developer",
+          "text": "Manu (Nanerasingh)"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Repository",
+          "action": "https://nanerasingh.github.io/",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Twitter — @nanerasingh",
+          "action": "https://twitter.com/nanerasingh",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Donate via PayPal",
+          "action": "https://www.paypal.me/nanerasingh",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "View Full Web Depiction",
+          "action": "https://nanerasingh.github.io/depicts/LocationApp/LocationApp.html",
+          "openExternal": true
+        }
+      ]
+    }
+  ]
+}
+

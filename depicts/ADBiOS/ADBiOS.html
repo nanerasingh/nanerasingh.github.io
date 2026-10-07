@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+    (function() {
+        const saved = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', saved);
+    })();
+</script>
+    <meta charset="utf-8">
+    <title>ADBiOS v1.0 — Manu (nanerasingh)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <style>
+        html[data-theme="light"] {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --card-border: #e2e8f0;
+            --text-color: #1e293b;
+            --text-secondary: #64748b;
+            --accent-color: #34c759;
+            --accent-gradient: linear-gradient(135deg, #34c759, #30d158);
+            --code-bg: #eef1f5;
+        }
+
+        .theme-toggle-depict {
+            position: fixed;
+            top: 12px;
+            right: 12px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            z-index: 9999;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: background 0.2s, color 0.2s;
+        }
+
+        :root {
+            --bg-color: #0f1117;
+            --card-bg: #1c1c1e;
+            --card-border: #2c2c2e;
+            --text-color: #f2f2f7;
+            --text-secondary: #8e8e93;
+            --accent-color: #30d158;
+            --accent-gradient: linear-gradient(135deg, #30d158, #34c759);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 16px;
+            line-height: 1.6;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px 0 10px;
+        }
+
+        .header h1 {
+            font-size: 26px;
+            margin: 0 0 6px 0;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        .header p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-title {
+            font-size: 17px;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 12px;
+            color: var(--accent-color);
+        }
+
+        ul {
+            margin: 4px 0 12px 20px;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .screenshots {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .screenshots img {
+            max-width: 240px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 1px solid var(--card-border);
+            object-fit: contain;
+        }
+
+        .table-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--card-border);
+            font-size: 14px;
+        }
+
+        .table-row:last-child {
+            border-bottom: none;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            background: var(--accent-gradient);
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            padding: 12px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 24px;
+            padding-bottom: 16px;
+        }
+
+        .donate-card-depict {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .donate-btn-depict {
+            display: inline-block;
+            background: #0070ba;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+<button class="theme-toggle-depict" onclick="toggleDepictTheme()" id="depict-theme-btn">☀️ Light</button>
+<script>
+    function updateDepictBtn(t) {
+        const btn = document.getElementById('depict-theme-btn');
+        if (btn) btn.innerText = t === 'dark' ? '☀️ Light' : '🌙 Dark';
+    }
+    function toggleDepictTheme() {
+        const cur = document.documentElement.getAttribute('data-theme') || 'dark';
+        const next = cur === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        updateDepictBtn(next);
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        updateDepictBtn(document.documentElement.getAttribute('data-theme') || 'dark');
+    });
+</script>
+
+    <div class="header">
+        <h1>🚀 ADBiOS</h1>
+        <p>Android Device Manager &amp; ADB Utility for Jailbroken iOS</p>
+    </div>
+
+    <div class="card">
+        <div class="card-title">✨ Overview</div>
+        <p style="font-size: 14px; margin: 0 0 10px 0;">
+            Manage your Android device directly from your Jailbroken iPhone over ADB!
+        </p>
+        <p style="font-size: 14px; margin: 0;">
+            Welcome to the first official release of <strong>ADBiOS</strong>. This application empowers power-users to manage, tweak, and debug their Android devices straight from iOS using a sleek, native interface.
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="card-title">📸 Screenshots</div>
+        <div class="screenshots">
+            <img src="./ADBiOS2.PNG" alt="ADBiOS Dashboard">
+            <img src="./ADBiOS3.PNG" alt="ADBiOS File Explorer">
+            <img src="./ADBiOS4.PNG" alt="ADBiOS App Management">
+            <img src="./ADBiOS5.png" alt="ADBiOS Terminal & Macros">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">🎉 What's New in v1.0 (Initial Release)</div>
+        
+        <h4 style="margin: 8px 0 4px 0; color: var(--accent-color); font-size: 14px;">📊 Dashboard Redesign</h4>
+        <ul>
+            <li><strong>System Overview:</strong> Clean visual interface showing real-time stats for the connected Android device.</li>
+            <li><strong>Hardware Status:</strong> Live progress bars indicating current battery capacity and storage usage.</li>
+            <li><strong>Network &amp; Connections:</strong> Instantly view whether Wi-Fi, Bluetooth, and crucial radios are enabled.</li>
+        </ul>
+
+        <h4 style="margin: 12px 0 4px 0; color: var(--accent-color); font-size: 14px;">📂 Enhanced File Explorer (ES Explorer Style)</h4>
+        <ul>
+            <li><strong>Redesigned UI:</strong> Highly visual file manager drawing inspiration from classic tools like ES File Explorer.</li>
+            <li><strong>Path Breadcrumbs:</strong> Sticky breadcrumb path header so you never lose your place while browsing the Android filesystem.</li>
+            <li><strong>Smart Parsing &amp; Fallbacks:</strong> Ensures directories load properly with raw fallback views if directory permissions block standard parsing.</li>
+        </ul>
+
+        <h4 style="margin: 12px 0 4px 0; color: var(--accent-color); font-size: 14px;">📱 Advanced App Management (Root &amp; Non-Root)</h4>
+        <ul>
+            <li><strong>Standard Actions:</strong> Launch app, force stop, clear standard app data, and uninstall.</li>
+            <li><strong>Root Privileges (New!):</strong> If your Android device is rooted, unlock advanced actions:
+                <ul>
+                    <li>Freeze &amp; Unfreeze applications</li>
+                    <li>Enable &amp; Disable system apps</li>
+                    <li>Deep Clear App Data (<code>su -c pm clear</code>)</li>
+                    <li>Uninstall System Apps (Debloat your Android device effortlessly!)</li>
+                </ul>
+            </li>
+        </ul>
+
+        <h4 style="margin: 12px 0 4px 0; color: var(--accent-color); font-size: 14px;">🖥️ Root Terminal &amp; Shell Macros</h4>
+        <ul>
+            <li><strong>Interactive Shell Page:</strong> Features categorized visual macros for instant command execution.</li>
+            <li><strong>Root-Only Command List:</strong> Quick root-only commands (e.g. <code>su -c setenforce 0</code>, <code>reboot bootloader</code>, restarting system services) without manual typing.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <div class="card-title">🛠️ Installation &amp; Setup Instructions</div>
+        <ul>
+            <li><strong>SpringBoard:</strong> Respring your device if prompted.</li>
+            <li><strong>Android Setup:</strong> Ensure target Android device has Wireless Debugging enabled or is connected to the same network running ADB on port 5555.</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <div class="card-title">📱 Compatibility</div>
+        <div class="table-row">
+            <span style="color: var(--text-secondary);">iOS / iPadOS</span>
+            <span>iOS 14.0 – 16.x+</span>
+        </div>
+        <div class="table-row">
+            <span style="color: var(--text-secondary);">Jailbreak Support</span>
+            <span>Rootless (Dopamine, palera1n) &amp; Rootful</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">📥 Links &amp; Support</div>
+        <a href="https://nanerasingh.github.io/" class="btn">Add Repository</a>
+        <a href="https://twitter.com/nanerasingh" class="btn" style="background: #1da1f2;">Twitter (@nanerasingh)</a>
+        <a href="https://github.com/nanerasingh" class="btn" style="background: #24292e;">GitHub (nanerasingh)</a>
+    </div>
+
+    <div class="donate-card-depict">
+        <h3 style="margin: 0 0 6px 0; font-size: 16px; color: var(--text-color);">❤️ Support Tweak Development</h3>
+        <p style="font-size: 13px; color: var(--text-secondary); margin: 0 0 10px 0;">If you enjoy ADBiOS, consider supporting future updates and development!</p>
+        <a href="https://www.paypal.me/nanerasingh" target="_blank" rel="noopener" class="donate-btn-depict">
+            ☕ Donate via PayPal (@nanerasingh)
+        </a>
+    </div>
+
+    <div class="footer">
+        &copy; Nanerasingh, Since 2017
+    </div>
+
+</body>
+</html>
+

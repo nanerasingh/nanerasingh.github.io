@@ -25,7 +25,13 @@ depiction_map = {
     'com.nanerasingh.screenfreezex': ('https://nanerasingh.github.io/depicts/ScreenFreezeX/ScreenFreezeX.html', 'https://nanerasingh.github.io/depicts/com.manu.screenfreezex.json'),
     'com.manu.lastunlockx': ('https://nanerasingh.github.io/depicts/LastUnlockX/LastUnlockX.html', 'https://nanerasingh.github.io/depicts/com.manu.lastunlockx.json'),
     'com.manu.fullscreenshot': ('https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.html', 'https://nanerasingh.github.io/depicts/com.manu.fullscreenshot.json'),
-    'com.nanerasingh.fullscreenshot': ('https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.html', 'https://nanerasingh.github.io/depicts/com.manu.fullscreenshot.json')
+    'com.nanerasingh.fullscreenshot': ('https://nanerasingh.github.io/depicts/Fullscreenshot/Fullscreenshot.html', 'https://nanerasingh.github.io/depicts/com.manu.fullscreenshot.json'),
+    'com.manu.locationapp': ('https://nanerasingh.github.io/depicts/LocationApp/LocationApp.html', 'https://nanerasingh.github.io/depicts/com.manu.locationapp.json'),
+    'com.nanerasingh.locationapp': ('https://nanerasingh.github.io/depicts/LocationApp/LocationApp.html', 'https://nanerasingh.github.io/depicts/com.manu.locationapp.json'),
+    'com.manu.adbios': ('https://nanerasingh.github.io/depicts/ADBiOS/ADBiOS.html', 'https://nanerasingh.github.io/depicts/com.manu.adbios.json'),
+    'com.nanerasingh.adbios': ('https://nanerasingh.github.io/depicts/ADBiOS/ADBiOS.html', 'https://nanerasingh.github.io/depicts/com.manu.adbios.json'),
+    'com.manu.gpsonpower': ('https://nanerasingh.github.io/depicts/GPSOnPower/GPSOnPower.html', 'https://nanerasingh.github.io/depicts/com.manu.gpsonpower.json'),
+    'com.nanerasingh.gpsonpower': ('https://nanerasingh.github.io/depicts/GPSOnPower/GPSOnPower.html', 'https://nanerasingh.github.io/depicts/com.manu.gpsonpower.json')
 }
 
 def auto_resolve_depiction(pkg_id):
