@@ -645,6 +645,24 @@ Maintainer: nanerasingh
 Author: nanerasingh
 Section: Utilities
 Priority: optional
+Architecture: iphoneos-arm
+Version: 1.0
+Installed-Size: 8412
+Filename: pkgs/com.nanerasingh.adbios_1.0_iphoneos-arm.deb
+Size: 3493260
+MD5sum: 67d0e8a7d64af39914a853989f5b7eb0
+SHA1: 43ed745919fcfb9f7f2799901de84bb78fa3b273
+SHA256: ecd95b6dd69531059a366fc5979b9a6bb51c1296195d0779128f74bccf1e88a5
+Depiction: https://nanerasingh.github.io/depicts/ADBiOS/ADBiOS.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.adbios.json
+
+Package: com.nanerasingh.adbios
+Name: ADB iOS
+Description: Rootless jailbreak ADB companion for iOS 16+
+Maintainer: nanerasingh
+Author: nanerasingh
+Section: Utilities
+Priority: optional
 Architecture: iphoneos-arm64
 Version: 1.0
 Installed-Size: 8412
