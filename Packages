@@ -638,6 +638,24 @@ SHA256: f03256e01fae8cbf891b284044c4c7973fc727445e04471bce1263dfd76c552a
 Depiction: https://nanerasingh.github.io/depicts/Time/Time.html
 SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.time.json
 
+Package: com.nanerasingh.adbios
+Name: ADB iOS
+Description: Rootless jailbreak ADB companion for iOS 16+
+Maintainer: nanerasingh
+Author: nanerasingh
+Section: Utilities
+Priority: optional
+Architecture: iphoneos-arm64
+Version: 1.0
+Installed-Size: 8412
+Filename: pkgs/com.nanerasingh.adbios_1.0_iphoneos-arm64.deb
+Size: 3496390
+MD5sum: c50ffe449ccae85bf26d89fda12c085a
+SHA1: 8bd13eff96e4413d7a069b95e6d7f6acd3b7fed3
+SHA256: e3b3f3ab0f35e1251c7499914b389202ebf4a82966d43946933af74c13209ef4
+Depiction: https://nanerasingh.github.io/depicts/ADBiOS/ADBiOS.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.adbios.json
+
 Package: com.nanerasingh.battery
 Name: Battery
 Depends: mobilesubstrate, preferenceloader
@@ -717,6 +735,42 @@ MD5sum: d973a245bdc05267a5aacb0f27d4ca0d
 SHA1: 14398f344b7a5e18703286b91386770eb4f96cb6
 SHA256: c11f90ca120a8023536d05b9ab409fa25af55b36fe546659e275c39d2b2713ab
 Depiction: https://nanerasingh.github.io/depicts/Battery/Battery.html
+
+Package: com.nanerasingh.delayotaleft
+Name: DelayOTA Left
+Description: Live Apple server tracker for DelayOTA iOS versions, release dates, remaining days, and device compatibility.
+Maintainer: nanerasingh
+Author: nanerasingh
+Section: Tweaks
+Depends: mobilesubstrate, preferenceloader
+Architecture: iphoneos-arm
+Version: 1.0
+Installed-Size: 736
+Filename: pkgs/com.nanerasingh.delayotaleft_1.0_iphoneos-arm.deb
+Size: 100110
+MD5sum: c43f22a84b28a2f1da7d6b1d8c4d42a6
+SHA1: a848139534f0c738247f99443515f88612d4c453
+SHA256: 8a8717bec3f2bd13bc915bc391f43e0b45b86f92df380cea86069926a135dd8e
+Depiction: https://nanerasingh.github.io/depicts/DelayOtaLeft/DelayOtaLeft.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.delayotaleft.json
+
+Package: com.nanerasingh.delayotaleft
+Name: DelayOTA Left
+Description: Live Apple server tracker for DelayOTA iOS versions, release dates, remaining days, and device compatibility.
+Maintainer: nanerasingh
+Author: nanerasingh
+Section: Tweaks
+Depends: mobilesubstrate, preferenceloader
+Architecture: iphoneos-arm64
+Version: 1.0
+Installed-Size: 736
+Filename: pkgs/com.nanerasingh.delayotaleft_1.0_iphoneos-arm64.deb
+Size: 100322
+MD5sum: c76ec3a0f64c866285dbb09c67d34c93
+SHA1: 23255e02c63403de3750b7c83353fadd8c336f0e
+SHA256: 28f2449c57b2c917c32d1894d0157383523233ab2a795b71f865eed4b67b8ab5
+Depiction: https://nanerasingh.github.io/depicts/DelayOtaLeft/DelayOtaLeft.html
+SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.delayotaleft.json
 
 Package: com.nanerasingh.dialergradientx
 Name: DialerGradientx

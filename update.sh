@@ -31,7 +31,9 @@ depiction_map = {
     'com.manu.adbios': ('https://nanerasingh.github.io/depicts/ADBiOS/ADBiOS.html', 'https://nanerasingh.github.io/depicts/com.manu.adbios.json'),
     'com.nanerasingh.adbios': ('https://nanerasingh.github.io/depicts/ADBiOS/ADBiOS.html', 'https://nanerasingh.github.io/depicts/com.manu.adbios.json'),
     'com.manu.gpsonpower': ('https://nanerasingh.github.io/depicts/GPSOnPower/GPSOnPower.html', 'https://nanerasingh.github.io/depicts/com.manu.gpsonpower.json'),
-    'com.nanerasingh.gpsonpower': ('https://nanerasingh.github.io/depicts/GPSOnPower/GPSOnPower.html', 'https://nanerasingh.github.io/depicts/com.manu.gpsonpower.json')
+    'com.nanerasingh.gpsonpower': ('https://nanerasingh.github.io/depicts/GPSOnPower/GPSOnPower.html', 'https://nanerasingh.github.io/depicts/com.manu.gpsonpower.json'),
+    'com.manu.delayotaleft': ('https://nanerasingh.github.io/depicts/DelayOtaLeft/DelayOtaLeft.html', 'https://nanerasingh.github.io/depicts/com.manu.delayotaleft.json'),
+    'com.nanerasingh.delayotaleft': ('https://nanerasingh.github.io/depicts/DelayOtaLeft/DelayOtaLeft.html', 'https://nanerasingh.github.io/depicts/com.manu.delayotaleft.json')
 }
 
 def auto_resolve_depiction(pkg_id):

@@ -1,0 +1,151 @@
+{
+  "minVersion": "0.1",
+  "headerImage": "https://nanerasingh.github.io/depicts/DelayOtaLeft/DelayOtaLeft.png",
+  "tintColor": "#0A84FF",
+  "tabs": [
+    {
+      "tabname": "Details",
+      "views": [
+        {
+          "class": "DepictionSubheaderView",
+          "title": "⏱️ What is DelayOTA Left?",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "**DelayOTA Left (v1.0)** is the ultimate all-in-one native iOS Settings tool designed to track, manage, and install DelayOTA updates directly on your device without relying on external websites, PC tools, or complex setups. Never miss a DelayOTA signing window again!",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionScreenshotsView",
+          "screenshots": [
+            {
+              "url": "https://nanerasingh.github.io/depicts/DelayOtaLeft/DelayOtaLeft.png",
+              "accessibilityText": "DelayOTA Left Settings & Tools"
+            },
+            {
+              "url": "https://nanerasingh.github.io/depicts/DelayOtaLeft/DelayOtaLeft2.png",
+              "accessibilityText": "DelayOTA Left Search & Filters"
+            },
+            {
+              "url": "https://nanerasingh.github.io/depicts/DelayOtaLeft/DelayOtaLeft3.png",
+              "accessibilityText": "DelayOTA Left Firmware & Recommended Target"
+            },
+            {
+              "url": "https://nanerasingh.github.io/depicts/DelayOtaLeft/DelayOtaLeft4.png",
+              "accessibilityText": "DelayOTA Left Beta Seeds & Support"
+            },
+            {
+              "url": "https://nanerasingh.github.io/depicts/DelayOtaLeft/DelayOtaLeft_full.jpg",
+              "accessibilityText": "DelayOTA Left Full Scroll View"
+            }
+          ],
+          "itemCornerRadius": 10,
+          "itemSize": "{160,346}"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "🌟 Key Features",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "### 🌐 Live Apple Catalog Sync (`gdmf.apple.com`)\nQueries Apple's official Software Update catalog in real-time with offline caching and pull-to-refresh for accurate expiration dates and build numbers.\n\n### ⚡ One-Tap Device Supervision Toggle\nToggle supervised mode on and off instantly directly in Settings. No computer, backups, or external apps required.\n\n### 🎛️ Dynamic Pending Window Filter (7d | 15d | 30d | 45d | 60d | 90d)\nFilter firmware versions by real-time pending countdowns. Tap `7d` to immediately view updates expiring within a week.\n\n### 📲 Built-in Localhost Profile Server (100% Offline)\nInstalls DelayOTA profiles via an embedded local HTTP microserver (`localhost:8080`). No Safari redirects, dead links, or internet required for `.mobileconfig` install.\n\n### 🌐 Real-Time Apple TSS Signing Status\nIntegrated with `api.ipsw.me` to check whether regular iTunes/IPSW signing is 🟢 OPEN or 🔴 CLOSED (DelayOTA Required).\n\n### 📋 Active Installed Profiles Inspector\nDetects active profiles and effective restriction delays (`enforcedSoftwareUpdateDelay`) with a direct shortcut to iOS Profile Settings.\n\n### 🛡️ OTA Download Blocker & Storage Purger\nKill automatic background updates and purge corrupt/partial files from `/var/MobileSoftwareUpdate` in one tap.\n\n### 🔔 Local Expiration Push Alerts\nGet local push notifications 7 days and 24 hours before any window permanently closes.\n\n### 🔍 Smart Search & Filtering\nFilter by \"Compatible With My iPhone\", version chips (iOS 18+, iOS 17, Older), Beta seeds toggle, and live search.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "🧙‍♂️ Ready-to-Update? 6-Point Checklist",
+          "useBoldText": true,
+          "useBottomMargin": true
+        },
+        {
+          "class": "DepictionMarkdownView",
+          "markdown": "- 🛡️ **Device Supervision Active**: Ensures device is in supervised state.\n- 📋 **DelayOTA Profile Installed**: Confirms valid profile.\n- 💾 **Storage Check**: Verifies ≥ 6.5 GB free space available.\n- 🌐 **Apple Update Server**: Confirms `gdmf.apple.com` reachability.\n- 🔋 **Battery & Power State**: Checks ≥ 50% or on AC charger.\n- 🧹 **OTA Cache Cleanliness**: Verifies zero corrupt downloads.\n- 🚀 **Direct Deep-Link**: One-tap shortcut to launch Software Update in Settings.",
+          "useSpacing": true
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "⚙️ Information & Compatibility",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Version",
+          "text": "1.0"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Price",
+          "text": "Free"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Architecture",
+          "text": "Rootless (iphoneos-arm64)"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Supported iOS",
+          "text": "iOS 15.0 – 17.x / 18.x"
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Jailbreak Support",
+          "text": "Dopamine, palera1n, Bootstrap / Serotonin"
+        },
+        {
+          "class": "DepictionSeparatorView"
+        },
+        {
+          "class": "DepictionSubheaderView",
+          "title": "📥 Links & Support",
+          "useBoldText": true,
+          "useBottomMargin": false
+        },
+        {
+          "class": "DepictionTableTextView",
+          "title": "Developer",
+          "text": "Manu (Nanerasingh)"
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Repository",
+          "action": "https://nanerasingh.github.io/",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Twitter — @nanerasingh",
+          "action": "https://twitter.com/nanerasingh",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "Donate via PayPal",
+          "action": "https://www.paypal.me/nanerasingh",
+          "openExternal": true
+        },
+        {
+          "class": "DepictionTableButtonView",
+          "title": "View Full Web Depiction",
+          "action": "https://nanerasingh.github.io/depicts/DelayOtaLeft/DelayOtaLeft.html",
+          "openExternal": true
+        }
+      ]
+    }
+  ]
+}
+

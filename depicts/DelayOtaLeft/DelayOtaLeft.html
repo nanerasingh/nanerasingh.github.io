@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script>
+    (function() {
+        const saved = localStorage.getItem('theme') || 'dark';
+        document.documentElement.setAttribute('data-theme', saved);
+    })();
+</script>
+    <meta charset="utf-8">
+    <title>DelayOTA Left — Manu (nanerasingh)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <style>
+        html[data-theme="light"] {
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --card-border: #e2e8f0;
+            --text-color: #1e293b;
+            --text-secondary: #64748b;
+            --accent-color: #0a84ff;
+            --accent-gradient: linear-gradient(135deg, #0a84ff, #5e5ce6);
+            --code-bg: #eef1f5;
+        }
+
+        .theme-toggle-depict {
+            position: fixed;
+            top: 12px;
+            right: 12px;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            color: var(--text-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            z-index: 9999;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: background 0.2s, color 0.2s;
+        }
+
+        :root {
+            --bg-color: #0c0f17;
+            --card-bg: #161d2b;
+            --card-border: #222f44;
+            --text-color: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-color: #38bdf8;
+            --accent-gradient: linear-gradient(135deg, #0284c7, #38bdf8);
+            --code-bg: #1e293b;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 16px;
+            line-height: 1.6;
+            -webkit-text-size-adjust: 100%;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px 0 10px;
+        }
+
+        .header h1 {
+            font-size: 26px;
+            margin: 0 0 6px 0;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        .header p {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin: 0;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-title {
+            font-size: 17px;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 12px;
+            color: var(--accent-color);
+        }
+
+        ul {
+            margin: 4px 0 12px 20px;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .screenshots {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            padding-bottom: 8px;
+            -webkit-overflow-scrolling: touch;
+            align-items: flex-start;
+        }
+
+        .screenshots img {
+            max-width: 280px;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            border: 1px solid var(--card-border);
+            object-fit: contain;
+            align-self: flex-start;
+        }
+
+        .table-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid var(--card-border);
+            font-size: 14px;
+        }
+
+        .table-row:last-child {
+            border-bottom: none;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--accent-color);
+            margin-right: 6px;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            background: var(--accent-gradient);
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+            padding: 12px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-top: 24px;
+            padding-bottom: 16px;
+        }
+
+        .donate-card-depict {
+            background-color: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .donate-btn-depict {
+            display: inline-block;
+            background: #0070ba;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+<button class="theme-toggle-depict" onclick="toggleDepictTheme()" id="depict-theme-btn">☀️ Light</button>
+<script>
+    function updateDepictBtn(t) {
+        const btn = document.getElementById('depict-theme-btn');
+        if (btn) btn.innerText = t === 'dark' ? '☀️ Light' : '🌙 Dark';
+    }
+    function toggleDepictTheme() {
+        const cur = document.documentElement.getAttribute('data-theme') || 'dark';
+        const next = cur === 'dark' ? 'light' : 'dark';
+        document.documentElement.setAttribute('data-theme', next);
+        localStorage.setItem('theme', next);
+        updateDepictBtn(next);
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+        updateDepictBtn(document.documentElement.getAttribute('data-theme') || 'dark');
+    });
+</script>
+
+    <div class="header">
+        <h1>⏱️ DelayOTA Left</h1>
+        <p>The Ultimate All-in-One Native DelayOTA &amp; Profile Suite for iOS</p>
+    </div>
+
+    <div class="card">
+        <div class="card-title">✨ Overview</div>
+        <p style="font-size: 14px; margin: 0 0 10px 0;">
+            Welcome to the official release of <strong>DelayOTA Left (v1.0)</strong>, a complete native iOS Settings tool designed to track, manage, and install DelayOTA updates directly on your device without relying on external websites, PC tools, or complex setups.
+        </p>
+        <p style="font-size: 14px; margin: 0; color: var(--accent-color); font-weight: 600;">
+            Never miss a DelayOTA signing window again!
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="card-title">📸 Screenshots &amp; UI Preview</div>
+        <div class="screenshots">
+            <img src="./DelayOtaLeft.png" alt="DelayOTA Left Settings &amp; Tools">
+            <img src="./DelayOtaLeft2.png" alt="DelayOTA Left Search &amp; Filters">
+            <img src="./DelayOtaLeft3.png" alt="DelayOTA Left Firmware &amp; Recommended Target">
+            <img src="./DelayOtaLeft4.png" alt="DelayOTA Left Beta &amp; Support">
+            <img src="./DelayOtaLeft_full.jpg" alt="DelayOTA Left Full Scroll View">
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">🌟 Key Features</div>
+
+        <h4 style="margin: 8px 0 4px 0; color: var(--accent-color); font-size: 14px;">🌐 Live Apple Catalog Sync (gdmf.apple.com)</h4>
+        <p style="font-size: 14px; margin: 0 0 8px 0;">
+            Queries Apple’s official Software Update catalog in real-time. Features offline caching and pull-to-refresh so you always know exact expiration dates and build numbers.
+        </p>
+
+        <h4 style="margin: 12px 0 4px 0; color: var(--accent-color); font-size: 14px;">⚡ One-Tap Device Supervision Toggle</h4>
+        <p style="font-size: 14px; margin: 0 0 8px 0;">
+            Toggle supervised mode on and off instantly directly in Settings. No PC, no backups, and no external apps needed.
+        </p>
+
+        <h4 style="margin: 12px 0 4px 0; color: var(--accent-color); font-size: 14px;">🎛️ Dynamic Pending Window Filter (7d | 15d | 30d | 45d | 60d | 90d)</h4>
+        <p style="font-size: 14px; margin: 0 0 8px 0;">
+            Instantly filter firmware versions by real-time pending countdowns. Want to see urgent updates expiring within a week? Tap <strong>7d</strong> to display only versions with &le; 7 days left before the window permanently closes.
+        </p>
+
+        <h4 style="margin: 12px 0 4px 0; color: var(--accent-color); font-size: 14px;">📲 Built-in Localhost Profile Server (100% Offline)</h4>
+        <p style="font-size: 14px; margin: 0 0 8px 0;">
+            Installs DelayOTA profiles via an embedded, local HTTP microserver right on your device (<code>localhost:8080</code>). No Safari redirects, no dead community links, and no internet required to install your <code>.mobileconfig</code>.
+        </p>
+
+        <h4 style="margin: 12px 0 4px 0; color: var(--accent-color); font-size: 14px;">🧙‍♂️ Interactive "Ready-to-Update?" Checklist Wizard</h4>
+        <p style="font-size: 14px; margin: 0 0 6px 0;">A 6-point pre-flight diagnostic screen that checks:</p>
+        <ul>
+            <li>🛡️ <strong>Device Supervision Active</strong></li>
+            <li>📋 <strong>DelayOTA Profile Installed</strong></li>
+            <li>💾 <strong>Storage Check</strong> (&ge; 6.5 GB free space verified)</li>
+            <li>🌐 <strong>Apple Update Server Reachability</strong> (<code>gdmf.apple.com</code>)</li>
+            <li>🔋 <strong>Battery &amp; Power Check</strong> (&ge; 50% or on AC power)</li>
+            <li>🧹 <strong>OTA Download Cache Cleanliness</strong></li>
+        </ul>
+        <p style="font-size: 14px; margin: 0 0 8px 0;">Includes a one-tap deep link: <strong>🚀 Launch Software Update</strong> in Settings.</p>
+
+        <h4 style="margin: 12px 0 4px 0; color: var(--accent-color); font-size: 14px;">🌐 Real-Time Apple TSS Signing Status</h4>
+        <p style="font-size: 14px; margin: 0 0 8px 0;">
+            Integrated with <code>api.ipsw.me</code> to check if regular iTunes/IPSW signing is 🟢 OPEN or 🔴 CLOSED (DelayOTA Required).
+        </p>
+
+        <h4 style="margin: 12px 0 4px 0; color: var(--accent-color); font-size: 14px;">📋 Active Installed Profiles Inspector</h4>
+        <p style="font-size: 14px; margin: 0 0 8px 0;">
+            Detects active DelayOTA profiles and effective restriction delays (<code>enforcedSoftwareUpdateDelay</code>), with a direct one-tap shortcut to <strong>Settings &gt; General &gt; VPN &amp; Device Management</strong>.
+        </p>
+
+        <h4 style="margin: 12px 0 4px 0; color: var(--accent-color); font-size: 14px;">🛡️ OTA Download Blocker &amp; Storage Purger</h4>
+        <p style="font-size: 14px; margin: 0 0 8px 0;">
+            Kill automatic background iOS updates. Includes a one-tap button to purge corrupt or partially downloaded update files from <code>/var/MobileSoftwareUpdate</code>, freeing up gigabytes of storage and clearing the red Settings badge.
+        </p>
+
+        <h4 style="margin: 12px 0 4px 0; color: var(--accent-color); font-size: 14px;">🔔 Local Expiration Push Alerts</h4>
+        <p style="font-size: 14px; margin: 0 0 8px 0;">
+            Receive local push notifications 7 days and 24 hours before a DelayOTA window expires so you never get caught off guard.
+        </p>
+
+        <h4 style="margin: 12px 0 4px 0; color: var(--accent-color); font-size: 14px;">🔍 Smart Search &amp; Filtering</h4>
+        <p style="font-size: 14px; margin: 0 0 8px 0;">
+            Filter by "Compatible With My iPhone" vs "All Devices", version chips (All, iOS 18+, iOS 17, Older), toggle Beta seeds, and live search by build, version, or model.
+        </p>
+
+        <h4 style="margin: 12px 0 4px 0; color: var(--accent-color); font-size: 14px;">⭐ Recommended Target Badge</h4>
+        <p style="font-size: 14px; margin: 0;">
+            Automatically highlights the newest stable compatible firmware for your hardware.
+        </p>
+    </div>
+
+    <div class="card">
+        <div class="card-title">⚙️ Information &amp; Compatibility</div>
+        <div class="table-row">
+            <span style="color: var(--text-secondary);">Version</span>
+            <span>1.0</span>
+        </div>
+        <div class="table-row">
+            <span style="color: var(--text-secondary);">Price</span>
+            <span>Free</span>
+        </div>
+        <div class="table-row">
+            <span style="color: var(--text-secondary);">Architecture</span>
+            <span>Rootless (iphoneos-arm64, Dopamine, palera1n, Bootstrap/Serotonin)</span>
+        </div>
+        <div class="table-row">
+            <span style="color: var(--text-secondary);">Supported iOS</span>
+            <span>iOS 15.0 – 17.x / 18.x</span>
+        </div>
+        <div class="table-row">
+            <span style="color: var(--text-secondary);">Developer</span>
+            <span>Manu (<a href="https://twitter.com/nanerasingh" target="_blank" rel="noopener" style="color: var(--accent-color); text-decoration: none;">@nanerasingh</a>)</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-title">📥 Links &amp; Support</div>
+        <a href="https://nanerasingh.github.io/" class="btn">Add Repository</a>
+        <a href="https://twitter.com/nanerasingh" class="btn" style="background: #1da1f2;">Twitter (@nanerasingh)</a>
+        <a href="https://github.com/nanerasingh" class="btn" style="background: #24292e;">GitHub (nanerasingh)</a>
+    </div>
+
+    <div class="donate-card-depict">
+        <h3 style="margin: 0 0 6px 0; font-size: 16px; color: var(--text-color);">❤️ Support Tweak Development</h3>
+        <p style="font-size: 13px; color: var(--text-secondary); margin: 0 0 10px 0;">If you find DelayOTA Left helpful, consider supporting future development!</p>
+        <a href="https://www.paypal.me/nanerasingh" target="_blank" rel="noopener" class="donate-btn-depict">
+            ☕ Donate via PayPal (@nanerasingh)
+        </a>
+    </div>
+
+    <div class="footer">
+        &copy; Nanerasingh, Since 2017
+    </div>
+
+</body>
+</html>
+
