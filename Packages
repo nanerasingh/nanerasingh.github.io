@@ -765,10 +765,10 @@ Architecture: iphoneos-arm
 Version: 1.0
 Installed-Size: 736
 Filename: pkgs/com.nanerasingh.delayotaleft_1.0_iphoneos-arm.deb
-Size: 100110
-MD5sum: c43f22a84b28a2f1da7d6b1d8c4d42a6
-SHA1: a848139534f0c738247f99443515f88612d4c453
-SHA256: 8a8717bec3f2bd13bc915bc391f43e0b45b86f92df380cea86069926a135dd8e
+Size: 100280
+MD5sum: 276557f46d353f7d05a809fd4b948530
+SHA1: 1132a9acf111ffe6ac5bd9928312a5bb547c230c
+SHA256: 4921e2ed866b9c0b157490b9b00ceb64af4624543f43a529fff5e8377cb943fb
 Depiction: https://nanerasingh.github.io/depicts/DelayOtaLeft/DelayOtaLeft.html
 SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.delayotaleft.json
 
@@ -783,10 +783,10 @@ Architecture: iphoneos-arm64
 Version: 1.0
 Installed-Size: 736
 Filename: pkgs/com.nanerasingh.delayotaleft_1.0_iphoneos-arm64.deb
-Size: 100322
-MD5sum: c76ec3a0f64c866285dbb09c67d34c93
-SHA1: 23255e02c63403de3750b7c83353fadd8c336f0e
-SHA256: 28f2449c57b2c917c32d1894d0157383523233ab2a795b71f865eed4b67b8ab5
+Size: 100916
+MD5sum: 2bb15017714731963905fcee427415aa
+SHA1: d5ef113cd4b4e4375011c3b1e2ea65a2ceee4af4
+SHA256: 147b82de5b71b5754cb275c4a4e8aa92f651053d080af0f2556bec118a13efaf
 Depiction: https://nanerasingh.github.io/depicts/DelayOtaLeft/DelayOtaLeft.html
 SileoDepiction: https://nanerasingh.github.io/depicts/com.manu.delayotaleft.json
 
